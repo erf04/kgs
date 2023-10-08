@@ -49,7 +49,31 @@
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
             <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-            <li><a href="#products" class="nav-link px-2 text-white">Products</a></li>
+            <li>
+              <div class="btn-group nav-link">
+                <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
+                <a class="text-decoration-none text-white pe-1" href="#products">Products</a>
+                <button
+                  type="button"
+                  class="btn btn-dark dropdown-toggle p-0"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                ></button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
             <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
             <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
