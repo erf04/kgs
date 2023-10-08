@@ -3,7 +3,9 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-    return render(request,"indexEn.html",{
+    return render(request,"indexFa.html",{
 
     })
+
+
 
