@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
   <head>
@@ -10,11 +12,12 @@
       integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv"
       crossorigin="anonymous"
     />
-    <style>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- <style>
       img {
         height: 500px;
       }
-    </style>
+    </style> -->
 
     <title>سلام بر شما خر عزیز</title>
   </head>
@@ -83,7 +86,7 @@
                   </li>
                   <li>
                     <a class="dropdown-item" href="{% url 'enhome' %}"
-                      >English - انگلیسی</a 
+                      >English - انگلیسی</a
                     >
                   </li>
                 </ul>
