@@ -2,8 +2,9 @@ img {
     height: 500px;
 }
 
-#pedaSag {
-    color: yellow;
+#imgGallery {
+    height: 200px;
+    display: none;
 }
 
 #productD {
