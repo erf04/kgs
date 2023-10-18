@@ -1,5 +1,4 @@
-{% extends 'baseEn.html' %}
-{% block content %}
+{% extends 'baseEn.html' %} {% load static %} {% block content %}
 <div
   id="carouselExampleAutoplaying"
   class="carousel slide"
@@ -435,7 +434,7 @@
                   Edit
                 </button>
               </div>
-              <small class="text-body-secondary">9 mins</small>
+              <small id="pedaSag" class="text-body-secondary">peda sag</small>
             </div>
           </div>
         </div>
@@ -444,7 +443,128 @@
   </div>
 </div>
 
-<section class="u-align-center u-clearfix u-section-4" id="sec-4e7f">
+<div class="gallery">
+  <img
+    src="https://picsum.photos/id/815/400/400"
+    alt="Two hands creating a heart and showing the sun"
+  />
+  <img src="https://picsum.photos/id/872/400/400" alt="The mountain" />
+  <img src="https://picsum.photos/id/603/400/400" alt="a river" />
+  <img src="https://picsum.photos/id/823/400/400" alt="a women with a camera" />
+</div>
+
+<!-- <ul class="results">
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+  <li class="result">
+    <a href="#"
+      ><img
+        src="{% static 'logo-social.png' %}"
+        width="500"
+        height="500"
+        alt=""
+    /></a>
+  </li>
+</ul> -->
+
+<!-- <section class="u-align-center u-clearfix u-section-4" id="sec-4e7f">
   <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
     <h2 class="u-text u-text-default u-text-1">Sample Headline</h2>
     <p class="u-text u-text-2">
@@ -462,7 +582,7 @@
           data-gallery-uid="1"
         >
           <div class="u-back-slide">
-            <img class="u-back-image u-expanded" src="images/90fc53c9.svg" />
+            <img class="u-back-image u-expanded" src="{% static 'logo-social.png' %}" />
           </div>
           <div class="u-over-slide u-shading u-over-slide-1"></div>
         </div>
@@ -489,7 +609,6 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-<h1>sagi </h1>
 {% endblock %}
