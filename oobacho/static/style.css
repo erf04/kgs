@@ -49,7 +49,7 @@ img {
 
 #gallery {
     display: flex;
-    width: calc(80% - 2rem);
+    width: calc(80%);
     padding: 0;
     margin: 0;
     list-style-type: none;
@@ -74,7 +74,7 @@ img {
     --lerp-6: 0;
 }
 
-a {
+.galleryLink {
     outline-offset: 4px;
 }
 
