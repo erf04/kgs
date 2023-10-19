@@ -123,3 +123,7 @@ img {
     --active-lerp: var(--lerp-6);
     z-index: 1;
 }
+
+#certification {
+    background-color: rgba(248, 249, 250, 1) !important;
+}
