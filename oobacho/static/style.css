@@ -1,10 +1,9 @@
 img {
     height: 500px;
-}
-
-#imgGallery {
-    height: 200px;
-    display: none;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease;
 }
 
 #productD {
@@ -15,13 +14,11 @@ img {
     border: none;
 }
 
-.gallery {
+/* .gallery {
     --g: 6px;
-    /* the gap */
 
     display: grid;
     width: 450px;
-    /* the size */
     aspect-ratio: 1;
     grid: auto-flow 1fr/repeat(3, 1fr);
     gap: var(--g);
@@ -48,12 +45,81 @@ img {
 .gallery img:nth-child(3) {
     grid-area: 2/1/span 2/span 2;
     clip-path: polygon(0 0, calc(50% - var(--g)/4) 0, 100% calc(50% + var(--g)/4), 100% 100%, 0 100%);
+} */
+
+#gallery {
+    display: flex;
+    width: calc(80% - 2rem);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
-    background: #81A8B8;
+.galleryImg {
+    padding: 0;
+}
+
+#gallery:is(:hover, :focus-within) img {
+    opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
+    filter: grayscale(calc(1 - var(--active-lerp, 0)));
+}
+
+:root {
+    --lerp-0: 1;
+    --lerp-1: 0.5787037;
+    --lerp-2: 0.2962963;
+    --lerp-3: 0.125;
+    --lerp-4: 0.037037;
+    --lerp-5: 0.0046296;
+    --lerp-6: 0;
+}
+
+a {
+    outline-offset: 4px;
+}
+
+.galleryImg {
+    flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+    transition: flex 0.2s ease;
+}
+
+.galleryImg:is(:hover, :focus-within) {
+    --active-lerp: var(--lerp-0);
+    z-index: 7;
+}
+
+.galleryImg:has(+ li:is(:hover, :focus-within)),
+.galleryImg:is(:hover, :focus-within)+li {
+    --active-lerp: var(--lerp-1);
+    z-index: 6;
+}
+
+.galleryImg:has(+ li + li:is(:hover, :focus-within)),
+.galleryImg:is(:hover, :focus-within)+li+li {
+    --active-lerp: var(--lerp-2);
+    z-index: 5;
+}
+
+.galleryImg:has(+ li + li + li:is(:hover, :focus-within)),
+.galleryImg:is(:hover, :focus-within)+li+li+li {
+    --active-lerp: var(--lerp-3);
+    z-index: 4;
+}
+
+.galleryImg:has(+ li + li + li + li:is(:hover, :focus-within)),
+.galleryImg:is(:hover, :focus-within)+li+li+li+li {
+    --active-lerp: var(--lerp-4);
+    z-index: 3;
+}
+
+.galleryImg:has(+ li + li + li + li + li:is(:hover, :focus-within)),
+.galleryImg:is(:hover, :focus-within)+li+li+li+li+li {
+    --active-lerp: var(--lerp-5);
+    z-index: 2;
+}
+
+.galleryImg:has(+ li + li + li + li + li + li:is(:hover, :focus-within)),
+.galleryImg:is(:hover, :focus-within)+li+li+li+li+li+li {
+    --active-lerp: var(--lerp-6);
+    z-index: 1;
 }
