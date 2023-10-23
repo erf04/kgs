@@ -1,51 +1,23 @@
 {% extends 'baseEn.html' %} {% load static %} {% block content %}
 
 <style>
-  /* Try hovering and changing the height/width */
-
-  /* *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-
-  body,
-  html {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
-
-  body {
+  #mz-gallery-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: black;
-    margin: 0;
-  } */
-
-  #mz-gallery-container {
-    position: relative;
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 400px;
+    height: 100%;
   }
 
   #mz-gallery {
+    padding: 40px;
     position: relative;
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: row;
     align-items: center;
-    /* justify-content: flex-start; */
+    justify-content: flex-start;
     width: calc(100% - 70px);
     height: calc(100% - 50px);
     max-height: 670px;
@@ -62,10 +34,6 @@
     scroll-snap-type: x mandatory;
     scroll-padding: 0 0 0 55px;
     scroll-behavior: smooth;
-    /* firefox scrollbar */
-    scrollbar-color: lawngreen #222;
-    scrollbar-width: auto;
-    animation: background 300s linear infinite;
   }
 
   @keyframes background {
@@ -134,7 +102,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    height: 200px;
     width: auto;
     min-height: 100px;
     margin-right: 60px;
@@ -188,7 +156,7 @@
   }
 
   #mz-gallery figure img {
-    height: 100%;
+    height: 200px;
     width: auto;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
       rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -403,7 +371,10 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{% static 'Landscape-Color.jpg' %}" class="d-block w-100" />
+      <img
+        src="{% static 'Landscape-Color.jpg' %}"
+        class="d-block w-100 slideImg"
+      />
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
@@ -412,7 +383,7 @@
     <div class="carousel-item">
       <img
         src=" {% static 'digital_camera_photo-1080x675.jpg' %}"
-        class="d-block w-100"
+        class="d-block w-100 slideImg"
       />
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
@@ -422,7 +393,7 @@
     <div class="carousel-item">
       <img
         src="{% static 'Image_created_with_a_mobile_phone.png' %}"
-        class="d-block w-100"
+        class="d-block w-100 slideImg"
       />
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
@@ -833,52 +804,52 @@
   <ul class="m-auto" id="gallery">
     <li class="galleryImg">
       <a href="#" class="galleryLink"
-        ><img src="{% static 'Landscape-Color.jpg' %}" width="500" height="500"
+        ><img src="{% static 'Landscape-Color.jpg' %}" class="GImg"
       /></a>
     </li>
     <li class="galleryImg">
       <a href="#" class="galleryLink"
-        ><img src="{% static 'Landscape-Color.jpg' %}" width="500" height="500"
+        ><img src="{% static 'Landscape-Color.jpg' %}" class="GImg"
       /></a>
     </li>
     <li class="galleryImg">
       <a href="#" class="galleryLink"
-        ><img src="{% static 'Landscape-Color.jpg' %}" width="500" height="500"
+        ><img src="{% static 'Landscape-Color.jpg' %}" class="GImg"
       /></a>
     </li>
     <li class="galleryImg">
       <a href="#" class="galleryLink"
-        ><img src="{% static 'Landscape-Color.jpg' %}" width="500" height="500"
+        ><img src="{% static 'Landscape-Color.jpg' %}" class="GImg"
       /></a>
     </li>
     <li class="galleryImg">
       <a href="#" class="galleryLink"
-        ><img src="{% static 'Landscape-Color.jpg' %}" width="500" height="500"
+        ><img src="{% static 'Landscape-Color.jpg' %}" class="GImg"
       /></a>
     </li>
     <li class="galleryImg">
       <a href="#" class="galleryLink"
-        ><img src="{% static 'Landscape-Color.jpg' %}" width="500" height="500"
+        ><img src="{% static 'Landscape-Color.jpg' %}" class="GImg"
       /></a>
     </li>
     <li class="galleryImg">
       <a href="#" class="galleryLink"
-        ><img src="{% static 'Landscape-Color.jpg' %}" width="500" height="500"
+        ><img src="{% static 'Landscape-Color.jpg' %}" class="GImg"
       /></a>
     </li>
     <li class="galleryImg">
       <a href="#" class="galleryLink"
-        ><img src="{% static 'Landscape-Color.jpg' %}" width="500" height="500"
+        ><img src="{% static 'Landscape-Color.jpg' %}" class="GImg"
       /></a>
     </li>
     <li class="galleryImg">
       <a href="#" class="galleryLink"
-        ><img src="{% static 'Landscape-Color.jpg' %}" width="500" height="500"
+        ><img src="{% static 'Landscape-Color.jpg' %}" class="GImg"
       /></a>
     </li>
     <li class="galleryImg">
       <a href="#" class="galleryLink"
-        ><img src="{% static 'Landscape-Color.jpg' %}" width="500" height="500"
+        ><img src="{% static 'Landscape-Color.jpg' %}" class="GImg"
       /></a>
     </li>
   </ul>
@@ -889,76 +860,6 @@
     <h3 style="text-align: center">Certification</h3>
   </div>
 </div>
-<!-- <div class="container">
-  <h1>Use Bootstrap's carousel to show multiple items per slide.</h1>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner">
-          <div class="item active">
-            <div class="col-xs-4">
-              <a href="#1"
-                ><img src="../oobacho/oobacho/static/3538633.jpg"
-              /></a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-4">
-              <a href="#1"
-                ><img src="../oobacho/oobacho/static/3538633.jpg"
-              /></a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-4">
-              <a href="#1"
-                ><img src="../oobacho/oobacho/static/3538633.jpg"
-              /></a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-4">
-              <a href="#1"
-                ><img src="../oobacho/oobacho/static/3538633.jpg"
-              /></a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-4">
-              <a href="#1"
-                ><img src="../oobacho/oobacho/static/3538633.jpg"
-              /></a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="col-xs-4">
-              <a href="#1"
-                ><img src="../oobacho/oobacho/static/3538633.jpg"
-              /></a>
-            </div>
-          </div>
-          
-
-          <div class="item">
-            <div class="col-xs-4">
-              <a href="#1"
-                ><img src="../oobacho/oobacho/static/3538633.jpg"
-              /></a>
-            </div>
-          </div>
-
-            
-        </div>
-        <a class="left carousel-control" href="#theCarousel" data-slide="prev"
-          ><i class="glyphicon glyphicon-chevron-left"></i
-        ></a>
-        <a class="right carousel-control" href="#theCarousel" data-slide="next"
-          ><i class="glyphicon glyphicon-chevron-right"></i
-        ></a>
-      </div>
-    </div>
-  </div>
-</div> -->
 <div id="mz-gallery-container">
   <div id="mz-gallery">
     <figure>
