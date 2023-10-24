@@ -456,3 +456,8 @@
         border-top: 1px solid lawngreen;
     }
 }
+
+.card-sh:hover {
+    box-shadow: rgba(0, 0, 0, .6) 5px 5px;
+    transition: 1s;
+}
