@@ -1,3 +1,7 @@
+img {
+    object-fit: cover;
+}
+
 .GImg {
     height: 500px;
     max-width: 100%;
@@ -8,6 +12,7 @@
 
 .slideImg {
     height: 500px;
+    object-fit: cover;
 }
 
 #productD {
