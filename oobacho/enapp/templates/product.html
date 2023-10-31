@@ -1,0 +1,538 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        margin-top: 20px;
+      }
+
+      .product-card-10 {
+        border: 1px solid var(--bs-gray-300);
+      }
+
+      .product-card-10 .product-card-image {
+        position: relative;
+      }
+
+      .product-card-10 .badge-ribbon {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 45px;
+        height: 45px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        text-transform: uppercase;
+        background: var(--bs-danger);
+        color: var(--bs-white);
+        z-index: 1;
+        border-radius: 50%;
+      }
+
+      .product-card-10 .product-media {
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid var(--bs-gray-300);
+      }
+
+      .product-card-10 .product-media img {
+        transition: ease all 0.35s;
+        transform: scale(1);
+      }
+
+      .product-card-10 .product-action {
+        padding-top: 8px;
+      }
+
+      .product-card-10 .product-action .btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bs-primary);
+        color: var(--bs-white);
+        margin: 0 2px;
+        padding: 0;
+      }
+
+      @media (max-width: 575.98px) {
+        .product-card-10 .product-action .btn {
+          width: 26px;
+          height: 26px;
+          margin: 1px;
+          font-size: 12px;
+        }
+      }
+
+      .product-card-10 .product-action .btn:hover {
+        background: var(--bs-dark);
+        color: var(--bs-white);
+      }
+
+      .product-card-10 .product-card-info {
+        text-align: center;
+        padding: 15px;
+      }
+
+      @media (max-width: 575.98px) {
+        .product-card-10 .product-card-info {
+          padding: 8px;
+        }
+      }
+
+      .product-card-10 .rating-star {
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+
+      .product-card-10 .product-title {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .product-card-10 .product-title a {
+        color: var(--bs-dark);
+      }
+
+      .product-card-10 .product-price {
+        margin-top: 8px;
+        line-height: normal;
+      }
+
+      .product-card-10:hover .product-media img {
+        transform: scale(1.03);
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="row justify-content-center section-heading">
+          <div class="col-lg-6 text-center">
+            <p class="fs-6 m-0">Read Today’s News.</p>
+            <h3 class="h2 mt-2">Latest Arrivals</h3>
+          </div>
+        </div>
+        <div class="row g-3 g-lg-4">
+          <!-- Product Box -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card-10">
+              <div class="product-card-image">
+                <div class="badge-ribbon">
+                  <span class="badge bg-danger">Sale</span>
+                </div>
+                <div class="product-media">
+                  <a href="#"
+                    ><img
+                      class="img-fluid"
+                      src="https://www.bootdey.com/image/380x380/FF00FF/000000"
+                      title=""
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="product-card-info">
+                <div class="rating-star text">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <h6 class="product-title">
+                  <a href="#">Full Rim Aviator Eyeglasses</a>
+                </h6>
+                <div class="product-price">
+                  <span class="text-primary">$28.<small>50</small></span>
+                  <del class="fs-sm text-muted">$38.<small>50</small></del>
+                </div>
+                <div class="product-action">
+                  <a href="#" class="btn"><i class="fa fa-heart"></i> </a
+                  ><a href="#" class="btn"><i class="fa fa-repeat"></i> </a
+                  ><a
+                    data-bs-toggle="modal"
+                    data-bs-target="#px-quick-view"
+                    href="javascript:void(0)"
+                    class="btn"
+                    ><i class="fa fa-eye"></i>
+                  </a>
+                  <a href="#" class="btn"
+                    ><i class="fa fa-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Product Box -->
+          <!-- Product Box -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card-10">
+              <div class="product-card-image">
+                <div class="badge-ribbon">
+                  <span class="badge bg-danger">Sale</span>
+                </div>
+                <div class="product-media">
+                  <a href="#"
+                    ><img
+                      class="img-fluid"
+                      src="https://www.bootdey.com/image/380x380/00FFFF/000000"
+                      title=""
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="product-card-info">
+                <div class="rating-star text">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <h6 class="product-title">
+                  <a href="#">Full Rim Aviator Eyeglasses</a>
+                </h6>
+                <div class="product-price">
+                  <span class="text-primary">$28.<small>50</small></span>
+                  <del class="fs-sm text-muted">$38.<small>50</small></del>
+                </div>
+                <div class="product-action">
+                  <a href="#" class="btn"><i class="fa fa-heart"></i> </a
+                  ><a href="#" class="btn"><i class="fa fa-repeat"></i> </a
+                  ><a
+                    data-bs-toggle="modal"
+                    data-bs-target="#px-quick-view"
+                    href="javascript:void(0)"
+                    class="btn"
+                    ><i class="fa fa-eye"></i>
+                  </a>
+                  <a href="#" class="btn"
+                    ><i class="fa fa-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Product Box -->
+          <!-- Product Box -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card-10">
+              <div class="product-card-image">
+                <div class="badge-ribbon">
+                  <span class="badge bg-danger">Sale</span>
+                </div>
+                <div class="product-media">
+                  <a href="#"
+                    ><img
+                      class="img-fluid"
+                      src="https://www.bootdey.com/image/380x380/000000/ffffff"
+                      title=""
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="product-card-info">
+                <div class="rating-star text">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <h6 class="product-title">
+                  <a href="#">Full Rim Aviator Eyeglasses</a>
+                </h6>
+                <div class="product-price">
+                  <span class="text-primary">$28.<small>50</small></span>
+                  <del class="fs-sm text-muted">$38.<small>50</small></del>
+                </div>
+                <div class="product-action">
+                  <a href="#" class="btn"><i class="fa fa-heart"></i> </a
+                  ><a href="#" class="btn"><i class="fa fa-repeat"></i> </a
+                  ><a
+                    data-bs-toggle="modal"
+                    data-bs-target="#px-quick-view"
+                    href="javascript:void(0)"
+                    class="btn"
+                    ><i class="fa fa-eye"></i>
+                  </a>
+                  <a href="#" class="btn"
+                    ><i class="fa fa-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Product Box -->
+          <!-- Product Box -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card-10">
+              <div class="product-card-image">
+                <div class="badge-ribbon">
+                  <span class="badge bg-danger">Sale</span>
+                </div>
+                <div class="product-media">
+                  <a href="#"
+                    ><img
+                      class="img-fluid"
+                      src="https://www.bootdey.com/image/380x380/8A2BE2/000000"
+                      title=""
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="product-card-info">
+                <div class="rating-star text">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <h6 class="product-title">
+                  <a href="#">Full Rim Aviator Eyeglasses</a>
+                </h6>
+                <div class="product-price">
+                  <span class="text-primary">$28.<small>50</small></span>
+                  <del class="fs-sm text-muted">$38.<small>50</small></del>
+                </div>
+                <div class="product-action">
+                  <a href="#" class="btn"><i class="fa fa-heart"></i> </a
+                  ><a href="#" class="btn"><i class="fa fa-repeat"></i> </a
+                  ><a
+                    data-bs-toggle="modal"
+                    data-bs-target="#px-quick-view"
+                    href="javascript:void(0)"
+                    class="btn"
+                    ><i class="fa fa-eye"></i>
+                  </a>
+                  <a href="#" class="btn"
+                    ><i class="fa fa-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Product Box -->
+          <!-- Product Box -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card-10">
+              <div class="product-card-image">
+                <div class="badge-ribbon">
+                  <span class="badge bg-danger">Sale</span>
+                </div>
+                <div class="product-media">
+                  <a href="#"
+                    ><img
+                      class="img-fluid"
+                      src="https://www.bootdey.com/image/380x380/FF7F50/000000"
+                      title=""
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="product-card-info">
+                <div class="rating-star text">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <h6 class="product-title">
+                  <a href="#">Full Rim Aviator Eyeglasses</a>
+                </h6>
+                <div class="product-price">
+                  <span class="text-primary">$28.<small>50</small></span>
+                  <del class="fs-sm text-muted">$38.<small>50</small></del>
+                </div>
+                <div class="product-action">
+                  <a href="#" class="btn"><i class="fa fa-heart"></i> </a
+                  ><a href="#" class="btn"><i class="fa fa-repeat"></i> </a
+                  ><a
+                    data-bs-toggle="modal"
+                    data-bs-target="#px-quick-view"
+                    href="javascript:void(0)"
+                    class="btn"
+                    ><i class="fa fa-eye"></i>
+                  </a>
+                  <a href="#" class="btn"
+                    ><i class="fa fa-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Product Box -->
+          <!-- Product Box -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card-10">
+              <div class="product-card-image">
+                <div class="badge-ribbon">
+                  <span class="badge bg-danger">Sale</span>
+                </div>
+                <div class="product-media">
+                  <a href="#"
+                    ><img
+                      class="img-fluid"
+                      src="https://www.bootdey.com/image/380x380/008B8B/000000"
+                      title=""
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="product-card-info">
+                <div class="rating-star text">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <h6 class="product-title">
+                  <a href="#">Full Rim Aviator Eyeglasses</a>
+                </h6>
+                <div class="product-price">
+                  <span class="text-primary">$28.<small>50</small></span>
+                  <del class="fs-sm text-muted">$38.<small>50</small></del>
+                </div>
+                <div class="product-action">
+                  <a href="#" class="btn"><i class="fi-heart"></i> </a
+                  ><a href="#" class="btn"><i class="fa fa-repeat"></i> </a
+                  ><a
+                    data-bs-toggle="modal"
+                    data-bs-target="#px-quick-view"
+                    href="javascript:void(0)"
+                    class="btn"
+                    ><i class="fa fa-eye"></i>
+                  </a>
+                  <a href="#" class="btn"
+                    ><i class="fa fa-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Product Box -->
+          <!-- Product Box -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card-10">
+              <div class="product-card-image">
+                <div class="badge-ribbon">
+                  <span class="badge bg-danger">Sale</span>
+                </div>
+                <div class="product-media">
+                  <a href="#"
+                    ><img
+                      class="img-fluid"
+                      src="https://www.bootdey.com/image/380x380/2F4F4F/000000"
+                      title=""
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="product-card-info">
+                <div class="rating-star text">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <h6 class="product-title">
+                  <a href="#">Full Rim Aviator Eyeglasses</a>
+                </h6>
+                <div class="product-price">
+                  <span class="text-primary">$28.<small>50</small></span>
+                  <del class="fs-sm text-muted">$38.<small>50</small></del>
+                </div>
+                <div class="product-action">
+                  <a href="#" class="btn"><i class="fa fa-heart"></i> </a
+                  ><a href="#" class="btn"><i class="fa fa-repeat"></i> </a
+                  ><a
+                    data-bs-toggle="modal"
+                    data-bs-target="#px-quick-view"
+                    href="javascript:void(0)"
+                    class="btn"
+                    ><i class="fa fa-eye"></i>
+                  </a>
+                  <a href="#" class="btn"
+                    ><i class="fa fa-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Product Box -->
+          <!-- Product Box -->
+          <div class="col-6 col-lg-3">
+            <div class="product-card-10">
+              <div class="product-card-image">
+                <div class="badge-ribbon">
+                  <span class="badge bg-danger">Sale</span>
+                </div>
+                <div class="product-media">
+                  <a href="#"
+                    ><img
+                      class="img-fluid"
+                      src="https://www.bootdey.com/image/380x380/7CFC00/000000"
+                      title=""
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="product-card-info">
+                <div class="rating-star text">
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star-fill active"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <h6 class="product-title">
+                  <a href="#">Full Rim Aviator Eyeglasses</a>
+                </h6>
+                <div class="product-price">
+                  <span class="text-primary">$28.<small>50</small></span>
+                  <del class="fs-sm text-muted">$38.<small>50</small></del>
+                </div>
+                <div class="product-action">
+                  <a href="#" class="btn"><i class="fa fa-heart"></i> </a
+                  ><a href="#" class="btn"><i class="fa fa-repeat"></i> </a
+                  ><a
+                    data-bs-toggle="modal"
+                    data-bs-target="#px-quick-view"
+                    href="javascript:void(0)"
+                    class="btn"
+                    ><i class="fa fa-eye"></i>
+                  </a>
+                  <a href="#" class="btn"
+                    ><i class="fa fa-shopping-cart"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Product Box -->
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
