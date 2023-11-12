@@ -1,4 +1,4 @@
-<!-- {% extends 'baseEn.html' %} {% load static %} {% block content %} -->
+{% extends 'baseEn.html' %} {% load static %} {% block content %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,13 +19,13 @@ https://templatemo.com/tm-556-catalog-z
   </head>
   <body>
     <!-- Page Loader -->
-    <div id="loader-wrapper">
+    <!-- <div id="loader-wrapper">
       <div id="loader"></div>
 
       <div class="loader-section section-left"></div>
       <div class="loader-section section-right"></div>
-    </div>
-    <nav class="navbar navbar-expand-lg">
+    </div> -->
+    <!-- <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <i class="fas fa-film mr-2"></i>
@@ -64,12 +64,12 @@ https://templatemo.com/tm-556-catalog-z
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <div
       class="tm-hero d-flex justify-content-center align-items-center"
       data-parallax="scroll"
-      data-image-src="img/hero.jpg"
+      data-image-src="{% static 'img/hero.jpg' %}"
     >
       <form class="d-flex tm-search-form">
         <input
@@ -103,12 +103,16 @@ https://templatemo.com/tm-556-catalog-z
       <div class="row tm-mb-90 tm-gallery">
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-03.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-03.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
               <h2>Clocks</h2>
-              <a href="photo-detail.html">View more</a>
+              <a href="{% url 'photo-detail' %}">View more</a>
             </figcaption>
           </figure>
           <div class="d-flex justify-content-between tm-text-gray">
@@ -118,7 +122,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-04.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-04.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -133,7 +141,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-05.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-05.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -148,7 +160,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-06.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-06.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -164,7 +180,11 @@ https://templatemo.com/tm-556-catalog-z
 
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-01.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-01.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -179,7 +199,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-02.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-02.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -194,7 +218,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-07.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-07.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -209,7 +237,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-08.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-08.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -224,7 +256,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-09.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-09.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -239,7 +275,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-10.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-10.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -254,7 +294,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-11.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-11.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -269,7 +313,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-12.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-12.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -284,7 +332,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-13.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-13.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -299,7 +351,11 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-14.jpg" alt="Image" class="img-fluid" />
+            <img
+              src="{% static 'img/img-14.jpg' %}"
+              alt="Image"
+              class="img-fluid"
+            />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -314,7 +370,7 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-15.jpg" alt="Image" class="img-fluid" />
+            <img src="{% static 'img/img-15.jpg' %}" alt="Image" class="img-fluid" />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -329,7 +385,7 @@ https://templatemo.com/tm-556-catalog-z
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
           <figure class="effect-ming tm-video-item">
-            <img src="img/img-16.jpg" alt="Image" class="img-fluid" />
+            <img src="{% static 'img/img-16.jpg' %}" alt="Image" class="img-fluid" />
             <figcaption
               class="d-flex align-items-center justify-content-center"
             >
@@ -366,7 +422,7 @@ https://templatemo.com/tm-556-catalog-z
       </div>
     </div>
     <!-- container-fluid, tm-container-content -->
-
+    <!-- 
     <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
       <div class="container-fluid tm-container-small">
         <div class="row">
@@ -438,14 +494,14 @@ https://templatemo.com/tm-556-catalog-z
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
-    <script src="js/plugins.js"></script>
-    <script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <!-- <script>
       $(window).on("load", function () {
         $("body").addClass("loaded");
       });
-    </script>
+    </script> -->
   </body>
 </html>
 {% endblock %}
