@@ -53,7 +53,7 @@
                 <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
                 <a
                   class="text-decoration-none text-white pe-1"
-                  href="product.html"
+                  href="{% url 'products' %}"
                   >Products</a
                 >
                 <button
@@ -257,8 +257,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-    <script src="../../static/index.js"></script>
-    <script src="../../static/3a2eaf6206.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+    <script src="{% static 'index.js' %}"></script>
+    <script src="{% static '3a2eaf6206.js' %}"></script>
   </body>
 </html>

@@ -10,3 +10,6 @@ def gallery(request):
 
 def img_detail(request):
     return render(request,"photo-detail.html",{})
+
+def products(request):
+    return render(request,"product.html",{})
