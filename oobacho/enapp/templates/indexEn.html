@@ -45,12 +45,16 @@
     transform-origin: center;
   }
 </style>
+
+<!-- Loader -->
+
 <div id="loader-wrapper">
   <div id="loader"></div>
-
   <div class="loader-section section-left"></div>
   <div class="loader-section section-right"></div>
 </div>
+
+<!-- Crousel -->
 <div
   id="carouselExampleAutoplaying"
   class="carousel slide"
@@ -130,6 +134,7 @@
   </button>
 </div>
 
+<!-- About Us -->
 <div class="container col-xxl-8 px-4 py-5" id="about">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
@@ -164,13 +169,14 @@
   </div>
 </div>
 
+<!-- Products -->
 <div class="album py-5 bg-body-tertiary" id="products">
   <div class="container">
     <h1>Products</h1>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col card-sh">
+      <div class="col">
         <div class="card shadow-sm">
-          <svg
+          <!-- <svg
             class="bd-placeholder-img card-img-top"
             width="100%"
             height="225"
@@ -183,7 +189,14 @@
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c"></rect>
             <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
+          </svg> -->
+          <a href="{% url 'products' %}">
+            <img
+              style="height: 225px; width: 100%;"
+              src="{% static 'img/about.jpg' %}"
+              alt=""
+            />
+          </a>
           <div class="card-body">
             <p class="card-text">
               This is a wider card with supporting text below as a natural
@@ -495,10 +508,11 @@
         </div>
       </div>
     </div>
-    <a id="more-products"><span style="color: blue">See more</span></a>
+    <a href="{% url 'products' %}" id="more-products"><span style="color: blue">See more</span></a>
   </div>
 </div>
 
+<!-- Gallery -->
 <div class="container my-3">
   <h1 class="p-3">Gallery</h1>
   <ul class="m-auto" id="gallery">
@@ -555,10 +569,9 @@
   </ul>
 </div>
 
+<!-- Certification -->
 <div class="container my-4" id="certification">
-  <!-- <div> -->
   <h3 style="text-align: center">Certification</h3>
-  <!-- </div> -->
   <div id="mz-gallery-container">
     <div id="mz-gallery">
       <figure>
@@ -801,6 +814,8 @@
     </div>
   </div>
 </div>
+
+<!-- Script For Loader -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
   $(window).on("load", function () {
