@@ -489,3 +489,11 @@ img {
     color: #241c15;
     background-color: #d9d7cd;
 } */
+
+.zooom {
+    transition: transform .2s;
+}
+
+.zooom:hover {
+    transform: scale(1.04);
+}
