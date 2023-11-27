@@ -1,53 +1,5 @@
 {% extends 'baseEn.html' %} {% load static %} {% block content %}
-
-<style>
-  #more-products {
-    display: block;
-    padding: 0.2em 0;
-    border: red;
-    margin: 15px;
-    position: absolute;
-    left: 46%;
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    font-weight: 500;
-    /* border: 1px solid transparent; */
-    border-radius: 2px;
-    height: auto;
-    width: auto;
-    line-height: 34px;
-    font-size: 34px;
-    /* color: #241c15; */
-    background-color: rgb(255, 255, 255);
-    /* transition: background-color 0.2s ease-in-out 0s,
-      opacity 0.2s ease-in-out 0s; */
-    /* padding: 0 18px; */
-    /* padding: 10px; */
-  }
-
-  #more-products::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.1em;
-    background-color: rgb(0, 0, 0);
-    opacity: 0;
-    transition: opacity 300ms, transform 300ms;
-  }
-
-  #more-products:hover::after,
-  #more-products:focus::after {
-    opacity: 1;
-    transform: translate3d(0, 0.2em, 0);
-    transform-origin: center;
-  }
-</style>
-
 <!-- Loader -->
-
 <div id="loader-wrapper">
   <div id="loader"></div>
   <div class="loader-section section-left"></div>
@@ -172,27 +124,26 @@
 <!-- Products -->
 <div class="album py-5 bg-body-tertiary" id="products">
   <div class="container">
-    <h1>Products</h1>
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+        <h4 style="font-size: 28pt">Products</h4>
+      </div>
+      <a class="flex items-center more-products" href="{% url 'products' %}"
+        ><span>
+          See more<img
+            class="arrow-more-pro"
+            src="{% static 'icons8-arrow-50.png' %}"
+            alt=""
+          />
+        </span>
+      </a>
+    </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col">
         <div class="card shadow-sm zooom">
-          <!-- <svg
-            class="bd-placeholder-img card-img-top"
-            width="100%"
-            height="225"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: Thumbnail"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg> -->
           <a href="{% url 'products' %}">
             <img
-              style="height: 225px; width: 100%;"
+              style="height: 225px; width: 100%"
               src="{% static 'img/about.jpg' %}"
               alt=""
             />
@@ -508,9 +459,6 @@
         </div>
       </div>
     </div>
-    <a href="{% url 'products' %}" id="more-products"
-      ><span style="color: blue">See more</span></a
-    >
   </div>
 </div>
 

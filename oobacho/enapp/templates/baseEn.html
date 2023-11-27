@@ -12,18 +12,9 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    /> -->
-
-    <!-- <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-      /> -->
-      <!-- <link rel="stylesheet" href="{% static 'style1.css' %}" /> -->
-      <link rel="stylesheet" href="{% static 'style.css' %}" />
-    </head>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
     <header class="p-3 text-bg-dark">
       <div class="container">
         <div
@@ -39,7 +30,7 @@
               style="width: 70px; height: 50px"
             />
           </a>
-  
+
           <ul
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
@@ -80,7 +71,7 @@
               <a href="#contact" class="nav-link px-2 text-white">Contact</a>
             </li>
           </ul>
-  
+
           <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
             <input
               type="search"
@@ -89,7 +80,7 @@
               aria-label="Search"
             />
           </form>
-  
+
           <div class="text-end">
             <button type="button" class="btn btn-outline-light me-2">
               Login
@@ -106,7 +97,7 @@
                 >
                   select language
                 </a>
-  
+
                 <ul class="dropdown-menu">
                   <li>
                     <a class="dropdown-item" href="{% url 'home' %}"
@@ -125,15 +116,13 @@
         </div>
       </div>
     </header>
-  <body>
     <!--
     write the header(like navbar)
     -->
 
     {% block content %} {% endblock %}
-  </body>
     <!--
-    write the footer
+      write the footer
     -->
     <div class="container border-top">
       <footer class="py-5">
@@ -257,8 +246,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
     <script src="{% static 'index.js' %}"></script>
     <script src="{% static '3a2eaf6206.js' %}"></script>
-  
+  </body>
 </html>

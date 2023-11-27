@@ -497,3 +497,38 @@ img {
 .zooom:hover {
     transform: scale(1.04);
 }
+
+.more-products {
+    /* float: right; */
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+    font-size: 16pt;
+    /* position: relative; */
+    /* margin-top: 6px; */
+    /* text-decoration: none;
+    position: absolute;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 34px;
+    font-size: 34px;
+    background-color: rgb(255, 255, 255); */
+}
+
+.arrow-more-pro {
+    padding: 0;
+    margin: 0;
+    width: 15px;
+    height: 15px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
