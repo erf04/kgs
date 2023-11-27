@@ -20,14 +20,10 @@
     <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    /> -->
-    <!-- <link rel="stylesheet" href="{% static 'style1.css' %}" /> -->
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
-  </head>
-  <body>
-    <!--
-    write the header(like navbar)
-    -->
+      /> -->
+      <!-- <link rel="stylesheet" href="{% static 'style1.css' %}" /> -->
+      <link rel="stylesheet" href="{% static 'style.css' %}" />
+    </head>
     <header class="p-3 text-bg-dark">
       <div class="container">
         <div
@@ -43,7 +39,7 @@
               style="width: 70px; height: 50px"
             />
           </a>
-
+  
           <ul
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
@@ -84,7 +80,7 @@
               <a href="#contact" class="nav-link px-2 text-white">Contact</a>
             </li>
           </ul>
-
+  
           <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
             <input
               type="search"
@@ -93,7 +89,7 @@
               aria-label="Search"
             />
           </form>
-
+  
           <div class="text-end">
             <button type="button" class="btn btn-outline-light me-2">
               Login
@@ -110,7 +106,7 @@
                 >
                   select language
                 </a>
-
+  
                 <ul class="dropdown-menu">
                   <li>
                     <a class="dropdown-item" href="{% url 'home' %}"
@@ -129,9 +125,13 @@
         </div>
       </div>
     </header>
+  <body>
+    <!--
+    write the header(like navbar)
+    -->
 
     {% block content %} {% endblock %}
-
+  </body>
     <!--
     write the footer
     -->
@@ -260,5 +260,5 @@
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
     <script src="{% static 'index.js' %}"></script>
     <script src="{% static '3a2eaf6206.js' %}"></script>
-  </body>
+  
 </html>

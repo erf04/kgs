@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Product
 # Create your views here.
 
 def home(request):
@@ -12,4 +12,8 @@ def img_detail(request):
     return render(request,"photo-detail.html",{})
 
 def products(request):
-    return render(request,"product.html",{})
+    theproducts=Product.objects.filter(name="sagi")
+    
+    return render(request,"product.html",{
+        "htmlproducts":theproducts,
+    })

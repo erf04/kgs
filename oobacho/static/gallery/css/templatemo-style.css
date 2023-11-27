@@ -6,7 +6,7 @@ http://www.templatemo.com/tm-500-fluid-gallery
 
 */
 
-html.gray .mfp-wrap,
+/* html.gray .mfp-wrap,
 html.gray .cd-hero,
 html.gray #loader-wrapper {
     -webkit-filter: grayscale(100%);
@@ -21,7 +21,7 @@ body {
 	font-size: 17px;
 	font-weight: 300;
 	overflow-x: hidden;
-}
+} */
 
 ul { padding: 0; margin: 0; }
 figure { margin: 0; }
@@ -382,7 +382,7 @@ border-top-color: #f9c922; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.
 
 /* Gallery */
 .grid-item {
-	float: left;
+	/* float: left; */
 	width: 100%;
 }
 
