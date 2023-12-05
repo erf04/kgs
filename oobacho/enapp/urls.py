@@ -7,4 +7,5 @@ urlpatterns = [
     path('photo-detail/',views.img_detail,name="photo-detail"),
     path('products/',views.products,name="products"),
     path('AboutUs/',views.AboutUs,name="AboutUs"),
+    path('seeproduct/<int:id>/',views.seeproduct,name="seeproduct"),
 ]

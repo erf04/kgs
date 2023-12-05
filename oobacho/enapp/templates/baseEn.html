@@ -21,11 +21,11 @@
           class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
         >
           <a
-            href="/"
+            href="."
             class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
           >
             <img
-              src="../../static/logo-social.png"
+              src="{% static 'logo-social.png' %}"
               class="me-4"
               style="width: 70px; height: 50px"
             />
@@ -34,12 +34,16 @@
           <ul
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
-            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+            <li>
+              <a href="{% url 'enhome' %}" class="nav-link px-3 text-secondary"
+                >Home</a
+              >
+            </li>
             <li>
               <div class="btn-group nav-link">
                 <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
                 <a
-                  class="text-decoration-none text-white pe-1"
+                  class="text-decoration-none text-white pl-3"
                   href="{% url 'products' %}"
                   >Products</a
                 >
@@ -50,25 +54,33 @@
                   aria-expanded="false"
                 ></button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
                   <li>
-                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="{% url 'products' %}"
+                      >Action</a
+                    >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="{% url 'products' %}"
+                      >Another action</a
+                    >
                   </li>
-                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'products' %}"
+                      >Something else here</a
+                    >
+                  </li>
+                  <!-- <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a class="dropdown-item" href="#">Separated link</a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </li>
-            <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-            <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
+            <!-- <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li> -->
+            <li><a href="#" class="nav-link px-3 text-white">FAQs</a></li>
+            <li><a href="#about" class="nav-link px-3 text-white">About</a></li>
             <li>
-              <a href="#contact" class="nav-link px-2 text-white">Contact</a>
+              <a href="#contact" class="nav-link px-3 text-white">Contact</a>
             </li>
           </ul>
 
@@ -88,15 +100,14 @@
             <button type="button" class="btn btn-warning">Sign-up</button>
             <button type="button" class="btn">
               <div class="dropdown">
-                <a
+                <button
                   class="btn btn-secondary dropdown-toggle"
-                  href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   select language
-                </a>
+                </button>
 
                 <ul class="dropdown-menu">
                   <li>
