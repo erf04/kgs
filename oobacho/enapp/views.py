@@ -11,6 +11,9 @@ def gallery(request):
 def img_detail(request):
     return render(request,"photo-detail.html",{})
 
+def AboutUs(request):
+    return render(request,"AboutUs.html",{})
+
 def products(request):
     theproducts=Product.objects.filter(name="sagi")
     
