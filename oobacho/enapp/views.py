@@ -1,18 +1,17 @@
 from django.shortcuts import render
 from .models import Product
-# Create your views here.
 
 def home(request):
     products=Product.objects.all()[:9]
-    return render(request,"indexEn.html",{
+    return render(request,"home.html",{
         "products":products
     })
 
 def gallery(request):
     return render(request,"gallery.html",{})
 
-def img_detail(request):
-    return render(request,"photo-detail.html",{})
+def pro_detail(request):
+    return render(request,"productDetail.html",{})
 
 def AboutUs(request):
     return render(request,"AboutUs.html",{})
@@ -26,6 +25,6 @@ def products(request):
 
 def seeproduct(request,id):
     product=Product.objects.get(pk=id)
-    return render(request,"photo-detail.html",{
+    return render(request,"productDetail.html",{
         "product":product
     })
