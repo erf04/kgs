@@ -7,19 +7,74 @@
   .zooom:hover {
     transform: scale(1.03);
   }
+
+  .image {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+  .blackBack {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 100px;
+    z-index: 10;
+    /* display: flex;
+    justify-content: center; */
+  }
+
+  .showedImg {
+    width: auto;
+    height: auto;
+  }
 </style>
-<div class="container">
-  <div class="row">
-    <div
-      class="col-3 zooom my-3"
-      style="max-height: 400px; max-width: 300px; object-fit: cover"
-    >
-      <img
-        style="height: 100%; width: 100%"
-        src="{% static 'gallery/img/tm-img-01.jpg' %}"
-        alt=""
-      />
+<div id="overlay">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div
+        onclick="showImage(this)"
+        class="col-12 col-sm-6 col-md-4 col-lg-3 zooom my-3 image"
+      >
+        <img
+          style="height: 100%; width: 100%"
+          src="{% static 'img/img-01.jpg' %}"
+          alt=""
+        />
+      </div>
+      <div
+        onclick="showImage(this)"
+        class="col-12 col-sm-6 col-md-4 col-lg-3 zooom my-3 image"
+      >
+        <img
+          style="height: 100%; width: 100%"
+          src="{% static 'img/img-01.jpg' %}"
+          alt=""
+        />
+      </div>
+      <div
+        onclick="showImage(this)"
+        class="col-12 col-sm-6 col-md-4 col-lg-3 zooom my-3 image"
+      >
+        <img
+          style="height: 100%; width: 100%"
+          src="{% static 'img/img-01.jpg' %}"
+          alt=""
+        />
+      </div>
+      <div
+        onclick="showImage(this)"
+        class="col-12 col-sm-6 col-md-4 col-lg-3 zooom my-3 image"
+      >
+        <video
+          src="{% static 'video/hero.mp4' %}"
+          class="image"
+          onclick="showImage()"
+        ></video>
+      </div>
     </div>
   </div>
-  {% endblock %}
 </div>
+<script src="{% static 'js/gallery.js' %}"></script>
+{% endblock %}
