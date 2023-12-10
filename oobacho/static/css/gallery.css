@@ -1,0 +1,29 @@
+.zooom {
+    transition: 0.3;
+}
+
+.zooom:hover {
+    transform: scale(1.03);
+}
+
+.image {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.blackBack {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 100px;
+    z-index: 10;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.showedImg {
+    width: auto;
+    height: auto;
+}

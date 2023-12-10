@@ -1,35 +1,11 @@
 {% extends 'baseEn.html' %} {% load static %} {% block content %}
-<style>
-  .zooom {
-    transition: 0.3;
-  }
-
-  .zooom:hover {
-    transform: scale(1.03);
-  }
-
-  .image {
-    height: 200px;
-    width: 300px;
-    object-fit: cover;
-  }
-
-  .blackBack {
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 100%;
-    width: 100%;
-    position: relative;
-    padding: 100px;
-    z-index: 10;
-    /* display: flex;
-    justify-content: center; */
-  }
-
-  .showedImg {
-    width: auto;
-    height: auto;
-  }
-</style>
+<link rel="stylesheet" href="{% static 'css/product.css' %}" />
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}" />
+<div id="loader-wrapper">
+  <div id="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
 <div id="overlay">
   <div class="container">
     <div class="row justify-content-center">
@@ -77,4 +53,10 @@
   </div>
 </div>
 <script src="{% static 'js/gallery.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+  $(window).on("load", function () {
+    $("body").addClass("loaded");
+  });
+</script>
 {% endblock %}

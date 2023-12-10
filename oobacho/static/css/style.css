@@ -29,8 +29,8 @@ img {
     display: flex;
     width: calc(90%);
     padding: 0;
-    margin: 0;
     list-style-type: none;
+    margin: 0 auto;
 }
 
 .galleryImg {
@@ -500,4 +500,19 @@ img {
 
 .items-center {
     align-items: center;
+}
+
+.gallery_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.seeGallery {
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+    font-size: 16pt;
 }

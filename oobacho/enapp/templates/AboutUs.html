@@ -1,9 +1,17 @@
 {% extends 'baseEn.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/product.css' %}" />
+<!-- Loader -->
+<div id="loader-wrapper">
+  <div id="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+
 <div class="container px-4 py-5">
   <div class="row flex-lg-row-reverse align-items-center g-5">
     <div class="col-10 col-sm-8 col-lg-6">
       <img
-      style="width: auto; height: auto;"
+        style="width: auto; height: auto"
         src="{% static 'img/Landscape-Color.jpg' %}"
         class="d-block mx-lg-auto img-fluid"
         alt="Bootstrap Themes"
@@ -20,15 +28,14 @@
         prebuilt components, and powerful JavaScript plugins. Lorem ipsum dolor,
         sit amet consectetur adipisicing elit. Inventore illum nemo magni
         incidunt omnis neque suscipit aut quaerat tempora magnam temporibus,
-        dolorem ipsam minus quam eos quibusdam similique itaque dicta!
-        Lorem ipsum dolor,
-        sit amet consectetur adipisicing elit. Inventore illum nemo magni
-        incidunt omnis neque suscipit aut quaerat tempora magnam temporibus,
-        dolorem ipsam minus quam eos quibusdam similique itaque dicta!
-        Lorem ipsum dolor,
-        sit amet consectetur adipisicing elit. Inventore illum nemo magni
-        incidunt omnis neque suscipit aut quaerat tempora magnam temporibus,
-        dolorem ipsam minus quam eos quibusdam similique itaque dicta!
+        dolorem ipsam minus quam eos quibusdam similique itaque dicta! Lorem
+        ipsum dolor, sit amet consectetur adipisicing elit. Inventore illum nemo
+        magni incidunt omnis neque suscipit aut quaerat tempora magnam
+        temporibus, dolorem ipsam minus quam eos quibusdam similique itaque
+        dicta! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Inventore illum nemo magni incidunt omnis neque suscipit aut quaerat
+        tempora magnam temporibus, dolorem ipsam minus quam eos quibusdam
+        similique itaque dicta!
       </p>
     </div>
     <div>
@@ -55,4 +62,10 @@
     </div>
   </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+  $(window).on("load", () => {
+    $("body").addClass("loaded");
+  });
+</script>
 {% endblock %}
