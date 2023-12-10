@@ -84,13 +84,16 @@
             </li>
           </ul>
 
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" method="post"  action="{% url 'result' %}" >
             <input
               type="search"
               class="form-control form-control-dark"
               placeholder="Search..."
               aria-label="Search"
+              id="search"
+              name="searchvalue"
             />
+            {% csrf_token %}
           </form>
 
           <div class="text-end">
@@ -260,5 +263,6 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
     <script src="{% static 'js/index.js' %}"></script>
     <script src="{% static 'js/3a2eaf6206.js' %}"></script>
+    <!-- <script src="{% static 'js/search.js' %}"></script> -->
   </body>
 </html>

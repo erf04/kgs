@@ -59,7 +59,7 @@
             class="img-fluid"
           />
           <figcaption class="d-flex align-items-center justify-content-center">
-            <h2>Clocks</h2>
+            <h2 class="product_name">Clocks</h2>
             <a href="{% url 'productDetail' %}">View more</a>
           </figcaption>
         </figure>
@@ -350,6 +350,7 @@
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="{% static 'js/plugins.js' %}"></script>
+  <script src="{% static 'js/search.js' %}"></script>
   <script>
     $(window).on("load", function () {
       $("body").addClass("loaded");

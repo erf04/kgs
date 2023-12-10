@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Product
+from django.http import HttpRequest
 
 def home(request):
     products=Product.objects.all()[:9]
@@ -30,4 +31,12 @@ def seeproduct(request,id):
     product=Product.objects.get(pk=id)
     return render(request,"productDetail.html",{
         "product":product
+    })
+
+def result(request:HttpRequest):
+    searchresult=request.POST.get("searchvalue")
+    searchedproducts=Product.objects.filter(name__contains=searchresult)
+    return render(request,"resultSearch.html",{
+        "products":searchedproducts
+        
     })
