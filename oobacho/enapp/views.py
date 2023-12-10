@@ -16,6 +16,9 @@ def pro_detail(request):
 def AboutUs(request):
     return render(request,"AboutUs.html",{})
 
+def Contact(request):
+    return render(request,"Contact.html",{})\
+
 def products(request):
     theproducts=Product.objects.filter(name="sagi")
     
