@@ -37,11 +37,12 @@ def seeproduct(request,id):
 def result(request:HttpRequest):
     searchresult=request.POST.get("searchvalue")
     searchedproducts=Product.objects.filter(name__contains=searchresult)
+    if (len(searchresult)) == 0:
+        return render(request, "resultSearch.html")
     if len(searchedproducts)==0:
         messages.success(request, "No product found for search \"" + searchresult + "\"")
     else:    
         messages.success(request, "Result for search \"" + searchresult + "\":")
     return render(request,"resultSearch.html",{
-        "products":searchedproducts
-        
+        "products":searchedproducts 
     })
