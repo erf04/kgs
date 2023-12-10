@@ -1,0 +1,15 @@
+.resultImg {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.message {
+    color: #009999;
+}
+
+.notFound {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}

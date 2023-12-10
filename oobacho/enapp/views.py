@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Product
 from django.http import HttpRequest
+from django.contrib import messages
 
 def home(request):
     products=Product.objects.all()[:9]
@@ -36,6 +37,10 @@ def seeproduct(request,id):
 def result(request:HttpRequest):
     searchresult=request.POST.get("searchvalue")
     searchedproducts=Product.objects.filter(name__contains=searchresult)
+    if len(searchedproducts)==0:
+        messages.success(request, "No product found for search \"" + searchresult + "\"")
+    else:    
+        messages.success(request, "Result for search \"" + searchresult + "\":")
     return render(request,"resultSearch.html",{
         "products":searchedproducts
         
