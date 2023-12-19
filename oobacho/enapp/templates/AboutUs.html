@@ -20,12 +20,18 @@
     <div
       class="tm-hero d-flex justify-content-center align-items-center"
       data-parallax="scroll"
-      data-image-src="{% static 'img/hero.jpg' %}"
+      style="
+        background-image: url({% static 'img/output.jpg' %});
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+      "
     ></div>
-
     <div class="container-fluid tm-mt-60">
       <div class="row mb-4">
-        <h2 class="col-12 tm-text-primary">About Catalog-Z Website Template</h2>
+        <h2 class="col-12 tm-text-primary" id="t1">
+          About Catalog-Z Website Template
+        </h2>
       </div>
       <div class="row tm-mb-74 tm-row-1640">
         <div class="col-lg-5 col-md-6 col-12 mb-3">
@@ -81,7 +87,9 @@
       <div class="row tm-mb-50">
         <div class="col-md-6 col-12">
           <div class="tm-about-2-col">
-            <h2 class="tm-text-primary mb-4">Left side of 2-Column content</h2>
+            <h2 class="tm-text-primary mb-4" id="t2">
+              Left side of 2-Column content
+            </h2>
             <p class="mb-4">
               Pellentesque urna odio, scelerisque eu mauris vitae, vestibulum
               sodales neque. Ut augue justo, tincidunt nec aliquet ac, cursus
@@ -98,7 +106,9 @@
         </div>
         <div class="col-md-6 col-12">
           <div class="tm-about-2-col">
-            <h2 class="tm-text-primary mb-4">Right-side Title goes here</h2>
+            <h2 class="tm-text-primary mb-4" id="t3">
+              Right-side Title goes here
+            </h2>
             <p class="mb-4">
               Pellentesque urna odio, scelerisque eu mauris vitae, vestibulum
               sodales neque. Ut augue justo, tincidunt nec aliquet ac, cursus
@@ -121,7 +131,7 @@
             <div class="tm-about-icon-container mb-5">
               <i class="fas fa-desktop fa-3x tm-text-primary"></i>
             </div>
-            <h2 class="tm-text-primary mb-4">Three-column title one</h2>
+            <h2 class="tm-text-primary mb-4" id="t4">Three-column title one</h2>
             <p class="mb-4">
               Integer tristique arcu scelerisque mauris posuere convallis. Fusce
               egestas ipsum sapien, hendrerit ultricies nisi viverra eget.
@@ -139,16 +149,18 @@
             <div class="tm-about-icon-container mb-5">
               <i class="fas fa-mobile-alt fa-3x tm-text-primary"></i>
             </div>
-            <h2 class="tm-text-primary mb-4">Title two of three-column</h2>
+            <h2 class="tm-text-primary mb-4" id="t5">
+              Title two of three-column
+            </h2>
             <p class="tm-mb-50">
               Donec nec est tincidunt, rhoncus nulla sit amet, imperdiet augue.
               Phasellus sodales placerat ipsum ac auctor. Mauris molestie
               blandit turpis. Mauris ante tellus, feugiat nec metus non,
               bibendum semper velit.
             </p>
-            <div class="text-center">
+            <!-- <div class="text-center">
               <a href="#" class="btn btn-primary">Read More</a>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-md-4 col-12">
@@ -156,7 +168,7 @@
             <div class="tm-about-icon-container mb-5">
               <i class="fas fa-photo-video fa-3x tm-text-primary"></i>
             </div>
-            <h2 class="tm-text-primary mb-4">Third Title goes here</h2>
+            <h2 class="tm-text-primary mb-4" id="t6">Third Title goes here</h2>
             <p class="mb-4">
               Pellentesque habitant morbi tristique senectus et netus et
               malesuada fames ac turpis egestas. Donec nec est tincidunt,

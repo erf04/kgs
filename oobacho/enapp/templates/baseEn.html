@@ -21,11 +21,11 @@
           class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
         >
           <a
-            href="."
+            href="{% url 'enhome' %}"
             class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
           >
             <img
-              src="{% static 'img/logo-social.png' %}"
+              src="{% static 'img/logo1.w.png' %}"
               class="me-4"
               style="width: 70px; height: 50px"
             />
@@ -34,11 +34,11 @@
           <ul
             class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
           >
-            <li>
+            <!-- <li>
               <a href="{% url 'enhome' %}" class="nav-link px-3 text-secondary"
                 >Home</a
               >
-            </li>
+            </li> -->
             <li>
               <div class="btn-group nav-link">
                 <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
@@ -78,13 +78,66 @@
             </li>
             <!-- <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li> -->
             <li><a href="#" class="nav-link px-3 text-white">FAQs</a></li>
-            <li><a href="{% url 'AboutUs' %}" class="nav-link px-3 text-white">About</a></li>
+            <div class="btn-group nav-link">
+              <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
+              <a
+                class="text-decoration-none text-white pl-3"
+                href="{% url 'AboutUs' %}"
+                >About</a
+              >
+              <button
+                type="button"
+                class="btn btn-dark dropdown-toggle p-0"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              ></button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#t1"
+                    >About Catalog-Z Website Template</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#t2"
+                    >Left side of 2-Column content</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#t3"
+                    >Right-side Title goes here</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#t4">Three-column title one</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#t5"
+                    >Title two of three-column</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#t6">Third Title goes here</a>
+                </li>
+                <!-- <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Separated link</a>
+                </li> -->
+              </ul>
+            </div>
+            <!-- <li><a href="{% url 'AboutUs' %}" class="nav-link px-3 text-white">About</a></li> -->
             <li>
-              <a href="{% url 'Contact' %}" class="nav-link px-3 text-white">Contact</a>
+              <a href="{% url 'Contact' %}" class="nav-link px-3 text-white"
+                >Contact</a
+              >
             </li>
           </ul>
 
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" method="post"  action="{% url 'result' %}" >
+          <form
+            class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"
+            role="search"
+            method="post"
+            action="{% url 'result' %}"
+          >
             <input
               type="search"
               class="form-control form-control-dark"
@@ -99,11 +152,11 @@
           </form>
 
           <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">
+            <!-- <button type="button" class="btn btn-outline-light me-2">
               Login
             </button>
-            <button type="button" class="btn btn-warning">Sign-up</button>
-            <button type="button" class="btn">
+            <button type="button" class="btn btn-warning">Sign-up</button> -->
+            <!-- <button type="button" class="btn">
               <div class="dropdown">
                 <button
                   class="btn btn-secondary dropdown-toggle"
@@ -116,7 +169,7 @@
 
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="{% url 'home' %}"
+                    <a class="dropdown-item" href=""
                       >Persion - فارسی</a
                     >
                   </li>
@@ -127,7 +180,7 @@
                   </li>
                 </ul>
               </div>
-            </button>
+            </button> -->
           </div>
         </div>
       </div>
@@ -265,6 +318,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
     <script src="{% static 'js/index.js' %}"></script>
     <script src="{% static 'js/3a2eaf6206.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- <script src="{% static 'js/search.js' %}"></script> -->
   </body>
 </html>

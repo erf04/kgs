@@ -1,17 +1,39 @@
-// $(".multi-item-carousel .item").each(function () {
-//   var next = $(this).next();
-//   if (!next.length) {
-//     next = $(this).siblings(":first");
-//   }
-//   next.children(":first-child").clone().appendTo($(this));
+$("#owl-demo").owlCarousel({
+  navigation: true,
+});
+$(window).on("load", () => {
+  $("body").addClass("loaded");
+});
 
-//   if (next.next().length > 0) {
-//     next.next().children(":first-child").clone().appendTo($(this));
-//   } else {
-//     $(this)
-//       .siblings(":first")
-//       .children(":first-child")
-//       .clone()
-//       .appendTo($(this));
-//   }
+// $(".owl-carousel").owlCarousel({
+//   loop: true,
+//   margin: 10,
+//   nav: true,
+//   responsive: {
+//     0: {
+//       items: 1,
+//     },
+//     600: {
+//       items: 3,
+//     },
+//     1000: {
+//       items: 5,
+//     },
+//   },
 // });
+
+var owl = $(".owl-carousel");
+owl.owlCarousel({
+  items: 4,
+  loop: true,
+  margin: 10,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+});
+$(".play").on("click", function () {
+  owl.trigger("play.owl.autoplay", [1000]);
+});
+$(".stop").on("click", function () {
+  owl.trigger("stop.owl.autoplay");
+});
