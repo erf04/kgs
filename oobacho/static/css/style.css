@@ -595,10 +595,36 @@ img {
     }
 }
 
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.linkedin-icon,
 .whatsapp-icon {
     font-size: 30px;
-    color: green;
-    border: 2px solid green;
     border-radius: 5px;
     padding: 3px;
+    transition: 0.2s;
+}
+
+.whatsapp-icon {
+    color: green;
+    border: 2px solid green;
+}
+
+.whatsapp-icon:hover {
+    color: white;
+    background-color: green;
+}
+
+.linkedin-icon {
+    color: blue;
+    border: 2px solid blue;
+}
+
+.linkedin-icon:hover {
+    color: white;
+    background-color: blue;
 }
