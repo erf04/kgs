@@ -12,6 +12,10 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
@@ -128,6 +132,11 @@
             <li>
               <a href="{% url 'Contact' %}" class="nav-link px-3 text-white"
                 >Contact</a
+              >
+            </li>
+            <li>
+              <a href="{% url 'E_N' %}" class="nav-link px-3 text-white"
+                >Events & News</a
               >
             </li>
           </ul>
@@ -282,6 +291,21 @@
                 <button class="btn btn-primary" type="button">Subscribe</button>
               </div>
             </form>
+            <div class="upComming">
+              <h6>Up Comming Events</h6>
+              <a href="{% url 'E_N' %}">
+                <img
+                  class="eventImg"
+                  src="{% static 'img/people-4.jpg' %}"
+                  alt=""
+                />
+              </a>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
+                aliquam itaque tempore fugiat sequi ducimus aut. Fugit ducimus
+                reiciendis fugiat?
+              </p>
+            </div>
           </div>
         </div>
 
@@ -290,13 +314,13 @@
           id="contact"
         >
           <div class="row">
+            <div class="col-auto">
+              <i class="fab fa-whatsapp whatsapp-icon"></i>
+            </div>
             <div class="col-auto"><i class="fa fa-phone"></i> 09123456789</div>
             <div class="col-auto"><span>&#9742;</span> 07131234567</div>
             <div class="col-auto">
               <i class="fa fa-globe"></i> exmample@gmail.com
-            </div>
-            <div class="col-auto">
-              <i class="fa fa-map-marker"></i> Shiraz, ....
             </div>
           </div>
         </div>
@@ -314,11 +338,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-    <script src="{% static 'js/index.js' %}"></script>
-    <script src="{% static 'js/3a2eaf6206.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- <script src="{% static 'js/search.js' %}"></script> -->
+    <script src="{% static 'js/3a2eaf6206.js' %}"></script>
   </body>
 </html>

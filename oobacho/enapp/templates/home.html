@@ -144,21 +144,12 @@
 </div>
 
 <!-- Products -->
-<div class="album py-5 bg-body-tertiary" id="products">
+<div class="album py-5" id="products">
   <div class="container">
     <div class="flex items-center justify-between">
       <div class="flex items-center">
         <h4 style="font-size: 28pt">Products</h4>
       </div>
-      <a class="flex items-center more-products" href="{% url 'products' %}"
-        ><span>
-          See more<img
-            class="arrow-more-pro"
-            src="{% static 'icons/icons8-arrow-50.png' %}"
-            alt=""
-          />
-        </span>
-      </a>
     </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       {% for product in products %}
@@ -189,6 +180,9 @@
       </div>
       {% endfor %}
     </div>
+    <a href="{% url 'products' %}">
+      <button class="button-52" role="button">See More</button>
+    </a>
   </div>
 </div>
 
@@ -196,7 +190,6 @@
 <div class="container mt-4 mb-5">
   <div class="gallery_head">
     <h1>Gallery</h1>
-    <a href="{% url 'gallery' %}" class="seeGallery">See all</a>
   </div>
   <ul id="gallery">
     <li class="galleryImg">
@@ -250,64 +243,20 @@
       /></a>
     </li>
   </ul>
+  <a href="{% url 'gallery' %}">
+    <button class="button-52" role="button">See More</button>
+  </a>
 </div>
 
 <!-- Certification -->
-<div class="container">
+<div class="container my-5">
+  <h2>Certification</h2>
   <div class="owl-carousel owl-theme">
-    <!-- {% for image in images %}
+    {% for img in certifications %}
     <div class="item">
-      <img src="{{image.image.url}}" alt="" />
+      <img src="{{img.image.url}}" alt="" title="{{img.title}}" />
     </div>
-    {% endfor %} -->
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
-    <div class="item">
-      <img src="{% static 'img/digital_camera_photo-1080x675.jpg' %}" alt="" />
-    </div>
+    {% endfor %}
   </div>
 </div>
 
@@ -315,5 +264,6 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
 <script src="{% static 'css\OwlCarousel2-2.3.4\dist\owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
 
 {% endblock %}

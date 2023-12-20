@@ -1,12 +1,14 @@
 from django.shortcuts import render
-from .models import Product
+from .models import Product, Certification
 from django.http import HttpRequest
 from django.contrib import messages
 
 def home(request):
     products=Product.objects.all()[:9]
+    cer=Certification.objects.all()[:9]
     return render(request,"home.html",{
-        "products":products
+        "products":products,
+        "certifications":cer,
     })
 
 def gallery(request):
@@ -20,6 +22,10 @@ def AboutUs(request):
 
 def Contact(request):
     return render(request,"Contact.html",{})\
+
+def Event_News(request):
+    return render(request,"Event_News.html",{})\
+
 
 def products(request):
     theproducts=Product.objects.filter(name="sagi")
