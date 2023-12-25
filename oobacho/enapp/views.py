@@ -21,11 +21,13 @@ def AboutUs(request):
     return render(request,"AboutUs.html",{})
 
 def Contact(request):
-    return render(request,"Contact.html",{})\
+    return render(request,"Contact.html",{})
 
 def Event_News(request):
-    return render(request,"Event_News.html",{})\
+    return render(request,"Event_News.html",{})
 
+def seeEventNews(request):
+    return render(request,"seeEventNews.html",{})
 
 def products(request):
     theproducts=Product.objects.filter(name="sagi")

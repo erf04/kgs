@@ -1,3 +1,17 @@
 {% extends 'baseEn.html' %} {% load static %} {% block content %}
-<h1>gaaaaaaaaaaaaaaaaav</h1>
+<link rel="stylesheet" href="{% static 'css/Event_News.css' %}" />
+<a class="seeLink" href="{% url 'seeEventNews' %}">
+  <div class="content container">
+    <div class="img-container">
+      <img class="img" src="{% static 'img/img-08.jpg' %}" alt="" />
+    </div>
+    <div class="discription">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, labore
+        rem doloribus a deleniti consequuntur delectus illum eligendi recusandae
+        necessitatibus?
+      </p>
+    </div>
+  </div>
+</a>
 {% endblock %}

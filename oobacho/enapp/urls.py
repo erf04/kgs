@@ -11,4 +11,5 @@ urlpatterns = [
     path('seeproduct/<int:id>/',views.seeproduct,name="seeproduct"),
     path('resultSearch/',views.result,name="result"),
     path('Events_News/',views.Event_News,name="E_N"),
+    path('seeEventsNews/',views.seeEventNews,name="seeEventNews"),
 ]
