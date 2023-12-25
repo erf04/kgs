@@ -2,7 +2,7 @@
     display: flex;
     width: 100%;
     height: auto;
-    border: 1px solid gray;
+    border: 1px solid rgb(199, 199, 199);
     padding: 0;
     transition: .3s ease;
     transition-delay: .1s;
@@ -11,8 +11,6 @@
 }
 
 .content:hover {
-    /* cursor: pointer; */
-    background-color: #f5f5f5;
     box-shadow: -1px 1px 5px #7d7d7d;
 }
 
@@ -35,7 +33,44 @@
     display: flex;
     align-items: center;
     padding: 10px;
+    background-repeat: no-repeat;
 }
+
+@keyframes colorChange {
+    0% {
+        background-image: url("../img/d9d9d9.png");
+        background-size: 0% 100%;
+    }
+
+    100% {
+        background-image: url("../img/d9d9d9.png");
+        background-size: 100% 100%;
+    }
+}
+
+.discription:hover {
+    animation: colorChange .6s;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
+}
+
+/* @keyframes colorChangeRev {
+    0% {
+        background-image: url("../img/d9d9d9.png");
+        background-size: 100% 100%;
+    }
+
+    100% {
+        background-image: url("../img/d9d9d9.png");
+        background-size: 0% 100%;
+    }
+}
+
+.discription:not(:hover) {
+    animation: colorChangeRev .6s;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
+} */
 
 @media screen and (max-width: 768px) {
     .content {
