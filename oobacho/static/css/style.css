@@ -470,12 +470,24 @@ img {
     transition: 1s;
 } */
 
-.zooom {
+.little-zooom {
     transition: transform .2s;
 }
 
-.zooom:hover {
+.little-zooom:hover {
     transform: scale(1.04);
+}
+
+.medium-zooom {
+    transition: transform .2s;
+}
+
+.medium-zooom:hover {
+    transform: scale(1.2);
+}
+
+.zooomDiv {
+    overflow: hidden;
 }
 
 .more-products {
