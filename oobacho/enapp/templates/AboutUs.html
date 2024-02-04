@@ -24,7 +24,6 @@
         background-image: url({% static 'img/output.jpg' %});
         background-size: cover;
         background-repeat: no-repeat;
-        
       "
     ></div>
     <div class="container-fluid tm-mt-60">
@@ -45,10 +44,7 @@
           <div class="tm-about-img-text">
             <p class="mb-4">
               You may support TemplateMo website by making
-              <a
-                href="https://paypal.me/templatemo"
-                target="_parent"
-                rel="sponsored"
+              <a href="{% url 'Contact' %}" target="_parent" rel="sponsored"
                 >a small contribution</a
               >
               via PayPal. This will be helpful for us. We hope you like this
