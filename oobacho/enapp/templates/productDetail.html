@@ -2,12 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalog-Z Photo Detail Page</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/product.css' %}" />
   </head>
   <body>
     <!-- Page Loader -->
@@ -16,7 +15,12 @@
       <div class="loader-section section-left"></div>
       <div class="loader-section section-right"></div>
     </div>
+
     <div
+      class="tm-hero"
+      style="background-image: url({% static 'img/output.jpg' %})"
+    ></div>
+    <!-- <div
       class="tm-hero d-flex justify-content-center align-items-center"
       data-parallax="scroll"
       data-image-src="{% static 'img/hero.jpg' %}"
@@ -32,7 +36,7 @@
           <i class="fas fa-search"></i>
         </button>
       </form>
-    </div>
+    </div> -->
 
     <div class="container-fluid tm-container-content tm-mt-60">
       <div class="row mb-4">
@@ -44,7 +48,17 @@
         </div>
         <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
           <div class="tm-bg-gray tm-video-details">
-            <p class="mb-4">
+            <div class="d-flex justify-content-center">
+              <!-- <div class="input-group mb-3"> -->
+                <!-- <input type="email" class="form-control" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+              <!-- </div> -->
+              <!-- <a href="https://mail.google.com/">Go to Gmail</a> -->
+              <!-- <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=email@example.com&su=Subject&body=Body">Compose Email</a> -->
+              <button type="button" class="btn btn-info">
+                <a style="color: black;" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=hasan84heydari@gmail.com" target="_blank">Compose Email</a>
+              </button>
+            </div>
+            <!-- <p class="mb-4">
               Please support us by making
               <a
                 href="https://paypal.me/templatemo"
@@ -56,16 +70,16 @@
             </p>
             <div class="text-center mb-5">
               <a href="#" class="btn btn-primary tm-btn-big">Download</a>
-            </div>
+            </div> -->
             <div class="mb-4 d-flex flex-wrap">
-              <div class="mr-4 mb-2">
+              <!-- <div class="mr-4 mb-2">
                 <span class="tm-text-gray-dark">Dimension: </span
                 ><span class="tm-text-primary">1920x1080</span>
-              </div>
+              </div> 
               <div class="mr-4 mb-2">
                 <span class="tm-text-gray-dark">Format: </span
                 ><span class="tm-text-primary">JPG</span>
-              </div>
+              </div> -->
             </div>
             <div class="mb-4">
               <h3 class="tm-text-gray-dark mb-3">License</h3>
