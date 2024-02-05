@@ -27,7 +27,7 @@ img {
 
 #gallery {
     display: flex;
-    width: calc(90%);
+    width: 90%;
     padding: 0;
     list-style-type: none;
     margin: 0 auto;
@@ -48,9 +48,10 @@ img {
     --lerp-1: 0.5787037;
     --lerp-2: 0.2962963;
     --lerp-3: 0.125;
-    --lerp-4: 0.037037;
+    /* --lerp-3: 0; */
+    /* --lerp-4: 0.037037;
     --lerp-5: 0.0046296;
-    --lerp-6: 0;
+    --lerp-6: 0; */
 }
 
 .galleryLink {
@@ -58,33 +59,34 @@ img {
 }
 
 .galleryImg {
-    flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+    flex: calc(0.3 + (var(--active-lerp, 0) * 1));
     transition: flex 0.2s ease;
 }
 
 .galleryImg:is(:hover, :focus-within) {
     --active-lerp: var(--lerp-0);
-    z-index: 7;
+    z-index: 3;
 }
 
 .galleryImg:has(+ li:is(:hover, :focus-within)),
 .galleryImg:is(:hover, :focus-within)+li {
     --active-lerp: var(--lerp-1);
-    z-index: 6;
+    z-index: 2;
 }
 
 .galleryImg:has(+ li + li:is(:hover, :focus-within)),
 .galleryImg:is(:hover, :focus-within)+li+li {
     --active-lerp: var(--lerp-2);
-    z-index: 5;
+    z-index: 1;
 }
 
-.galleryImg:has(+ li + li + li:is(:hover, :focus-within)),
+/* .galleryImg:has(+ li + li + li:is(:hover, :focus-within)),
 .galleryImg:is(:hover, :focus-within)+li+li+li {
     --active-lerp: var(--lerp-3);
     z-index: 4;
-}
+} */
 
+/*
 .galleryImg:has(+ li + li + li + li:is(:hover, :focus-within)),
 .galleryImg:is(:hover, :focus-within)+li+li+li+li {
     --active-lerp: var(--lerp-4);
@@ -101,7 +103,7 @@ img {
 .galleryImg:is(:hover, :focus-within)+li+li+li+li+li+li {
     --active-lerp: var(--lerp-6);
     z-index: 1;
-}
+} */
 
 #certification {
     background-color: rgba(248, 249, 250, 1) !important;

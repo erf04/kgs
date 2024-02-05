@@ -6,49 +6,118 @@
   <div class="loader-section section-left"></div>
   <div class="loader-section section-right"></div>
 </div>
-<div id="overlay">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div
-        onclick="showImage(this)"
-        class="col-12 col-sm-6 col-md-4 col-lg-3 zooom my-3 image"
-      >
-        <img
-          style="height: 100%; width: 100%"
-          src="{% static 'img/img-01.jpg' %}"
-          alt=""
-        />
-      </div>
-      <div
-        onclick="showImage(this)"
-        class="col-12 col-sm-6 col-md-4 col-lg-3 zooom my-3 image"
-      >
-        <img
-          style="height: 100%; width: 100%"
-          src="{% static 'img/img-01.jpg' %}"
-          alt=""
-        />
-      </div>
-      <div
-        onclick="showImage(this)"
-        class="col-12 col-sm-6 col-md-4 col-lg-3 zooom my-3 image"
-      >
-        <img
-          style="height: 100%; width: 100%"
-          src="{% static 'img/img-01.jpg' %}"
-          alt=""
-        />
-      </div>
-      <div
-        onclick="showImage(this)"
-        class="col-12 col-sm-6 col-md-4 col-lg-3 zooom my-3 image"
-      >
-        <video
-          src="{% static 'video/hero.mp4' %}"
-          class="image"
-          onclick="showImage()"
-        ></video>
-      </div>
+<div class="container">
+  <div class="d-flex justify-content-evenly flex-wrap">
+    <!-- image 1 -->
+    <img
+      class="myImg"
+      style="width: 200px; height: 184px"
+      src="{% static 'img/img-01.jpg' %}"
+      alt="Image_wallpaper"
+      onclick="showBigger(1)"
+    />
+    <div id="myModal" class="modal">
+      <span class="close">×</span>
+      <img src="{% static 'img/img-01.jpg' %}" class="modal-content img01" />
+      <div class="caption"></div>
+    </div>
+
+    <!-- image 2 -->
+    <img
+      class="myImg"
+      style="width: 200px; height: 184px"
+      src="{% static 'img/img-01.jpg' %}"
+      alt="Image_wallpaper"
+      onclick="showBigger(2)"
+    />
+    <div id="myModal" class="modal">
+      <span class="close">×</span>
+      <img src="{% static 'img/img-01.jpg' %}" class="modal-content img01" />
+      <div class="caption"></div>
+    </div>
+
+    <!-- image 3 -->
+    <img
+      class="myImg"
+      style="width: 200px; height: 184px"
+      src="{% static 'img/img-01.jpg' %}"
+      alt="Image_wallpaper"
+      onclick="showBigger(3)"
+    />
+    <div id="myModal" class="modal">
+      <span class="close">×</span>
+      <img src="{% static 'img/img-01.jpg' %}" class="modal-content img01" />
+      <div class="caption"></div>
+    </div>
+
+    <!-- image 4 -->
+    <img
+      class="myImg"
+      style="width: 200px; height: 184px"
+      src="{% static 'img/img-01.jpg' %}"
+      alt="Image_wallpaper"
+      onclick="showBigger(3)"
+    />
+    <div id="myModal" class="modal">
+      <span class="close">×</span>
+      <img src="{% static 'img/img-01.jpg' %}" class="modal-content img01" />
+      <div class="caption"></div>
+    </div>
+
+    <!-- image 5 -->
+    <img
+      class="myImg"
+      style="width: 200px; height: 184px"
+      src="{% static 'img/img-01.jpg' %}"
+      alt="Image_wallpaper"
+      onclick="showBigger(3)"
+    />
+    <div id="myModal" class="modal">
+      <span class="close">×</span>
+      <img src="{% static 'img/img-01.jpg' %}" class="modal-content img01" />
+      <div class="caption"></div>
+    </div>
+
+    <!-- image 6 -->
+    <img
+      class="myImg"
+      style="width: 200px; height: 184px"
+      src="{% static 'img/img-01.jpg' %}"
+      alt="Image_wallpaper"
+      onclick="showBigger(3)"
+    />
+    <div id="myModal" class="modal">
+      <span class="close">×</span>
+      <img src="{% static 'img/img-01.jpg' %}" class="modal-content img01" />
+      <div class="caption"></div>
+    </div>
+
+    <!-- image 7 -->
+    <img
+      class="myImg"
+      style="width: 200px; height: 184px"
+      src="{% static 'img/img-01.jpg' %}"
+      alt="Image_wallpaper"
+      onclick="showBigger(3)"
+    />
+    <div id="myModal" class="modal">
+      <span class="close">×</span>
+      <img src="{% static 'img/img-01.jpg' %}" class="modal-content img01" />
+      <div class="caption"></div>
+    </div>
+
+    <!-- image 8 -->
+    <img
+      class="myImg"
+      style="width: 200px; height: 184px"
+      src="{% static 'img/img-01.jpg' %}"
+      alt="Image_wallpaper"
+      onclick="showBigger(3)"
+    />
+    <div id="myModal" class="modal">
+      <span class="close">×</span>
+      <img src="{% static 'img/img-01.jpg' %}" class="modal-content img01" />
+      <div class="caption"></div>
     </div>
   </div>
 </div>
@@ -58,5 +127,34 @@
   $(window).on("load", function () {
     $("body").addClass("loaded");
   });
+
+  // window.onload = function () {
+  // add window.onload here and set it euqal to a function
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementsByClassName("myImg");
+  var modalImg = document.getElementsByClassName("img01");
+  var captionText = document.getElementsByClassName("caption");
+  // img.onclick = function () {
+  //   modal.style.display = "block";
+  //   modalImg.src = this.src;
+  //   captionText.innerHTML = this.alt;
+  // };
+
+  function showBigger(n) {
+    modal.style.display = "block";
+    modalImg[n - 1].src = img[n - 1].src;
+    captionText[n - 1].innerHTML = img[n - 1].alt;
+  }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+  // };
 </script>
 {% endblock %}
