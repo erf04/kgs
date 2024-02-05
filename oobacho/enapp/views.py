@@ -4,10 +4,14 @@ from django.http import HttpRequest
 from django.contrib import messages
 
 def home(request):
-    products=Product.objects.all()[:9]
+    products=Product.objects.all()[:3]
+    products2=Product.objects.all()[:9]
     cer=Certification.objects.all()[:9]
+    myrange=range(1,4)
+    final=zip(products,myrange)
     return render(request,"home.html",{
-        "products":products,
+        "products":final,
+        "products2":products2,
         "certifications":cer,
     })
 
@@ -36,7 +40,7 @@ def products(request):
         "htmlproducts":theproducts,
     })
 
-def seeproduct(request,id):
+def seeproduct(request:HttpRequest,id):
     product=Product.objects.get(pk=id)
     return render(request,"productDetail.html",{
         "product":product
