@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Product, Certification
 from django.http import HttpRequest
 from django.contrib import messages
+from .forms import ProductForm
 
 def home(request):
     products=Product.objects.all()[:3]
@@ -61,3 +62,20 @@ def result(request:HttpRequest):
     return render(request,"resultSearch.html",{
         "products":searchedproducts 
     })
+
+
+def update_product(request:HttpRequest,id):
+    product=Product.objects.get(pk=id)
+    if request.method=="POST":
+        form=ProductForm(request.POST,request.FILES,instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request,"your product updated successfully")
+            return redirect("enhome")
+        else:
+            print(form.errors)
+        
+    form=ProductForm(instance=product) 
+    return render(request,"update-product.html",{"form":form,"product":product})
+
+
