@@ -81,7 +81,11 @@
               </div>
             </li>
             <!-- <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li> -->
-            <li><a href="#" class="nav-link px-3 text-white">FAQs</a></li>
+            <li>
+              <a href="{% url 'FAQs' %}" class="nav-link px-3 text-white"
+                >FAQs</a
+              >
+            </li>
             <div class="btn-group nav-link">
               <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
               <a
@@ -112,7 +116,9 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'AboutUs' %}#t4">Three-column title one</a>
+                  <a class="dropdown-item" href="{% url 'AboutUs' %}#t4"
+                    >Three-column title one</a
+                  >
                 </li>
                 <li>
                   <a class="dropdown-item" href="{% url 'AboutUs' %}#t5"
@@ -120,7 +126,9 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="{% url 'AboutUs' %}#t6">Third Title goes here</a>
+                  <a class="dropdown-item" href="{% url 'AboutUs' %}#t6"
+                    >Third Title goes here</a
+                  >
                 </li>
                 <!-- <li><hr class="dropdown-divider" /></li>
                 <li>

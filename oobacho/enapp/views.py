@@ -42,6 +42,9 @@ def seeproduct(request,id):
         "product":product
     })
 
+def FAQs(request):
+    return render(request,"FAQs.html",{})
+
 def result(request:HttpRequest):
     searchresult=request.POST.get("searchvalue")
     searchedproducts=Product.objects.filter(name__contains=searchresult)

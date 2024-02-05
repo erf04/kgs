@@ -1,6 +1,6 @@
-$("#owl-demo").owlCarousel({
-  navigation: true,
-});
+// $("#owl-demo").owlCarousel({
+//   navigation: true,
+// });
 $(window).on("load", () => {
   $("body").addClass("loaded");
 });

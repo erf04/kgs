@@ -12,4 +12,5 @@ urlpatterns = [
     path('resultSearch/',views.result,name="result"),
     path('Events_News/',views.Event_News,name="E_N"),
     path('seeEventsNews/',views.seeEventNews,name="seeEventNews"),
+    path('FAQs/',views.FAQs,name="FAQs"),
 ]
