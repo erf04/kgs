@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Dosis";
+    src: local("Dosis"), url(../fonts/dosis/Dosis-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Exo_2";
+    src: local("Exo_2"), url(../fonts/exo2/Exo2-Medium.ttf) format("truetype");
+}
+
+body {
+    font-family: "Exo_2";
+}
+
 img {
     object-fit: cover;
 }
