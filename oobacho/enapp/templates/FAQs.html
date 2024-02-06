@@ -1,12 +1,159 @@
-{% extends 'baseEn.html' %} {% load static %} {% block content %}
-<!-- <link rel="stylesheet" href="{% static 'css/product.css' %}" /> -->
-<div id="loader-wrapper">
-  <div id="loader"></div>
-  <div class="loader-section section-left"></div>
-  <div class="loader-section section-right"></div>
-</div>
-<!-- Script For Loader -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
-<script src="{% static 'js/index.js' %}"></script>
+{% extends "baseEn.html" %} {% load static %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-ZrJeCn3w+AdCZ3NzjGznlv7XK+uE7QID6jJlf7SWez9hnHoHqE4J+VCLaNOv8/JdW8Rb5ubXn55zY2v0fKBlgg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      .faq {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .faq h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+      }
+      .question {
+        margin-bottom: 20px;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: background-color 0.3s ease;
+      }
+      .question:hover {
+        background-color: #e9e9e9;
+      }
+      .question strong {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        font-size: 18px;
+        color: #333;
+      }
+      .question .question-title {
+        flex: 1;
+      }
+      .question .icon {
+        font-size: 20px;
+        transition: transform 0.3s ease;
+      }
+      .question.open .icon {
+        transform: rotate(180deg);
+      }
+      .answer {
+        padding: 0 20px 20px;
+        display: none;
+        background-color: #fff;
+        color: #666;
+        border-top: 1px solid #ddd;
+        transition: max-height 0.5s ease, padding 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+      }
+      .question.open .answer {
+        display: block;
+        max-height: 1000px;
+        padding: 20px 20px 20px;
+      }
+
+      /* Responsive Styling */
+      @media screen and (max-width: 600px) {
+        .faq {
+          padding: 10px;
+        }
+        .faq h2 {
+          font-size: 20px;
+        }
+        .question strong {
+          font-size: 16px;
+        }
+        .question .icon {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="question">
+        <strong class="question-title"
+          >What is Lorem Ipsum? <i class="icon fas fa-chevron-down"></i
+        ></strong>
+        <div class="answer">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+        </div>
+      </div>
+
+      <div class="question">
+        <strong class="question-title"
+          >Why do we use it? <i class="icon fas fa-chevron-down"></i
+        ></strong>
+        <div class="answer">
+          <p>
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout.
+          </p>
+        </div>
+      </div>
+
+      <div class="question">
+        <strong class="question-title"
+          >Where does it come from? <i class="icon fas fa-chevron-down"></i
+        ></strong>
+        <div class="answer">
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+          </p>
+        </div>
+      </div>
+
+      <!-- Add more questions and answers as needed -->
+    </div>
+
+    <script>
+      document.querySelectorAll(".question").forEach(function (question) {
+        question.addEventListener("click", function () {
+          this.classList.toggle("open");
+          var answer = this.querySelector(".answer");
+          if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+          } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
 {% endblock %}
