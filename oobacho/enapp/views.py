@@ -3,6 +3,7 @@ from .models import Product, Certification
 from django.http import HttpRequest
 from django.contrib import messages
 from .forms import ProductForm
+from django.contrib.auth import authenticate,login,logout
 
 def home(request):
     products=Product.objects.all()[:3]
@@ -77,5 +78,4 @@ def update_product(request:HttpRequest,id):
         
     form=ProductForm(instance=product) 
     return render(request,"update-product.html",{"form":form,"product":product})
-
 
