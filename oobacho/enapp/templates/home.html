@@ -1,4 +1,14 @@
 {% extends 'baseEn.html' %} {% load static %} {% block content %}
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{message}}<strong> by {{user}}</strong> 
+      <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+        <!-- <span aria-hidden="true">&times;</span> -->
+      </button>
+    </div>
+    {% endfor %}
+{% endif %}
 <!-- Loader -->
 <div id="loader-wrapper">
   <div id="loader"></div>
@@ -140,10 +150,16 @@
                   View
                 </button>
                 </a>
+                {% if user.is_authenticated %}
                 <a href="{% url 'update-product' product.pk %}"><button type="button" class="btn btn-sm btn-outline-secondary">
                   Edit
                 </button>
                 </a>
+                <a href="{% url 'delete-product' product.pk %}"><button type="button" class="btn btn-sm btn-outline-secondary">
+                  delete
+                </button>
+                </a>
+                {% endif %}
               </div>
               <small class="text-body-secondary">9 mins</small>
             </div>
@@ -151,6 +167,7 @@
         </div>
       </div>
       {% endfor %}
+      <a class="btn btn-primary" href="{% url 'create-product' %}">create a new</a>
     </div>
     <a href="{% url 'products' %}">
       <button class="button-52" role="button">See More</button>

@@ -1,0 +1,21 @@
+{% extends 'baseEn.html' %} {% load static %}
+
+{% block content %}
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{message}}<strong>by {{user}}</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    {% endfor %}
+{% endif %}
+<div class="container mt-5 mb-5">
+  <form action="{% url 'create-product' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="btn btn-primary mt-3">create</button>
+  </form>
+</div>
+{% endblock %}

@@ -13,5 +13,7 @@ urlpatterns = [
     path('Events_News/',views.Event_News,name="E_N"),
     path('seeEventsNews/',views.seeEventNews,name="seeEventNews"),
     path('FAQs/',views.FAQs,name="FAQs"),
-    path("update_product/<int:id>/",views.update_product,name="update-product")
+    path("update_product/<int:id>/",views.update_product,name="update-product"),
+    path("create_product/",views.create_product,name="create-product"),
+    path("delete_product/<int:id>/",views.delete_product,name='delete-product'),
 ]

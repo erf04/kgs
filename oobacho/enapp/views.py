@@ -4,6 +4,7 @@ from django.http import HttpRequest
 from django.contrib import messages
 from .forms import ProductForm
 from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     products=Product.objects.all()[:3]
@@ -65,6 +66,7 @@ def result(request:HttpRequest):
     })
 
 
+@login_required(login_url='/accounts/login')
 def update_product(request:HttpRequest,id):
     product=Product.objects.get(pk=id)
     if request.method=="POST":
@@ -79,3 +81,27 @@ def update_product(request:HttpRequest,id):
     form=ProductForm(instance=product) 
     return render(request,"update-product.html",{"form":form,"product":product})
 
+
+def delete_product(request:HttpRequest,id):
+    product=Product.objects.get(pk=id)
+    product.delete()
+    messages.error(request,"Your Product has been deleted Successfully!")
+    return redirect("enhome")
+
+
+def create_product(request:HttpRequest):
+    
+    if request.method=="POST":
+        form=ProductForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request,"your product created successfully")
+            return redirect("enhome")
+        else:
+            messages.error(request,"something wrong")
+            print(form.errors)    
+
+    form=ProductForm
+    return render(request,"create-product.html",{
+        "form":form
+    })

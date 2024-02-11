@@ -163,6 +163,13 @@
                 >Events & News</a
               >
             </li>
+            {% if user.is_authenticated %}
+            <li>
+              <a href="{% url 'logout' %}" class="nav-link px-3 text-white"
+                >logout</a
+              >
+            </li>
+            {% endif %}
           </ul>
 
           <form
