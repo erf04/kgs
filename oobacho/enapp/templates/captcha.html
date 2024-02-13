@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="arcaptcha" data-site-key="44m8emt72r"></div>
+    <script>
+      const arcaptcha_api = "https://api.arcaptcha.ir/arcaptcha/api/verify";
+
+      const result = await axios.post(arcaptcha_api, {
+          challenge_id: req.body["arcaptcha-token"],
+          site_key: "44m8emt72r",
+          secret_key: "mv3boz1qqedajagpxcrv"
+      });
+      if (result.data.success) {
+          console.log("OK!");
+      } else {
+        console.log("Error!");
+      }
+    </script>
+    <script src="https://widget.arcaptcha.ir/1/api.js" async defer></script>
+  </body>
+</html>
