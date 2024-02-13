@@ -54,7 +54,7 @@
     animation-delay: .2s;
 }
 
-/* @keyframes colorChangeRev {
+@keyframes colorChangeRev {
     0% {
         background-image: url("../img/d9d9d9.png");
         background-size: 100% 100%;
@@ -68,9 +68,9 @@
 
 .discription:not(:hover) {
     animation: colorChangeRev .6s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
     animation-delay: .2s;
-} */
+}
 
 @media screen and (max-width: 768px) {
     .content {

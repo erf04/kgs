@@ -7,22 +7,25 @@
   <div class="loader-section section-right"></div>
 </div>
 <!-- loader -->
-<a class="seeLink" href="{% url 'seeEventNews' %}">
-  <div class="content container little-zooom">
-    <div class="img-container">
-      <img class="img" src="{% static 'img/img-08.jpg' %}" alt="" />
+<div class="container">
+
+  <a class="seeLink" href="{% url 'seeEventNews' %}">
+    <div class="content little-zooom">
+      <div class="img-container">
+        <img class="img" src="{% static 'img/img-08.jpg' %}" alt="" />
+      </div>
+      <div class="discription">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, labore
+          rem doloribus a deleniti consequuntur delectus illum eligendi recusandae
+          necessitatibus?
+        </p>
+      </div>
     </div>
-    <div class="discription">
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, labore
-        rem doloribus a deleniti consequuntur delectus illum eligendi recusandae
-        necessitatibus?
-      </p>
-    </div>
-  </div>
-</a>
-<!-- Script For Loader -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
+  </a>
+</div>
+  <!-- Script For Loader -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
 <script src="{% static 'js/index.js' %}"></script>
 {% endblock %}
