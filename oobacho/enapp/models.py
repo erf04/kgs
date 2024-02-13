@@ -31,11 +31,26 @@ class Product(models.Model):
     
 
 class Certification(models.Model):
-    title=models.CharField(max_length=50)
+    title=models.CharField(max_length=500)
     image=models.ImageField(upload_to="mediafiles/certification/")
 
     def __str__(self) -> str:
         return self.title   
+    
+
+class Event(models.Model):
+    title=models.CharField(max_length=500)
+    description=models.TextField(max_length=1000)
+    image=models.ImageField(upload_to="mediafiles/event/images")
+    date=models.DateField(blank=True,null=True)
+    voice=models.FileField(upload_to="mediafiles/event/voices",blank=True)
+    attachment=models.FileField(upload_to="mediafiles/event/attachments", blank=True)
+
+    def __str__(self) -> str:
+        return self.title
+
+
+
 
 
     

@@ -1,0 +1,12 @@
+{% extends 'baseEn.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <form action="{% url 'create-event' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{form}}
+      <button type="submit" class="btn btn-primary mt-3">create</button>
+    </form>
+  </div>
+{% endblock %}

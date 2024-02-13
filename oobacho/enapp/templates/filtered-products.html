@@ -1,0 +1,141 @@
+{% extends 'baseEn.html' %} {% load static %} {% block content %}
+
+<!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" /> -->
+<!-- <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}" /> -->
+<!-- <link rel="stylesheet" href="{% static 'css/product.css' %}" /> -->
+<!-- Page Loader -->
+<div id="loader-wrapper">
+  <div id="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+<!-- {% for product in htmlproducts %}
+    <h1 class="btn btn-warning">{{product.name}}</h1>
+    <h2>{{product.description}}</h2>
+    {% endfor %} -->
+<div
+  class="tm-hero"
+></div>
+
+
+<div class="container tm-container-content tm-mt-60">
+  <div class="row">
+    <div class="col-md-2">
+      <!-- <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown link
+        </a>
+      
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div> -->
+      <div class="list-group">
+        {% for category,types in result %}
+        <div class="list-group-item">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{category.title}}
+            </button>
+            <div class="dropdown-menu">
+              {% for type in types %}
+              <a class="dropdown-item" href="{% url 'filtered-products' category.pk type.pk %}">{{type.title}}</a>
+              {% endfor %}
+            
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+        <div class="list-group-item">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown 2
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Option 1</a>
+              <a class="dropdown-item" href="#">Option 2</a>
+              <a class="dropdown-item" href="#">Option 3</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Add more dropdown items as needed -->
+    
+      </div>
+      
+    </div>
+    <div class="row col-md-10 tm-mb-90 tm-gallery">
+      <!-- for loop -->
+      {% for product in products %}
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-5">
+        <figure class="effect-ming tm-video-item">
+          <img
+            src="{% static 'img/img-03.jpg' %}"
+            alt="Image"
+            class="img-fluid"
+          />
+          <figcaption class="d-flex align-items-center justify-content-center">
+            <h2 class="product_name">Clocks</h2>
+            <a href="{% url 'productDetail' %}">View more</a>
+          </figcaption>
+        </figure>
+        <div class="d-flex justify-content-between tm-text-gray">
+          <span class="tm-text-gray-light">18 Oct 2020</span>
+          <span>9,906 views</span>
+        </div>
+      </div>
+      <!-- endfor -->
+      {% endfor %}
+
+      <div class="row mb-4">
+        <!-- <h2 class="col-6 tm-text-primary" id="type1">Type 1</h2> -->
+        <div class="col-6 d-flex justify-content-end align-items-center">
+          <form action="" class="tm-text-primary">
+            Page
+            <input
+              type="text"
+              value="1"
+              size="1"
+              class="tm-input-paging tm-text-primary"
+            />
+            of 200
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- row -->
+  <!-- <div class="row tm-mb-90">
+      <div
+        class="col-12 d-flex justify-content-between align-items-center tm-paging-col"
+      >
+        <a
+          href="javascript:void(0);"
+          class="btn btn-primary tm-btn-prev mb-2 disabled"
+          >Previous</a
+        >
+        <div class="tm-paging d-flex">
+          <a href="javascript:void(0);" class="active tm-paging-link">1</a>
+          <a href="javascript:void(0);" class="tm-paging-link">2</a>
+          <a href="javascript:void(0);" class="tm-paging-link">3</a>
+          <a href="javascript:void(0);" class="tm-paging-link">4</a>
+        </div>
+        <a href="javascript:void(0);" class="btn btn-primary tm-btn-next"
+          >Next Page</a
+        >
+      </div>
+    </div> -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<script>
+  $(window).on("load", function () {
+    $("body").addClass("loaded");
+  });
+</script>
+{% endblock %}

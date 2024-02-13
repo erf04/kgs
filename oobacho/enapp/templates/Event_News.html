@@ -9,20 +9,20 @@
 </div>
 <div class="tm-hero"></div>
 <div class="container">
-  <a class="seeLink" href="{% url 'seeEventNews' %}">
+  {% for event in events %}
+  <a class="seeLink" href="{% url 'seeEventNews' event.pk %}">
     <div class="content little-zooom">
       <div class="img-container">
-        <img class="img" src="{% static 'img/img-08.jpg' %}" alt="" />
+        <img class="img" src="{{event.image.url}}" alt="" />
       </div>
       <div class="discription">
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus,
-          labore rem doloribus a deleniti consequuntur delectus illum eligendi
-          recusandae necessitatibus?
+          {{event.description}}
         </p>
       </div>
     </div>
   </a>
+  {% endfor %}
 </div>
 <!-- Script For Loader -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

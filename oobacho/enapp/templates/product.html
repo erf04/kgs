@@ -15,305 +15,97 @@
     {% endfor %} -->
 <div
   class="tm-hero"
-  style="background-image: url({% static 'img/output.jpg' %})"
 ></div>
 
-<div class="container-fluid tm-container-content tm-mt-60">
-  <div class="row mb-4">
-    <h2 class="col-6 tm-text-primary" id="type1">Type 1</h2>
-    <div class="col-6 d-flex justify-content-end align-items-center">
-      <form action="" class="tm-text-primary">
-        Page
-        <input
-          type="text"
-          value="1"
-          size="1"
-          class="tm-input-paging tm-text-primary"
-        />
-        of 200
-      </form>
-    </div>
-  </div>
-  <div class="row tm-mb-90 tm-gallery">
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-03.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2 class="product_name">Clocks</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">18 Oct 2020</span>
-        <span>9,906 views</span>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-04.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Plants</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">14 Oct 2020</span>
-        <span>16,100 views</span>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-05.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Morning</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">12 Oct 2020</span>
-        <span>12,460 views</span>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-06.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Pinky</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">10 Oct 2020</span>
-        <span>11,402 views</span>
-      </div>
-    </div>
 
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-01.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Hangers</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">24 Sep 2020</span>
-        <span>16,008 views</span>
-      </div>
-    </div>
-
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-02.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Perfumes</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">20 Sep 2020</span>
-        <span>12,860 views</span>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-07.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Bus</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">16 Sep 2020</span>
-        <span>10,900 views</span>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-08.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>New York</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">12 Sep 2020</span>
-        <span>11,300 views</span>
-      </div>
-    </div>
-
-    <h2 class="tm-text-primary mb-4" id="type2">Type 2</h2>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-09.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Abstract</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">10 Sep 2020</span>
-        <span>42,700 views</span>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-10.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Flowers</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">8 Sep 2020</span>
-        <span>11,402 views</span>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-11.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Rosy</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">4 Sep 2020</span>
-        <span>32,906 views</span>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-12.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Rocki</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">28 Aug 2020</span>
-        <span>50,700 views</span>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-13.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Purple</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">22 Aug 2020</span>
-        <span>107,510 views</span>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-14.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Sea</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">14 Aug 2020</span>
-        <span>118,006 views</span>
-      </div>
-    </div>
+<div class="container tm-container-content tm-mt-60">
+  <div class="row">
+    <div class="col-md-2">
+      <!-- <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown link
+        </a>
+      
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div> -->
+      <div class="list-group">
+        {% for category,types in result %}
+        <div class="list-group-item">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{category.title}}
+            </button>
+            <div class="dropdown-menu">
+              {% for type in types %}
+              <a class="dropdown-item" href="{% url 'filtered-products' category.pk type.pk %}">{{type.title}}</a>
+              {% endfor %}
+            
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        
+        <div class="list-group-item">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown 2
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Option 1</a>
+              <a class="dropdown-item" href="#">Option 2</a>
+              <a class="dropdown-item" href="#">Option 3</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Add more dropdown items as needed -->
     
-    <h2 class="tm-text-primary mb-4" id="type3">Type 3</h2>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-15.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Turtle</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">9 Aug 2020</span>
-        <span>121,300 views</span>
       </div>
+      
     </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-      <figure class="effect-ming tm-video-item">
-        <img
-          src="{% static 'img/img-16.jpg' %}"
-          alt="Image"
-          class="img-fluid"
-        />
-        <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>Peace</h2>
-          <a href="{% url 'productDetail' %}">View more</a>
-        </figcaption>
-      </figure>
-      <div class="d-flex justify-content-between tm-text-gray">
-        <span class="tm-text-gray-light">3 Aug 2020</span>
-        <span>21,204 views</span>
+    <div class="row col-md-10 tm-mb-90 tm-gallery">
+      <!-- for loop -->
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-5">
+        <figure class="effect-ming tm-video-item">
+          <img
+            src="{% static 'img/img-03.jpg' %}"
+            alt="Image"
+            class="img-fluid"
+          />
+          <figcaption class="d-flex align-items-center justify-content-center">
+            <h2 class="product_name">Clocks</h2>
+            <a href="{% url 'productDetail' %}">View more</a>
+          </figcaption>
+        </figure>
+        <div class="d-flex justify-content-between tm-text-gray">
+          <span class="tm-text-gray-light">18 Oct 2020</span>
+          <span>9,906 views</span>
+        </div>
+      </div>
+      <!-- endfor -->
+
+      <div class="row mb-4">
+        <!-- <h2 class="col-6 tm-text-primary" id="type1">Type 1</h2> -->
+        <div class="col-6 d-flex justify-content-end align-items-center">
+          <form action="" class="tm-text-primary">
+            Page
+            <input
+              type="text"
+              value="1"
+              size="1"
+              class="tm-input-paging tm-text-primary"
+            />
+            of 200
+          </form>
+        </div>
       </div>
     </div>
   </div>
+</div>
   <!-- row -->
   <!-- <div class="row tm-mb-90">
       <div

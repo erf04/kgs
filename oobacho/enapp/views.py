@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect
-from .models import Product, Certification
+from .models import Product, Certification,Event,Category,Type
 from django.http import HttpRequest
 from django.contrib import messages
-from .forms import ProductForm
+from .forms import ProductForm,EventForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 
@@ -31,16 +31,43 @@ def Contact(request):
     return render(request,"Contact.html",{})
 
 def Event_News(request):
-    return render(request,"Event_News.html",{})
+    events=Event.objects.all()
 
-def seeEventNews(request):
-    return render(request,"seeEventNews.html",{})
+    return render(request,"Event_News.html",{
+        "events":events
+    })
+
+def seeEventNews(request,id):
+    event = Event.objects.get(pk=id)
+    return render(request,"seeEventNews.html",{
+        "event":event
+    })
 
 def products(request):
     theproducts=Product.objects.filter(name="sagi")
-    
+    categories=Category.objects.all()
+    types=[]
+    temp=[]
+    for cat in categories:
+        pros=Product.objects.filter(category=cat)
+        for pro in pros:
+            if pro.type not in temp:
+                temp.append(pro.type)
+        types.append(temp)
+
+    result=zip(categories,types)
+
+        
     return render(request,"product.html",{
         "htmlproducts":theproducts,
+        "result":result
+
+    })
+
+def filter_product(request:HttpRequest,cat_id,type_id):
+    products=Product.objects.filter(category__id=cat_id).filter(type__id=type_id)
+    return render(request,"filtered-products.html",{
+        "products":products
     })
 
 def seeproduct(request:HttpRequest,id):
@@ -105,3 +132,43 @@ def create_product(request:HttpRequest):
     return render(request,"create-product.html",{
         "form":form
     })
+
+
+def create_event(request:HttpRequest,*args,**kwargs):
+    if request.method=="POST":
+        form=EventForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request,"your event created successfully")
+            return redirect("enhome")
+        else:
+            messages.error(request,"something wrong")
+            print(form.errors) 
+
+    else:
+        form=EventForm
+    return  render(request,'eventForm.html',{'form':form},*args,**kwargs)
+
+
+def delete_event(request:HttpRequest,id):
+    instance=Event.objects.get(pk=id)
+    instance.delete()
+    messages.success(request,"Your Event has been deleted Successfully!")
+    return redirect("enhome")
+
+
+def update_event(request:HttpRequest,id):
+    event=Event.objects.get(pk=id)
+    if request.method=="POST":
+        form=EventForm(request.POST,request.FILES,instance=event)
+        if form.is_valid():
+            form.save()
+            messages.success(request,"your event updated successfully")
+            return redirect("enhome")
+        else:
+            print(form.errors)
+        
+    form=EventForm(instance=event) 
+    print(event.date)
+    # print(form.date)
+    return render(request,"update_event.html",{"form":form,"event":event})
