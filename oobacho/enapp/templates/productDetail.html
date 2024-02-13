@@ -4,74 +4,7 @@
     <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/product.css' %}" /> -->
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-#btn {
-    width: 190px;
-    height: 56px;
-    border: none;
-    outline: none;
-    background: #2f2f2f;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 40px;
-    text-align: center;
-    box-shadow: 0 6px 20px -5px rgba(255, 255, 255, 0.4);
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-#btn > a {
-  color: #009999;
-}
-
-.check-box{
-    width: 56px;
-    height: 56px;
-    border-radius: 40px;
-    box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
-    position: absolute;
-    top: 0;
-    right: -32px;
-    opacity: 0;
-}
-
-.check-box svg{
-    width: 28px;
-    margin: 14px;
-}
-
-svg path{
-    stroke-width: 3;
-    stroke: #fff;
-    stroke-dasharray: 34;
-    stroke-dashoffset: 34;
-    stroke-linecap: round;
-}
-
-.active{
-    background-color: #ff2b75;
-    transition: 1s;
-}
-
-.active .check-box{
-    right: 0;
-    opacity: 1;
-    transition: 1s;
-}
-
-.active a {
-    margin-right: 85px;
-    transition: 1s;
-}
-
-.active svg path{
-    stroke-dashoffset: 0;
-    transition: 1s;
-    transition-delay: 1s;
-}
-</style>
+<link rel="stylesheet" href="{% static 'css/productDetail.css' %}" />
 <!-- Page Loader -->
 <div id="loader-wrapper">
   <div id="loader"></div>
@@ -79,10 +12,7 @@ svg path{
   <div class="loader-section section-right"></div>
 </div>
 
-<div
-  class="tm-hero"
-  style="background-image: url({% static 'img/output.jpg' %})"
-></div>
+<div class="tm-hero"></div>
 <!-- <div
       class="tm-hero d-flex justify-content-center align-items-center"
       data-parallax="scroll"
@@ -125,14 +55,19 @@ svg path{
               >Compose Email</a
             >
           </button> -->
-            <button id="btn">
-                <a target="_blank" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=hasan84heydari@gmail.com" id="btnText">Submit</a>
-                <div class="check-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-                        <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                    </svg>
-                </div>
-            </button>
+          <button id="btn">
+            <a
+              target="_blank"
+              href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=hasan84heydari@gmail.com"
+              id="btnText"
+              >Submit</a
+            >
+            <div class="check-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+              </svg>
+            </div>
+          </button>
         </div>
         <!-- <p class="mb-4">
               Please support us by making
@@ -188,7 +123,7 @@ svg path{
     </div>
   </div>
   <div class="row mb-4">
-    <h2 class="col-12 tm-text-primary">Related Photos</h2>
+    <h2 class="col-12 tm-text-primary">Related Products</h2>
   </div>
   <div class="row mb-3 tm-gallery">
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
@@ -337,13 +272,12 @@ svg path{
   });
 
   const btn = document.querySelector("#btn");
-        const btnText = document.querySelector("#btnText");
+  const btnText = document.querySelector("#btnText");
 
-        btn.onclick = () => {
-            btnText.innerHTML = "Thanks";
-            btn.classList.add("active");
-          };
-          console.log(btn.classList);
-
+  btn.onclick = () => {
+    btnText.innerHTML = "Thanks";
+    btn.classList.add("active");
+  };
+  console.log(btn.classList);
 </script>
 {% endblock %}

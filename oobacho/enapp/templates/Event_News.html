@@ -1,14 +1,14 @@
 {% extends 'baseEn.html' %} {% load static %} {% block content %}
 <link rel="stylesheet" href="{% static 'css/Event_News.css' %}" />
 <!-- <link rel="stylesheet" href="{% static 'css/product.css' %}" /> -->
+<!-- loader -->
 <div id="loader-wrapper">
   <div id="loader"></div>
   <div class="loader-section section-left"></div>
   <div class="loader-section section-right"></div>
 </div>
-<!-- loader -->
+<div class="tm-hero"></div>
 <div class="container">
-
   <a class="seeLink" href="{% url 'seeEventNews' %}">
     <div class="content little-zooom">
       <div class="img-container">
@@ -16,16 +16,16 @@
       </div>
       <div class="discription">
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, labore
-          rem doloribus a deleniti consequuntur delectus illum eligendi recusandae
-          necessitatibus?
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus,
+          labore rem doloribus a deleniti consequuntur delectus illum eligendi
+          recusandae necessitatibus?
         </p>
       </div>
     </div>
   </a>
 </div>
-  <!-- Script For Loader -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
+<!-- Script For Loader -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
 <script src="{% static 'js/index.js' %}"></script>
 {% endblock %}
