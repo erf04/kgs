@@ -1,7 +1,7 @@
 # oobacho
 site for oobacho
 
-##setup
+## setup
 
 for run the application:
 ```
