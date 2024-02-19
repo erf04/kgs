@@ -16,12 +16,13 @@
         <img class="img" src="{{event.image.url}}" alt="" />
       </div>
       <div class="discription">
-        <p>
-          {{event.description}}
-        </p>
+        <p>{{event.description}}</p>
       </div>
     </div>
   </a>
+  <button type="button" class="btn btn-primary">
+    <a href="{% url 'update-event' event.pk %}">Update</a>
+  </button>
   {% endfor %}
 </div>
 <!-- Script For Loader -->

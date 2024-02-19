@@ -9,7 +9,6 @@
 <div class="container-fluid content">
   <div class="img-container">
     <img class="img" src="{{event.image.url}}" alt="" />
-
   </div>
   <div class="discription">
     <h2>{{event.title}}</h2>
@@ -26,6 +25,14 @@
     </ul>
     <!-- attachment and date  -->
   </div>
+  <!-- <audio controls src="{{event.voice.url}}"></audio> -->
+</div>
+<div class="container">
+  <audio controls class="d-block">
+    <source src="{{event.voice.url}}" />
+    Your browser does not support the audio tag.
+  </audio>
+  <video src="{{event.attachment.url}}" class="d-block" controls></video>
 </div>
 <!-- Script For Loader -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

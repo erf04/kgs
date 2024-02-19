@@ -43,7 +43,7 @@ def seeEventNews(request,id):
         "event":event
     })
 
-def products(request:HttpRequest):
+def getZip():
     categories=Category.objects.all()
     types=[]
     temp=[]
@@ -55,39 +55,46 @@ def products(request:HttpRequest):
         types.append(temp)
 
     filter_result=zip(categories,types)
+    return filter_result
 
-    if request.method=="GET":
-
-        products=Product.objects.all()  
-        return render(request,"product.html",{
-            "products":products,
-            "result":filter_result
-        })
+def products(request:HttpRequest):
     
-    else:
-        category_id=request.POST["category_id"]
-        type_id=request.POST["type_id"]
-        products=Product.objects.filter(category__id=category_id).filter(type__id=type_id)
-        return render(request,"filtered-products.html",{
-            "result":filter_result,
-            "products":products,
-        })
+    filter_result=getZip()
+
+    products=Product.objects.all()  
+    return render(request,"product.html",{
+        "products":products,
+        "result":filter_result
+    })
+
+    # else:
+    #     category_id=request.POST["category_id"]
+    #     type_id=request.POST["type_id"]
+    #     products=Product.objects.filter(category__id=category_id).filter(type__id=type_id)
+    #     return render(request,"filtered-products.html",{
+    #         "result":filter_result,
+    #         "products":products,
+    #     })
 
 
 
     
 
 
-# def filter_product(request:HttpRequest,cat_id,type_id):
-#     products=Product.objects.filter(category__id=cat_id).filter(type__id=type_id)
-#     return render(request,"filtered-products.html",{
-#         "products":products
-#     })
+def filter_product(request:HttpRequest,cat_id,type_id):
+    filter_result=getZip()
+    products=Product.objects.filter(category__id=cat_id).filter(type__id=type_id)
+    return render(request,"product.html",{
+        "products":products,
+        "result":filter_result
+    })
 
 def seeproduct(request:HttpRequest,id):
     product=Product.objects.get(pk=id)
+    relatedProducts = Product.objects.filter(type=product.type).exclude(pk=id)[:8] 
     return render(request,"productDetail.html",{
-        "product":product
+        "product":product,
+        "related":relatedProducts,
     })
 
 def FAQs(request):
