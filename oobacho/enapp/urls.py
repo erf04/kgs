@@ -19,6 +19,6 @@ urlpatterns = [
     path('create_event/',views.create_event,name="create-event"),
     path('update_event/<int:id>/',views.update_event,name="update-event"),
     path('delete/<int:id>/',views.delete_event,name="delete-event"),
-    path('filtered_products/<int:cat_id>/<int:type_id>/',views.filter_product,name="filtered-products"),
+    # path('filtered_products/<int:cat_id>/<int:type_id>/',views.filter_product,name="filtered-products"),
 
 ]

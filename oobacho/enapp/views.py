@@ -43,8 +43,7 @@ def seeEventNews(request,id):
         "event":event
     })
 
-def products(request):
-    theproducts=Product.objects.filter(name="sagi")
+def products(request:HttpRequest):
     categories=Category.objects.all()
     types=[]
     temp=[]
@@ -55,20 +54,35 @@ def products(request):
                 temp.append(pro.type)
         types.append(temp)
 
-    result=zip(categories,types)
+    filter_result=zip(categories,types)
 
-        
-    return render(request,"product.html",{
-        "htmlproducts":theproducts,
-        "result":result
+    if request.method=="GET":
 
-    })
+        products=Product.objects.all()  
+        return render(request,"product.html",{
+            "products":products,
+            "result":filter_result
+        })
+    
+    else:
+        category_id=request.POST["category_id"]
+        type_id=request.POST["type_id"]
+        products=Product.objects.filter(category__id=category_id).filter(type__id=type_id)
+        return render(request,"filtered-products.html",{
+            "result":filter_result,
+            "products":products,
+        })
 
-def filter_product(request:HttpRequest,cat_id,type_id):
-    products=Product.objects.filter(category__id=cat_id).filter(type__id=type_id)
-    return render(request,"filtered-products.html",{
-        "products":products
-    })
+
+
+    
+
+
+# def filter_product(request:HttpRequest,cat_id,type_id):
+#     products=Product.objects.filter(category__id=cat_id).filter(type__id=type_id)
+#     return render(request,"filtered-products.html",{
+#         "products":products
+#     })
 
 def seeproduct(request:HttpRequest,id):
     product=Product.objects.get(pk=id)
