@@ -1,11 +1,11 @@
-# oobacho
-site for oobacho
+# KGS
+a website written by django for a international online shop 
 
 ## setup
 
 for run the application:
 ```
-cd oobacho
+cd kgs
 python manage.py runserver 
 ```
 
