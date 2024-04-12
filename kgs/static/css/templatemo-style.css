@@ -718,12 +718,12 @@ select:not([multiple]) {
 .form-control,
 input:-internal-autofill-selected,
 select:not([multiple]) {
-    color: #009999 !important;
+    color: #61a870 !important;
 }
 
 .form-control::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #009999;
+    color: #61a870;
     opacity: 1;
     /* Firefox */
 }

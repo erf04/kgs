@@ -2,9 +2,12 @@
 
 <!--<link rel="stylesheet" href="{% static 'css/carousel.css' %}">-->
 
-
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+
+    body {
+        font-family: roboto-regular;
+    }
 
     section {
         min-height: 100vh;
@@ -297,7 +300,7 @@
 
 <!-- Certification -->
 <div class="container my-5" style="text-align: center">
-    <p style="font-weight: 100; font-size: 2em; font-family: 'Calibri Light'">KGS product</p>
+    <p style="font-family: roboto-light; font-size: 2em;">KGS product</p>
     <div class="d-flex justify-content-between reveal fade-left">
         <div id="owl-demo" class="owl-carousel owl-theme" style="width: 65%">
             {% for img in certifications %}
@@ -399,6 +402,9 @@
         </div>
     </div>
 </div>
+
+<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+</iframe>
 
 <div class="container w-75 mb-5" style="background-color: rgba(0,128,0,0.49); margin-top: 6em; border-radius: 15px; padding: 20px; text-align: center">
     <h4 style="color: white; font-weight: bold; font-size: 2.5em">Subscribe to get the last updates</h4>

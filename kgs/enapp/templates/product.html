@@ -4,9 +4,9 @@
 <!-- <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}" /> -->
 <!-- <link rel="stylesheet" href="{% static 'css/product.css' %}" /> -->
 <style>
-        .filter-btn {
+    .filter-btn {
         color: white;
-        background-color: rgb(0, 145, 255);
+        background-color: #61a870;
         display: inline-block;
         font-weight: 400;
         text-align: center;
@@ -22,142 +22,161 @@
         line-height: 1.5;
         border-radius: 0.25rem;
         transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-          border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-      }
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
 
-      .dropdown {
+    .dropdown {
         border: 1px solid gray;
         border-radius: 5px;
         width: 100px;
-        background-color: aliceblue;
+        background-color: rgba(156, 211, 141, 0.48);
         display: none;
         /* padding: 10px; */
-      }
+    }
 
-      .dropdown-item {
+    .dropdown-item {
         /* border-bottom: 1px solid black; */
         /* margin-bottom: 10px; */
         transition: 0.5s;
         padding: 10px;
-      }
+    }
 
-      .dropdown-item:hover {
-        background-color: rgb(0, 170, 255);
-      }
+    .dropdown-item:hover {
+        background-color: #9cd38d;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: black;
+    }
 </style>
 <!-- Page Loader -->
 <div id="loader-wrapper">
-  <div id="loader"></div>
-  <div class="loader-section section-left"></div>
-  <div class="loader-section section-right"></div>
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
 </div>
 <!-- {% for product in htmlproducts %}
     <h1 class="btn btn-warning">{{product.name}}</h1>
     <h2>{{product.description}}</h2>
     {% endfor %} -->
 <div
-  class="tm-hero"
+        class="tm-hero"
 ></div>
 
 
 <div class="container tm-container-content tm-mt-60">
-  <div class="row">
-    <div class="col-md-2">
-      
-        {% for category,types in result %}
-        <div>
-          <button class="filter-btn" >{{category.title}} <i class="fas fa-chevron-down"></i></button>
-          <div class="dropdown">
-            <ul style="list-style-type: none; margin: 0; padding: 0">
-              {% for type in types %}
-              <!-- <div class="d-flex"> -->
-                <!-- <input type="checkbox" /> -->
-                <a href="{% url 'filtered-products' category.pk type.pk %}"><li class="dropdown-item">{{type.title}}</li></a>
-              <!-- </div> -->
-              {% endfor %}
-            </ul>
-          </div>
-        </div>  
-        {% endfor %}
-        
-  
+    <div class="row">
+        <div class="col-md-2">
+            {% for category,types in result %}
+            <button id="filter-btn" class="filter-btn btn btn-secondary " type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">{{ category.title }} <i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown" id="popup">
+                <ul style="list-style-type: none; margin: 0; padding: 0">
+                    <a href="#">
+                        <li class="dropdown-item">
+                            All
+                        </li>
+                    </a>
+                    {% for type in types %}
+                    <!-- <div class="d-flex"> -->
+                    <!-- <input type="checkbox" /> -->
+                    <a href="{% url 'filtered-products' category.pk type.pk %}">
+                        <li class="dropdown-item">
+                            {{ type.title }}
+                        </li>
+                    </a>
+                    <!-- </div> -->
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
 
-      
-    </div>
-    <div class="row col-md-10 tm-mb-90 tm-gallery">
-      <!-- for loop -->
-      {% for product in products %}
-      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-5">
-        <figure class="effect-ming tm-video-item">
-          <img
-            src="{{product.image.url}}"
-            alt="Image"
-            class="img-fluid"
-          />
-          <figcaption class="d-flex align-items-center justify-content-center">
-            <h2 class="product_name">{{product.name}}</h2>
-            <a href="{% url 'seeproduct' product.pk %}">View </a>
-          </figcaption>
-        </figure>
-        <div class="d-flex justify-content-between tm-text-gray">
-          <span class="tm-text-gray-light">18 Oct 2020</span>
-          <span>9,906 views</span>
         </div>
-      </div>
-      {% endfor %}
-      <!-- endfor -->
+        <div class="row col-md-10 tm-mb-90 tm-gallery">
+            <!-- for loop -->
+            {% for product in products %}
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img
+                            src="{{product.image.url}}"
+                            alt="Image"
+                            class="img-fluid"
+                    />
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2 class="product_name" style="font-family: roboto-light">{{ product.name }}</h2>
+                        <a href="{% url 'seeproduct' product.pk %}">View </a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">18 Oct 2020</span>
+                    <span>9,906 views</span>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- endfor -->
 
-      <div class="row mb-4">
-        <!-- <h2 class="col-6 tm-text-primary" id="type1">Type 1</h2> -->
-        <div class="col-6 d-flex justify-content-end align-items-center">
-          <form action="" class="tm-text-primary">
-            Page
-            <input
-              type="text"
-              value="1"
-              size="1"
-              class="tm-input-paging tm-text-primary"
-            />
-            of 200
-          </form>
+            <!--      <div class="row mb-4">-->
+            <!--        &lt;!&ndash; <h2 class="col-6 tm-text-primary" id="type1">Type 1</h2> &ndash;&gt;-->
+            <!--        <div class="col-6 d-flex justify-content-end align-items-center">-->
+            <!--          <form action="" class="tm-text-primary">-->
+            <!--            Page-->
+            <!--            <input-->
+            <!--              type="text"-->
+            <!--              value="1"-->
+            <!--              size="1"-->
+            <!--              class="tm-input-paging tm-text-primary"-->
+            <!--            />-->
+            <!--            of 200-->
+            <!--          </form>-->
+            <!--        </div>-->
+            <!--      </div>-->
         </div>
-      </div>
     </div>
-  </div>
 </div>
-  <!-- row -->
-  <!-- <div class="row tm-mb-90">
-      <div
-        class="col-12 d-flex justify-content-between align-items-center tm-paging-col"
+<!-- row -->
+<!-- <div class="row tm-mb-90">
+    <div
+      class="col-12 d-flex justify-content-between align-items-center tm-paging-col"
+    >
+      <a
+        href="javascript:void(0);"
+        class="btn btn-primary tm-btn-prev mb-2 disabled"
+        >Previous</a
       >
-        <a
-          href="javascript:void(0);"
-          class="btn btn-primary tm-btn-prev mb-2 disabled"
-          >Previous</a
-        >
-        <div class="tm-paging d-flex">
-          <a href="javascript:void(0);" class="active tm-paging-link">1</a>
-          <a href="javascript:void(0);" class="tm-paging-link">2</a>
-          <a href="javascript:void(0);" class="tm-paging-link">3</a>
-          <a href="javascript:void(0);" class="tm-paging-link">4</a>
-        </div>
-        <a href="javascript:void(0);" class="btn btn-primary tm-btn-next"
-          >Next Page</a
-        >
+      <div class="tm-paging d-flex">
+        <a href="javascript:void(0);" class="active tm-paging-link">1</a>
+        <a href="javascript:void(0);" class="tm-paging-link">2</a>
+        <a href="javascript:void(0);" class="tm-paging-link">3</a>
+        <a href="javascript:void(0);" class="tm-paging-link">4</a>
       </div>
-    </div> -->
-</div>
+      <a href="javascript:void(0);" class="btn btn-primary tm-btn-next"
+        >Next Page</a
+      >
+    </div>
+  </div> -->
+<!--</div>-->
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="{% static 'js/plugins.js' %}"></script>
 <script>
-  $(window).on("load", function () {
-    $("body").addClass("loaded");
-  });
-  $(".filter-btn").click(function (e) {
-    e.preventDefault();
-    $(this).next().toggle();
-  });
+    $(window).on("load", function () {
+        $("body").addClass("loaded");
+    });
 
+    document.addEventListener('click', function(e) {
+        if (!document.getElementById('popup').contains(e.target) && !document.getElementById('filter-btn').contains(e.target)) {
+            document.getElementById('popup').style.display = 'none';
+        }
+    });
+
+    $("#filter-btn").click(function (e) {
+        e.preventDefault();
+        $(this).next().toggle();
+    });
 </script>
 {% endblock %}

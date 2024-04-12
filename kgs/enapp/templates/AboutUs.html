@@ -1,5 +1,11 @@
 {% extends 'baseEn.html' %} {% load static %} {% block content %}
 
+<style>
+    .text-green {
+        color: #61a870;
+    }
+</style>
+
 <!-- Page Loader -->
 <div id="loader-wrapper">
   <div id="loader"></div>
@@ -14,11 +20,12 @@
     background-image: url({% static 'img/output.jpg' %});
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 9999;
   "
 ></div>
 <div class="container-fluid tm-mt-60">
   <div class="row mb-4">
-    <h2 class="col-12 tm-text-primary" id="t1">
+    <h2 class="col-12 text-green" id="t1">
       About Catalog-Z Website Template
     </h2>
   </div>
@@ -66,7 +73,7 @@
   <div class="row tm-mb-50">
     <div class="col-md-6 col-12">
       <div class="tm-about-2-col">
-        <h2 class="tm-text-primary mb-4" id="t2">
+        <h2 class="text-green mb-4" id="t2">
           Left side of 2-Column content
         </h2>
         <p class="mb-4">
@@ -85,7 +92,7 @@
     </div>
     <div class="col-md-6 col-12">
       <div class="tm-about-2-col">
-        <h2 class="tm-text-primary mb-4" id="t3">Right-side Title goes here</h2>
+        <h2 class="text-green mb-4" id="t3">Right-side Title goes here</h2>
         <p class="mb-4">
           Pellentesque urna odio, scelerisque eu mauris vitae, vestibulum
           sodales neque. Ut augue justo, tincidunt nec aliquet ac, cursus vel
@@ -106,9 +113,9 @@
     <div class="col-md-4 col-12">
       <div class="tm-about-3-col">
         <div class="tm-about-icon-container mb-5">
-          <i class="fas fa-desktop fa-3x tm-text-primary"></i>
+          <i class="fas fa-desktop fa-3x text-green"></i>
         </div>
-        <h2 class="tm-text-primary mb-4" id="t4">Three-column title one</h2>
+        <h2 class="text-green mb-4" id="t4">Three-column title one</h2>
         <p class="mb-4">
           Integer tristique arcu scelerisque mauris posuere convallis. Fusce
           egestas ipsum sapien, hendrerit ultricies nisi viverra eget.
@@ -124,9 +131,9 @@
     <div class="col-md-4 col-12">
       <div class="tm-about-3-col">
         <div class="tm-about-icon-container mb-5">
-          <i class="fas fa-mobile-alt fa-3x tm-text-primary"></i>
+          <i class="fas fa-mobile-alt fa-3x text-green"></i>
         </div>
-        <h2 class="tm-text-primary mb-4" id="t5">Title two of three-column</h2>
+        <h2 class="text-green mb-4" id="t5">Title two of three-column</h2>
         <p class="tm-mb-50">
           Donec nec est tincidunt, rhoncus nulla sit amet, imperdiet augue.
           Phasellus sodales placerat ipsum ac auctor. Mauris molestie blandit
@@ -141,9 +148,9 @@
     <div class="col-md-4 col-12">
       <div class="tm-about-3-col">
         <div class="tm-about-icon-container mb-5">
-          <i class="fas fa-photo-video fa-3x tm-text-primary"></i>
+          <i class="fas fa-photo-video fa-3x text-green"></i>
         </div>
-        <h2 class="tm-text-primary mb-4" id="t6">Third Title goes here</h2>
+        <h2 class="text-green mb-4" id="t6">Third Title goes here</h2>
         <p class="mb-4">
           Pellentesque habitant morbi tristique senectus et netus et malesuada
           fames ac turpis egestas. Donec nec est tincidunt, rhoncus nulla sit

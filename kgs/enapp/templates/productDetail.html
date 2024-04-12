@@ -5,6 +5,13 @@
     <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/product.css' %}" /> -->
 <link rel="stylesheet" href="{% static 'css/productDetail.css' %}" />
+
+<style>
+    a {
+        color: #61a870;
+    }
+</style>
+
 <!-- Page Loader -->
 <div id="loader-wrapper">
   <div id="loader"></div>
@@ -33,7 +40,7 @@
 
 <div class="container-fluid tm-container-content tm-mt-60">
   <div class="row mb-4">
-    <h2 class="col-12 tm-text-primary">{{product.name}}</h2>
+    <h2 class="col-12" style="color: #61a870">{{product.name}}</h2>
   </div>
   <div class="row tm-mb-90">
     <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
@@ -55,8 +62,9 @@
               >Compose Email</a
             >
           </button> -->
-          <button id="btn">
+          <button id="btn" >
             <a
+                    style="color: #61a870"
               target="_blank"
               href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=hasan84heydari@gmail.com"
               id="btnText"
@@ -86,7 +94,7 @@
           <!-- <div class="mr-4 mb-2">
                 <span class="tm-text-gray-dark">Dimension: </span
                 ><span class="tm-text-primary">1920x1080</span>
-              </div> 
+              </div>
               <div class="mr-4 mb-2">
                 <span class="tm-text-gray-dark">Format: </span
                 ><span class="tm-text-primary">JPG</span>
@@ -101,21 +109,21 @@
         </div>
         <div>
           <h3 class="tm-text-gray-dark mb-3">Tags</h3>
-          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Cloud</a>
-          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block"
+          <a href="#" class=" mr-4 mb-2 d-inline-block">Cloud</a>
+          <a href="#" class=" mr-4 mb-2 d-inline-block"
             >Bluesky</a
           >
-          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block"
+          <a href="#" class="mr-4 mb-2 d-inline-block"
             >Nature</a
           >
-          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block"
+          <a href="#" class=" mr-4 mb-2 d-inline-block"
             >Background</a
           >
-          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block"
+          <a href="#" class=" mr-4 mb-2 d-inline-block"
             >Timelapse</a
           >
-          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Night</a>
-          <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block"
+          <a href="#" class=" mr-4 mb-2 d-inline-block">Night</a>
+          <a href="#" class=" mr-4 mb-2 d-inline-block"
             >Real Estate</a
           >
         </div>
@@ -123,7 +131,7 @@
     </div>
   </div>
   <div class="row mb-4">
-    <h2 class="col-12 tm-text-primary">Related Products</h2>
+    <h2 class="col-12" style="color: #61a870">Related Products</h2>
   </div>
   <div class="row mb-3 tm-gallery">
     {% for rel in related %}
@@ -135,7 +143,7 @@
           class="img-fluid"
         />
         <figcaption class="d-flex align-items-center justify-content-center">
-          <h2>{{rel.name}}</h2>
+          <h2 style="font-family: roboto-light">{{rel.name}}</h2>
           <a href="{% url 'seeproduct' rel.pk %}">View more</a>
         </figcaption>
       </figure>

@@ -1,4 +1,24 @@
 {% extends 'baseEn.html' %} {% load static %} {% block content %}
+
+<style>
+    .text-green {
+        color: #61a870;
+    }
+
+    #sendForm {
+        background-color: #61a870;
+    }
+
+    #sendForm:hover {
+        background-color: #468152;
+    }
+
+    ::placeholder {
+        color: #61a870;
+    }
+
+</style>
+
 <!-- Page Loader -->
 <div id="loader-wrapper">
   <div id="loader"></div>
@@ -14,7 +34,7 @@
 <div class="container tm-mt-60">
   <div class="row tm-mb-50">
     <div class="col-lg-6 col-12 mb-5">
-      <h2 class="tm-text-primary mb-5">Contact Page</h2>
+      <h2 class="text-green mb-5">Contact Page</h2>
       <form
         id="contact-form"
         action=""
@@ -25,7 +45,7 @@
           <input
             type="text"
             name="name"
-            class="form-control rounded-0"
+            class="form-control rounded-0 text-green"
             placeholder="Name"
             required
           />
@@ -58,13 +78,13 @@
         </div>
 
         <div class="form-group tm-text-right">
-          <button type="submit" class="btn btn-primary">Send</button>
+          <button type="submit" class="btn btn-primary" id="sendForm">Send</button>
         </div>
       </form>
     </div>
     <div class="col-lg-6 col-12 mb-5">
       <div class="tm-address-col">
-        <h2 class="tm-text-primary mb-5">Our Address</h2>
+        <h2 class="text-green mb-5">Our Address</h2>
         <p class="tm-mb-50">
           Quisque eleifend mi et nisi eleifend pretium. Duis porttitor accumsan
           arcu id rhoncus. Praesent fermentum venenatis ipsum, eget vestibulum
@@ -102,7 +122,7 @@
       </div>
     </div>
     <!-- <div class="col-lg-4 col-12">
-          <h2 class="tm-text-primary mb-5">Our Location</h2>
+          <h2 class="text-green mb-5">Our Location</h2>
           <div class="mapouter mb-4">
             <div class="gmap-canvas">
               <iframe
@@ -126,7 +146,7 @@
             alt="Image"
             class="mb-4 img-fluid"
           />
-          <h2 class="tm-text-primary mb-4">Ryan White</h2>
+          <h2 class="text-green mb-4">Ryan White</h2>
           <h3 class="tm-text-secondary h5 mb-4">Chief Executive Officer</h3>
           <p class="mb-4">
             Mauris ante tellus, feugiat nec metus non, bibendum semper velit.
@@ -151,7 +171,7 @@
             alt="Image"
             class="mb-4 img-fluid"
           />
-          <h2 class="tm-text-primary mb-4">Catherine Pinky</h2>
+          <h2 class="text-green mb-4">Catherine Pinky</h2>
           <h3 class="tm-text-secondary h5 mb-4">Chief Marketing Officer</h3>
           <p class="mb-4">
             Sed faucibus nec velit finibus accumsan. Sed varius augue et leo
@@ -175,7 +195,7 @@
             alt="Image"
             class="mb-4 img-fluid"
           />
-          <h2 class="tm-text-primary mb-4">Johnny Brief</h2>
+          <h2 class="text-green mb-4">Johnny Brief</h2>
           <h3 class="tm-text-secondary h5 mb-4">Accounting Executive</h3>
           <p class="mb-4">
             Sed faucibus nec velit finibus accumsan. Sed varius augue et leo
@@ -199,7 +219,7 @@
             alt="Image"
             class="mb-4 img-fluid"
           />
-          <h2 class="tm-text-primary mb-4">George Nelson</h2>
+          <h2 class="text-green mb-4">George Nelson</h2>
           <h3 class="tm-text-secondary h5 mb-4">Creative Art Director #C69</h3>
           <p class="mb-4">
             Nunc convallis facilisis congue. Curabitur gravida rutrum justo sed

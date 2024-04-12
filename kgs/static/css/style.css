@@ -1,15 +1,30 @@
+/*@font-face {*/
+/*    font-family: "Dosis";*/
+/*    src: local("Dosis"), url(../fonts/dosis/Dosis-Medium.ttf) format("truetype");*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: "Exo_2";*/
+/*    src: local("Exo_2"), url(../fonts/exo2/Exo2-Medium.ttf) format("truetype");*/
+/*}*/
+
 @font-face {
-    font-family: "Dosis";
-    src: local("Dosis"), url(../fonts/dosis/Dosis-Medium.ttf) format("truetype");
+    font-family: "roboto";
+    src: local("roboto"), url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Exo_2";
-    src: local("Exo_2"), url(../fonts/exo2/Exo2-Medium.ttf) format("truetype");
+    font-family: "roboto-light";
+    src: local("roboto-light"), url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "roboto-regular";
+    src: local("roboto-regular"), url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
 }
 
 body {
-    font-family: "Exo_2";
+    font-family: roboto-regular, serif;
 }
 
 img {
