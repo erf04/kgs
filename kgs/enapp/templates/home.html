@@ -6,7 +6,7 @@
     @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
 
     body {
-        font-family: roboto-regular;
+        font-family: roboto-condensed;
     }
 
     section {
@@ -132,7 +132,7 @@
         background-color: green;
     }
 
-    //input {
+    /* //input {
     //    width: 100%; padding: 1em; border-radius: 40px; border: none;
     //    font-size: 1.5em;
     //}
@@ -142,7 +142,7 @@
     //    position: relative;
         //top: 8px;
         //color: #989898;
-    //}
+    //} */
 </style>
 
 {% if messages %}
@@ -198,21 +198,23 @@
                 <video autoplay muted loop id="myVideo">
                     <source src="{% static 'video/test.mp4' %}">
                 </video>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>From farm to your target market</h5>
-                    <button class="p-2 glass-button" style="display: inline-block;
-    padding: 24px 32px;
-    border: 0;
+                <div class="carousel-caption d-none d-md-block p-0">
+                    <h2 style="margin-bottom: 0.8em;">From farm to your target market</h2>
+                    <button class="glass-button" style="display: inline-block;
+    padding: 10px 32px;
+    border: 3.1px solid #ffffff;
     text-decoration: none;
-    border-radius: 15px;
+    border-radius: 37px;
     background-color: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.1);
     backdrop-filter: blur(30px);
     color: rgba(255,255,255,0.8);
-    font-size: 14px;
+    font-size: 1.3em;
+    font-family: 'roboto-condensed-light';
     letter-spacing: 2px;
     cursor: pointer;
-    text-transform: uppercase;">Order to KGS
+    margin-bottom: 0.8em;
+    text-transform: uppercase;
+    ">order to KGS
                     </button>
                 </div>
             </div>
@@ -300,40 +302,36 @@
 
 <!-- Certification -->
 <div class="container my-5" style="text-align: center">
-    <p style="font-family: roboto-light; font-size: 2em;">KGS product</p>
-    <div class="d-flex justify-content-between reveal fade-left">
-        <div id="owl-demo" class="owl-carousel owl-theme" style="width: 65%">
+    <p style="font-family: roboto-condensed-light; font-size: 2em;">KGS product</p>
+    <div class="d-flex justify-content-between reveal fade-left" style="height: 18em;">
+        <div id="owl-demo" class="owl-carousel owl-theme" style="width: 55%;">
             {% for img in certifications %}
-                <div class="item"><img src="{{img.image.url}}" alt="Owl Image"></div>
+                <div class="item h-100 p-3 me-4" style="border: 1px solid gray; border-radius: 20px;"><img src="{{img.image.url}}" alt="Owl Image"></div>
             {% endfor %}
         </div>
         <div class="reveal fade-right">
             <img src="{% static 'img/img-14.jpg' %}" alt="">
         </div>
     </div>
-    <a href="{% url 'products' %}">
+    <a href="{% url 'products' %}" style="float: left;">
         <button style="background-color: rgba(0,128,0,0.51); color: white; border-radius: 5px; border: none; padding: 5px; margin-top: 1em" role="button">View all Products</button>
     </a>
 </div>
 
-<div class="container d-flex justify-content-center align-items-center" style="background-image: url('../../static/img/img-08.jpg'); background-size: cover; height: 300px; border-radius: 20px">
-    <div style="font-weight: bold; font-size: 4.5em; text-align: center; width: 100%">
-        <p style="color: #1c96c0; margin: 0; line-height: 1; width: 100%;">When you work  with KGS <br>
-            <span style="color: white; margin: 0">your target market is captured</span>
-        </p>
-    </div>
+<div class="container">
+    <img src="{% static 'img/newSolgan.png' %}" alt="solgan" style="width: 100%; margin-top: 3em;" />
 </div>
 
 <div class="container" style="margin-top: 6em">
     <div class="d-flex justify-content-end">
         <div class="d-flex justify-content-center align-items-center" style="gap: 80px">
-            <img style="border-radius: 10px; width: 600px; height: 280px;" src="{% static 'img/img-10.jpg' %}" alt="" />
-            <p style="color: rgba(0,128,0,0.57); font-weight: bold; font-size: 3em">Safe shopping <br> is our mission</p>
+            <img style="border-radius: 10px; width: 500px; height: auto;" src="{% static 'img/preparing1.png' %}" alt="" />
+            <p style="letter-spacing: 1.5px; color: #9cd38d; font-size: 3em; font-family: 'roboto-condensed-black';">Safe shopping <br> is our mission</p>
         </div>
     </div>
     <div class="d-flex justify-content-between mt-4" style="height: 400px">
-        <img class="align-self-end" style="border-radius: 10px; width: 600px; height: 280px;" src="{% static 'img/img-11.jpg' %}" alt="" />
-        <img class="align-self-start" style="border-radius: 10px; width: 600px; height: 280px;" src="{% static 'img/img-12.jpg' %}" alt="" />
+        <img class="align-self-end" style="border-radius: 10px; width: 500px; height: auto;" src="{% static 'img/preparing2.png' %}" alt="" />
+        <img class="align-self-start" style="border-radius: 10px; width: 500px; height: auto;" src="{% static 'img/preparing3.png' %}" alt="" />
     </div>
 </div>
 
@@ -357,7 +355,7 @@
                 <p style="color: rgba(0,128,0,0.61); font-weight: bold">A complete variety of date products A complete variety of date products A complete variety of date products</p>
             </div>
         </div>
-        <img style="height: 75%; border-radius: 10px; box-shadow: 0px 0px 20px rgba(0,0,0,0.29)" src="{% static 'img/img-04.jpg' %}" alt="">
+        <img style="height: 75%; border-radius: 10px;" src="{% static 'img/img-04.jpg' %}" alt="">
     </div>
     <div class="d-flex justify-content-between mt-5">
         <img style="height: 75%; border-radius: 10px; box-shadow: 0px 0px 20px rgba(0,0,0,0.29)" src="{% static 'img/img-05.jpg' %}" alt="">
@@ -403,10 +401,10 @@
     </div>
 </div>
 
-<div class="container my-5 d-flex justify-content-center">
+<!-- <div class="container my-5 d-flex justify-content-center">
     <iframe style="border-radius: 20px" width="730" height="420" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0&rel=0">
     </iframe>
-</div>
+</div> -->
 
 <div class="container w-75 mb-5" style="background-color: rgba(0,128,0,0.49); margin-top: 6em; border-radius: 15px; padding: 20px; text-align: center">
     <h4 style="color: white; font-weight: bold; font-size: 2.5em">Subscribe to get the last updates</h4>

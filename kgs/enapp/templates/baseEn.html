@@ -61,21 +61,13 @@
             position: absolute;
             top: 60px;
             right: -40px;
-            z-index: -1;
+            z-index: 0;
         }
 
-        //.greenRectTop {
-        //
-        //}
-
-        /*.greenRectBottom {*/
-        //    top: 60px;
-        //    left: 100%;
-        //}
     </style>
 </head>
 <body>
-<header class="px-2 text-bg-white">
+<header class="px-2 text-bg-white" style="background-color: #f4f4f4;">
     <div class="container-fluid pl-0" style="padding-left: 0;">
         <div class="greenRectTop"></div>
         <div class="greenRectBottom"></div>
@@ -90,10 +82,10 @@
                     <img
                             src="{% static 'img/logoKgs.png' %}"
                             class="me-4"
-                            style="width: 120px; height: 90px; background-color: none; position: relative; z-index: 1001; top: 8px;"
+                            style="width: 120px; height: 90px; background-color: none; position: relative; z-index: 1001; top: 8px; left: 5px"
                     />
                     <div style="background-color: white; border-radius: 50%; position: absolute;
-                width: 99px; height: 55px; top: 55px; left: -2px; z-index: 1000"></div>
+                width: 106px; height: 80px; top: 41px; left: -3px; z-index: 1000"></div>
                 </a>
 
                 <ul class="nav col-12 col-lg-auto mb-2 mb-md-0" style="position: relative; top: 12px; gap: 20px"
@@ -106,7 +98,7 @@
                     <li>
                         <div class="btn-group nav-link">
                             <a
-                                    style="font-size: 1.5em; color: #2f2f2f"
+                                    style="font-size: 1.4em; color: #4d4c4c"
                                     class="text-decoration-none pl-3"
                                     href="#certificates"
                             >Certificate</a
@@ -125,7 +117,7 @@
                         <div class="btn-group nav-link">
                             <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
                             <a
-                                    style="font-size: 1.5em; color: #2f2f2f"
+                                    style="font-size: 1.4em; color: #4d4c4c"
                                     class="text-decoration-none pl-3"
                                     href="{% url 'products' %}"
                             >Products</a
@@ -163,7 +155,7 @@
                     <div class="btn-group nav-link">
                         <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
                         <a
-                                style="font-size: 1.5em; color: #2f2f2f"
+                                style="font-size: 1.4em; color: #4d4c4c"
                                 class="text-decoration-none pl-3"
                                 href="{% url 'AboutUs' %}"
                         >About</a
@@ -215,7 +207,7 @@
                     <li>
                         <div class="btn-group nav-link">
                             <a href="{% url 'Contact' %}" class="text-decoration-none pl-3"
-                               style="font-size: 1.5em; color: #2f2f2f"
+                               style="font-size: 1.4em; color: #4d4c4c"
                             >Contact</a
                             >
                         </div>
@@ -240,14 +232,14 @@
                 </ul>
             </div>
 
-            <div style="gap: 40px" class="d-flex align-self-start align-items-center">
+            <div style="gap: 40px; margin-top: .3em;" class="d-flex align-self-start align-items-center">
                 <a
                         aria-label="Chat on WhatsApp"
                         href="https://wa.me/+989164043164"
                 >
                     <div class="d-flex align-items-center" style="gap: 5px">
-                        <i class="fab fa-whatsapp" style="color: #6c757d; font-size: 1.4em"></i>
-                        <p style="color: #6c757d; margin: 0;">
+                        <i class="fab fa-whatsapp" style="color: #4d4c4c; font-size: 1.4em"></i>
+                        <p style="color: #4d4c4c; margin: 0;">
                             Whatsapp
                         </p>
                     </div>
@@ -257,8 +249,8 @@
                         href="https://wa.me/+989164043164"
                 >
                     <div class="d-flex align-items-center" style="gap: 5px">
-                        <p style="font-weight: bold; font-size: 1.4em; color: #6c757d; margin: 0;">@</p>
-                        <p style="color: #6c757d; margin: 0;">
+                        <p style="font-weight: bold; font-size: 1.4em; color: #4d4c4c; margin: 0;">@</p>
+                        <p style="color: #4d4c4c; margin: 0;">
                             Email message
                         </p>
                     </div>

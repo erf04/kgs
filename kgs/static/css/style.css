@@ -23,8 +23,23 @@
     src: local("roboto-regular"), url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "roboto-condensed";
+    src: local("roboto-condensed"), url("../fonts/robotoo/RobotoCondensed-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "roboto-condensed-light";
+    src: local("roboto-condensed-light"), url("../fonts/robotoo/RobotoCondensed-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "roboto-condensed-black";
+    src: local("roboto-condensed-black"), url("../fonts/robotoo/RobotoCondensed-Black.ttf") format("truetype");
+}
+
 body {
-    font-family: roboto-regular, serif;
+    font-family: roboto-condensed, serif;
 }
 
 img {
@@ -644,18 +659,17 @@ img {
     background-color: blue;
 }
 
-.glass-button {
+/* .glass-button {
     display: inline-block;
-    padding: 24px 32px;
     border: 0;
     text-decoration: none;
     border-radius: 15px;
-    background-color: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(30px);
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
     letter-spacing: 2px;
     cursor: pointer;
     text-transform: uppercase;
-}
+} */
