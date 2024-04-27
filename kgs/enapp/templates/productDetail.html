@@ -7,9 +7,9 @@
 <link rel="stylesheet" href="{% static 'css/productDetail.css' %}" />
 
 <style>
-    a {
-        color: #61a870;
-    }
+  a {
+    color: #61a870;
+  }
 </style>
 
 <!-- Page Loader -->
@@ -19,7 +19,7 @@
   <div class="loader-section section-right"></div>
 </div>
 
-<div class="tm-hero" style="position: relative;"></div>
+<div class="tm-hero" style="position: relative"></div>
 <!-- <div
       class="tm-hero d-flex justify-content-center align-items-center"
       data-parallax="scroll"
@@ -62,7 +62,7 @@
               >Compose Email</a
             >
           </button> -->
-          <button id="btn" >
+          <!-- <button id="btn" >
             <a
                     style="color: #61a870"
               target="_blank"
@@ -75,7 +75,28 @@
                 <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
               </svg>
             </div>
-          </button>
+          </button> -->
+          <a href="{% url 'Contact' %}">
+            <button
+              class="glass-button"
+              style="
+                display: inline-block;
+                padding: 10px 32px;
+                border: 3.1px solid;
+                text-decoration: none;
+                border-radius: 37px;
+                background-color: #61a870;
+                backdrop-filter: blur(30px);
+                color: white;
+                letter-spacing: 2px;
+                cursor: pointer;
+                margin-bottom: 0.8em;
+                text-transform: uppercase;
+              "
+            >
+              order to KGS
+            </button>
+          </a>
         </div>
         <!-- <p class="mb-4">
               Please support us by making
@@ -109,23 +130,13 @@
         </div>
         <div>
           <h3 class="tm-text-gray-dark mb-3">Tags</h3>
-          <a href="#" class=" mr-4 mb-2 d-inline-block">Cloud</a>
-          <a href="#" class=" mr-4 mb-2 d-inline-block"
-            >Bluesky</a
-          >
-          <a href="#" class="mr-4 mb-2 d-inline-block"
-            >Nature</a
-          >
-          <a href="#" class=" mr-4 mb-2 d-inline-block"
-            >Background</a
-          >
-          <a href="#" class=" mr-4 mb-2 d-inline-block"
-            >Timelapse</a
-          >
-          <a href="#" class=" mr-4 mb-2 d-inline-block">Night</a>
-          <a href="#" class=" mr-4 mb-2 d-inline-block"
-            >Real Estate</a
-          >
+          <a href="#" class="mr-4 mb-2 d-inline-block">Cloud</a>
+          <a href="#" class="mr-4 mb-2 d-inline-block">Bluesky</a>
+          <a href="#" class="mr-4 mb-2 d-inline-block">Nature</a>
+          <a href="#" class="mr-4 mb-2 d-inline-block">Background</a>
+          <a href="#" class="mr-4 mb-2 d-inline-block">Timelapse</a>
+          <a href="#" class="mr-4 mb-2 d-inline-block">Night</a>
+          <a href="#" class="mr-4 mb-2 d-inline-block">Real Estate</a>
         </div>
       </div>
     </div>
@@ -137,11 +148,7 @@
     {% for rel in related %}
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
       <figure class="effect-ming tm-video-item">
-        <img
-          src="{{rel.image.url}}"
-          alt="Image"
-          class="img-fluid"
-        />
+        <img src="{{rel.image.url}}" alt="Image" class="img-fluid" />
         <figcaption class="d-flex align-items-center justify-content-center">
           <h2 style="font-family: roboto-light">{{rel.name}}</h2>
           <a href="{% url 'seeproduct' rel.pk %}">View more</a>
