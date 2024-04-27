@@ -1,9 +1,9 @@
 {% extends 'baseEn.html' %} {% load static %} {% block content %}
 
 <style>
-    .text-green {
-        color: #61a870;
-    }
+  .text-green {
+    color: #61a870;
+  }
 </style>
 
 <!-- Page Loader -->
@@ -14,20 +14,19 @@
 </div>
 
 <div
-  class="tm-hero d-flex justify-content-center align-items-center"
+  class="d-flex justify-content-center align-items-center"
   data-parallax="scroll"
   style="
+    position: relative;
+    min-height: 200px;
     background-image: url({% static 'img/output.jpg' %});
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 9999;
   "
 ></div>
 <div class="container-fluid tm-mt-60">
   <div class="row mb-4">
-    <h2 class="col-12 text-green" id="t1">
-      About Catalog-Z Website Template
-    </h2>
+    <h2 class="col-12 text-green" id="t1">About Catalog-Z Website Template</h2>
   </div>
   <div class="row tm-mb-74 tm-row-1640">
     <div class="col-lg-5 col-md-6 col-12 mb-3">
@@ -73,9 +72,7 @@
   <div class="row tm-mb-50">
     <div class="col-md-6 col-12">
       <div class="tm-about-2-col">
-        <h2 class="text-green mb-4" id="t2">
-          Left side of 2-Column content
-        </h2>
+        <h2 class="text-green mb-4" id="t2">Left side of 2-Column content</h2>
         <p class="mb-4">
           Pellentesque urna odio, scelerisque eu mauris vitae, vestibulum
           sodales neque. Ut augue justo, tincidunt nec aliquet ac, cursus vel
