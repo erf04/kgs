@@ -1,9 +1,9 @@
 // $("#owl-demo").owlCarousel({
 //   navigation: true,
 // });
-$(window).on("load", () => {
-  $("body").addClass("loaded");
-});
+// $(window).on("load", () => {
+//   $("body").addClass("loaded");
+// });
 
 
 var email = document.getElementById("email");
@@ -14,10 +14,10 @@ var placeholder = document.getElementById("placeholder");
 email.style.width = email_div.clientWidth;
 email.style.height = email_div.clientHeight;
 email.style.top = email_div.offsetHeight;
-email.style.paddingTop = $(email_div).css("padding-left");
+// email.style.paddingTop = $(email_div).css("padding-left");
 // email.style.paddingTop += 30 + "px";
-console.log($(email_div).css("padding-top"));
-email.style.paddingLeft = $(email_div).css("padding-left");
+// console.log($(email_div).css("padding-top"));
+// email.style.paddingLeft = $(email_div).css("padding-left");
 
 setInterval(() => {
   if (email.value !== "") {
@@ -53,13 +53,13 @@ setInterval(() => {
 // })
 
 // $(document).ready(function() {
-  $("#owl-demo").owlCarousel({
-    autoPlay: 3000, //Set AutoPlay to 3 seconds
-    nav: true,
-    items : 3,
-    itemsDesktop : [1199,3],
-    itemsDesktopSmall : [979,3]
-  });
+  // $("#owl-demo").owlCarousel({
+  //   autoPlay: 3000, //Set AutoPlay to 3 seconds
+  //   nav: true,
+  //   items : 3,
+  //   itemsDesktop : [1199,3],
+  //   itemsDesktopSmall : [979,3]
+  // });
 // });
 
 function reveal() {
