@@ -56,8 +56,11 @@
         border-radius: 30px;
         position: absolute;
         top: 60px;
-        right: -40px;
+        right: 0px;
         z-index: 0;
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
       }
 
       .whatsapp {
@@ -85,11 +88,11 @@
     <!-- destroy in other sizes -->
     <header
       class="px-2 text-bg-white"
-      style="background-color: #f4f4f4; overflow: hidden"
+      style="background-color: #f4f4f4;"
     >
-      <div class="container-fluid pl-0" style="padding-left: 0">
-        <div class="greenRectTop"></div>
-        <div class="greenRectBottom"></div>
+      <div class="container-fluid pl-0" style="padding-left: 0;">
+        <div class="greenRectTop d-none d-lg-block"></div>
+        <div class="greenRectBottom d-none d-lg-block"></div>
         <div
           class="d-flex flex-wrap align-items-center justify-content-between"
         >
@@ -124,6 +127,7 @@
                   left: -3px;
                   z-index: 1000;
                 "
+                class="d-none d-lg-block"
               ></div>
             </a>
 

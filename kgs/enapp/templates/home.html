@@ -180,6 +180,19 @@
         //top: 8px;
         //color: #989898;
     //} */
+
+    @media screen and (max-width: 1800px) {
+      .w-lg-100 {  
+        width: 55%;
+      }
+    }
+    @media screen and (max-width: 992px) {
+      .w-lg-100 {  
+        width: 100%;
+      }
+    }
+
+
 </style>
 
 {% if messages %} {% for message in messages %}
@@ -350,8 +363,8 @@
     </p>
   </a>
   <div>
-    <div class="d-flex justify-content-between" style="height: 18em">
-      <div id="owl-demo" class="owl-carousel owl-theme" style="width: 55%">
+    <div class="d-block d-lg-flex justify-content-between" style="height: 18em; margin-bottom: 5em;">
+      <div id="owl-demo" class="owl-carousel owl-theme w-lg-100">
         {% for img in certifications %}
         <div
           class="item h-100 p-3 me-4"
@@ -361,9 +374,9 @@
         </div>
         {% endfor %}
       </div>
-      <div>
-        <img src="{% static 'img/img-14.jpg' %}" alt="" />
-      </div>
+    </div>
+    <div>
+      <img style="width: 100%;" src="{% static 'img/img-14.jpg' %}" alt="" />
     </div>
   </div>
   <!-- <a href="{% url 'products' %}" style="float: left"> -->
