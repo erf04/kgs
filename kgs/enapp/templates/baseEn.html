@@ -33,7 +33,11 @@
     <!-- <link rel="stylesheet" href="{% static 'css/Event_News.css' %}" /> -->
     <link rel="stylesheet" href="{% static 'css/gallery.css' %}" />
     <link rel="stylesheet" href="{% static 'css/resultSearch.css' %}" />
-    <link rel="icon" type="image/x-icon" href="{% static 'img/logo1.w.png' %}" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'img/logo1.w.png' %}"
+    />
     <style>
       /* :root {
         overflow-x: hidden;
@@ -77,6 +81,17 @@
         right: 40px;
         z-index: 999;
       }
+
+      @media screen and (max-width: 1800px) {
+        #w-lg-100 {
+          width: 50%;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        #w-lg-100 {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -89,11 +104,8 @@
       </div>
     </a>
     <!-- destroy in other sizes -->
-    <header
-      class="px-2 text-bg-white"
-      style="background-color: #f4f4f4;"
-    >
-      <div class="container-fluid pl-0" style="padding-left: 0;">
+    <header class="px-2 text-bg-white" style="background-color: #f4f4f4">
+      <div class="container-fluid pl-0" style="padding-left: 0">
         <div class="greenRectTop d-none d-lg-block"></div>
         <div class="greenRectBottom d-none d-lg-block"></div>
         <div
@@ -379,8 +391,8 @@ write the header(like navbar)
 -->
     <div class="border-top mt-5">
       <footer class="px-5 pt-2 bg-dark" id="footer">
-        <div class="d-flex justify-content-between">
-          <div class="w-50">
+        <div class="d-block d-lg-flex justify-content-between">
+          <div id="w-lg-100">
             <ul class="nav flex-column">
               <div class="d-flex">
                 <a
@@ -444,7 +456,7 @@ write the header(like navbar)
             </ul>
           </div> -->
 
-          <div class="w-50" style="text-align: center">
+          <div id="w-lg-100" style="text-align: center">
             <div>
               <form>
                 <h5>Subscribe to our newsletter</h5>
@@ -502,7 +514,7 @@ write the header(like navbar)
             </div>
             <a href="{% url 'Contact' %}">
               <button
-                class="btn btn-primary mt-5"
+                class="btn btn-primary my-5"
                 style="background-color: #61a870; text-transform: uppercase"
                 type="button"
               >
