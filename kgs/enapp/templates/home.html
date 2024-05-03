@@ -197,11 +197,11 @@
 </div>
 {% endfor %} {% endif %}
 <!-- Loader -->
-<div id="loader-wrapper">
+<!-- <div id="loader-wrapper">
   <div id="loader"></div>
   <div class="loader-section section-left"></div>
   <div class="loader-section section-right"></div>
-</div>
+</div> -->
 
 <!-- Crousel -->
 <div>
@@ -423,28 +423,40 @@
     alt="preparing"
     style="width: 100%; margin-top: 4em; margin: 0 auto"
   />
-  <div class="d-flex" style="gap: 2em; margin-top: 2em;">
+  <div class="d-block d-md-flex" style="gap: 2em; margin-top: 2em">
     <img
       src="{% static 'img/preparing1.png' %}"
-      style="width: 100%; max-height: 15em; border-radius: 10px;"
+      style="
+        width: 100%;
+        max-height: 15em;
+        border-radius: 10px;
+        margin-bottom: 2em;
+      "
       alt="preparing"
     />
     <img
       src="{% static 'img/preparing2.png' %}"
-      style="width: 100%; max-height: 15em; border-radius: 10px;"
+      style="
+        width: 100%;
+        max-height: 15em;
+        border-radius: 10px;
+        margin-bottom: 2em;
+      "
       alt="preparing"
     />
     <img
       src="{% static 'img/preparing3.png' %}"
-      style="width: 100%; max-height: 15em; border-radius: 10px;"
+      style="
+        width: 100%;
+        max-height: 15em;
+        border-radius: 10px;
+        margin-bottom: 2em;
+      "
       alt="preparing"
     />
   </div>
 </div>
 
-<div class="container" style="margin-top: 2em;">
-  
-</div>
 <!-- <div class="container" style="display: flex; margin: 0 auto; margin-top: 3em; gap: 3em; justify-content: center;">
   <div>
     <img src="{% static 'img/preparing1.png' %}" alt="preparing" />
@@ -534,7 +546,7 @@
   <h2 style="color: rgba(0, 128, 0, 0.61); font-weight: bold; line-height: 3">
     What value can KGS create for you?
   </h2>
-  <div class="d-flex justify-content-between mt-5">
+  <div class="d-block d-md-flex justify-content-between mt-5">
     <div>
       <div
         class="d-flex align-items-center"
@@ -567,22 +579,26 @@
         </p>
       </div>
     </div>
-    <img
-      style="height: 75%; border-radius: 10px"
-      src="{% static 'img/img-04.jpg' %}"
-      alt=""
-    />
+    <div>
+      <img
+        style="border-radius: 10px; width: 100%"
+        src="{% static 'img/img-04.jpg' %}"
+        alt=""
+      />
+    </div>
   </div>
-  <div class="d-flex justify-content-between mt-5">
-    <img
-      style="
-        height: 75%;
-        border-radius: 10px;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.29);
-      "
-      src="{% static 'img/img-05.jpg' %}"
-      alt=""
-    />
+  <div class="d-block d-md-flex justify-content-between mt-5">
+    <div>
+      <img
+        style="
+        width: 100%;
+          border-radius: 10px;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.29);
+        "
+        src="{% static 'img/img-05.jpg' %}"
+        alt=""
+      />
+    </div>
     <div>
       <div
         class="d-flex align-items-center"
@@ -616,7 +632,7 @@
       </div>
     </div>
   </div>
-  <div class="d-flex justify-content-between mt-5">
+  <div class="d-block d-md-flex justify-content-between mt-5">
     <div>
       <div
         class="d-flex align-items-center"
@@ -649,26 +665,26 @@
         </p>
       </div>
     </div>
-    <img
-      style="
-        height: 75%;
-        border-radius: 10px;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.29);
-      "
-      src="{% static 'img/img-06.jpg' %}"
-      alt=""
-    />
+    <div>
+      <img
+        style="border-radius: 10px; width: 100%"
+        src="{% static 'img/img-04.jpg' %}"
+        alt=""
+      />
+    </div>
   </div>
-  <div class="d-flex justify-content-between mt-5">
-    <img
-      style="
-        height: 75%;
-        border-radius: 10px;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.29);
-      "
-      src="{% static 'img/img-07.jpg' %}"
-      alt=""
-    />
+  <div class="d-block d-md-flex justify-content-between mt-5">
+    <div>
+      <img
+        style="
+        width: 100%;
+          border-radius: 10px;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.29);
+        "
+        src="{% static 'img/img-05.jpg' %}"
+        alt=""
+      />
+    </div>
     <div>
       <div
         class="d-flex align-items-center"
@@ -702,6 +718,7 @@
       </div>
     </div>
   </div>
+
   <div class="container" style="margin-top: 1em">
     <a href="{% url 'Contact' %}">
       <button
