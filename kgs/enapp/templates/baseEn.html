@@ -122,8 +122,8 @@
                 src="{% static 'img/logoKgs.png' %}"
                 class="me-4"
                 style="
-                  width: 120px;
-                  height: 90px;
+                  width: 8em;
+                  height: 6em;
                   background-color: none;
                   position: relative;
                   z-index: 1001;
@@ -133,7 +133,7 @@
               />
               <div
                 style="
-                  background-color: white;
+                  background-color: #f4f4f4;
                   border-radius: 50%;
                   position: absolute;
                   width: 106px;
@@ -218,7 +218,7 @@
                   style="font-size: 1.4em; color: #4d4c4c"
                   class="text-decoration-none pl-3"
                   href="{% url 'AboutUs' %}"
-                  >About</a
+                  >About Us</a
                 >
                 <!--                    <button-->
                 <!--                            type="button"-->
@@ -270,7 +270,7 @@
                     href="#footer"
                     class="text-decoration-none pl-3"
                     style="font-size: 1.4em; color: #4d4c4c"
-                    >Contact</a
+                    >Contact Us</a
                   >
                 </div>
               </li>
@@ -405,7 +405,7 @@ write the header(like navbar)
                   href="{% url 'AboutUs' %}"
                   class="nav-link px-3 text-white"
                   style="text-decoration: underline"
-                  >About</a
+                  >About Us</a
                 >
               </div>
               <!-- <li class="nav-item mb-2"> -->
@@ -413,25 +413,31 @@ write the header(like navbar)
               <!-- <li class="nav-item mb-2"> -->
               <!-- </li> -->
               <hr style="color: white; margin: 10px" />
-              <li class="nav-item mb-2">
-                <p href="#" class="nav-link py-2 text-white">
-                  Not sure what you need? Just give us a shout!
-                </p>
-              </li>
-              <li class="nav-item mb-2">
-                <p href="#" class="nav-link py-2 text-white">
-                  Address: KGS Headquarters, 4th Floor, Building No.3, Danesh 2
-                  Street, Adab Square, Eram Complex, Eram Square, Shiraz
-                </p>
-              </li>
-              <li class="nav-item mb-2">
-                <p href="#" class="nav-link py-2 text-white">
-                  Call No: +989300615268 (just on whatsapp)
-                </p>
-              </li>
-              <li class="nav-item mb-2">
-                <p href="#" class="nav-link py-2 text-white">Email:</p>
-              </li>
+              <div class="row">
+                <div class="col-8">
+                  <li class="nav-item mb-2">
+                    <p href="#" class="nav-link py-2 text-white">
+                      Not sure what you need? Just give us a shout!
+                    </p>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <p href="#" class="nav-link py-2 text-white">
+                      Address: KGS Headquarters, 4th Floor, Building No.3,
+                      Danesh 2 Street, Adab Square, Eram Complex, Eram Square,
+                      Shiraz
+                    </p>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <p href="#" class="nav-link py-2 text-white">
+                      Call No: +989300615268 (just on whatsapp)
+                    </p>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <p href="#" class="nav-link py-2 text-white">Email:</p>
+                  </li>
+                </div>
+                <div class="col-4"></div>
+              </div>
             </ul>
           </div>
 

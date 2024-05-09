@@ -181,18 +181,16 @@
         //color: #989898;
     //} */
 
-    @media screen and (max-width: 1800px) {
-      .w-lg-100 {  
-        width: 55%;
-      }
+  @media screen and (max-width: 1800px) {
+    .w-lg-100 {
+      width: 55%;
     }
-    @media screen and (max-width: 992px) {
-      .w-lg-100 {  
-        width: 100%;
-      }
+  }
+  @media screen and (max-width: 992px) {
+    .w-lg-100 {
+      width: 100%;
     }
-
-
+  }
 </style>
 
 {% if messages %} {% for message in messages %}
@@ -217,7 +215,7 @@
 </div> -->
 
 <!-- Crousel -->
-<div>
+<!-- <div> -->
   <!--  <div class="carousel-indicators">-->
   <!--    <button-->
   <!--      type="button"-->
@@ -240,10 +238,10 @@
   <!--      aria-label="Slide 3"-->
   <!--    ></button>-->
   <!--  </div>-->
-  <div class="carousel-inner">
+  <div class="carousel-inner" style="height: 550px;">
     <!--    {% for product,number in products %}-->
-    <a>
-      <div class="carousel-item active" style="height: 550px">
+    <!-- <a> -->
+      <!-- <div class="carousel-item active d-flex w-100" style="height: 550px"> -->
         <video autoplay muted loop id="myVideo">
           <source src="{% static 'video/test.mp4' %}" />
         </video>
@@ -273,8 +271,8 @@
             </button>
           </a>
         </div>
-      </div>
-    </a>
+      <!-- </div> -->
+    <!-- </a> -->
     <!--    {% endfor %}-->
     <!-- <a href="{% url 'seeproduct' 2 %}">
           <div class="carousel-item">
@@ -321,7 +319,7 @@
   <!--    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
   <!--    <span class="visually-hidden">Next</span>-->
   <!--  </button>-->
-</div>
+<!-- </div> -->
 
 <!--<div class="myContent">-->
 <!--    <div>-->
@@ -359,33 +357,60 @@
 <div class="container my-5" style="text-align: center">
   <a href="{% url 'products' %}">
     <p style="font-family: roboto-condensed-light; font-size: 2em">
-      KGS product
+      KGS Products
     </p>
   </a>
-  <div>
-    <div class="d-block d-lg-flex justify-content-between" style="height: 18em; margin-bottom: 5em;">
-      <div id="owl-demo" class="owl-carousel owl-theme w-lg-100">
-        {% for img in certifications %}
-        <div
-          class="item h-100 p-3 me-4"
-          style="border: 1px solid gray; border-radius: 20px"
-        >
-          <img src="{{img.image.url}}" alt="Owl Image" />
-        </div>
-        {% endfor %}
+  <!-- <div> -->
+  <div
+    class="d-block d-lg-flex justify-content-between"
+    style="margin-bottom: 5em"
+  >
+    <div id="owl-demo" class="owl-carousel owl-theme w-lg-100" style="height: fit-content;">
+      {% for img in certifications %}
+      <div
+        class="item h-100 p-3 me-4"
+        style="border: 1px solid gray; border-radius: 20px"
+      >
+        <img src="{{img.image.url}}" alt="Owl Image" />
       </div>
+      {% endfor %}
     </div>
     <div>
-      <img style="width: 100%;" src="{% static 'img/img-14.jpg' %}" alt="" />
+      <img style="width: 100%" src="{% static 'img/img-14.jpg' %}" alt="" />
     </div>
   </div>
+  <div style="text-align: start;">
+    <a href="{% url 'Contact' %}">
+      <button
+        class="glass-button"
+        style="
+          display: inline-block;
+          padding: 10px 32px;
+          border: 3.1px solid;
+          text-decoration: none;
+          border-radius: 37px;
+          background-color: #61a870;
+          backdrop-filter: blur(30px);
+          color: white;
+          letter-spacing: 2px;
+          cursor: pointer;
+          margin-bottom: 0.8em;
+          text-transform: uppercase;
+        "
+      >
+        order to KGS
+      </button>
+    </a>
+  </div>
+  <!-- </div> -->
   <!-- <a href="{% url 'products' %}" style="float: left"> -->
   <!-- </a> -->
   <!-- <div class="d-flex justify-content-start"> -->
   <!-- </div> -->
 </div>
-<div class="container" style="margin-top: 5em">
-  <!-- <a
+
+<!-- <div class="container" style="margin-top: 5em"> -->
+<!-- <a
     href="#"
     style="
       background-color: rgba(0, 128, 0, 0.51);
@@ -399,7 +424,7 @@
   >
     ORDER TO KGS
   </a> -->
-  <a href="{% url 'Contact' %}">
+<!-- <a href="{% url 'Contact' %}">
     <button
       class="glass-button"
       style="
@@ -419,8 +444,8 @@
     >
       order to KGS
     </button>
-  </a>
-</div>
+  </a> -->
+<!-- </div> -->
 
 <!-- <div class="container">
   <img
