@@ -105,14 +105,14 @@
     </a>
     <!-- destroy in other sizes -->
     <header class="px-2 text-bg-white" style="background-color: #f4f4f4">
-      <div class="container-fluid pl-0" style="padding-left: 0">
+      <div class="container-fluid pl-0" style="padding-left: 0; max-width: 2500px;">
         <div class="greenRectTop d-none d-lg-block"></div>
         <div class="greenRectBottom d-none d-lg-block"></div>
         <div
-          class="d-flex flex-wrap align-items-center justify-content-between"
+          class="d-block d-lg-flex flex-wrap align-items-center justify-content-between"
         >
           <div
-            class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+            class="d-flex flex-wrap align-items-center justify-content-center"
           >
             <a
               href="{% url 'enhome' %}"
@@ -148,7 +148,7 @@
 
             <ul
               class="nav col-12 col-lg-auto mb-2 mb-md-0"
-              style="position: relative; top: 12px; gap: 20px"
+              style="position: relative; top: 12px; gap: 20px; justify-content: center;" 
             >
               <!-- <li>
                       <a href="{% url 'enhome' %}" class="nav-link px-3 text-secondary"
@@ -299,7 +299,7 @@
 
           <div
             style="gap: 40px; margin-top: 0.3em"
-            class="d-flex align-self-start align-items-center"
+            class="d-flex align-self-start align-items-center justify-content-center"
           >
             <a aria-label="Chat on WhatsApp" href="https://wa.me/+989300615268">
               <div class="d-flex align-items-center" style="gap: 5px">
