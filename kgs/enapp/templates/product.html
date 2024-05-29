@@ -4,6 +4,10 @@
 <!-- <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}" /> -->
 <!-- <link rel="stylesheet" href="{% static 'css/product.css' %}" /> -->
 <style>
+    body {
+        background-color: #f0eded;
+    }
+
     .filter-btn {
         color: white;
         background-color: #61a870;
@@ -53,13 +57,17 @@
     a:hover {
         color: black;
     }
+
+    figure .effect-ming {
+        background: none;
+    }
 </style>
 <!-- Page Loader -->
-<div id="loader-wrapper">
+<!-- <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
-</div>
+</div> -->
 <!-- {% for product in htmlproducts %}
     <h1 class="btn btn-warning">{{product.name}}</h1>
     <h2>{{product.description}}</h2>
@@ -100,17 +108,20 @@
         </div>
         <div class="row col-md-10 tm-mb-90 tm-gallery">
             <!-- for loop -->
-            {% for product in products %}
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-5">
+            <!-- for product in products -->
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-5" style="padding: 0;">
                 <figure class="effect-ming tm-video-item">
+                    <!-- src="product.image.url" -->
                     <img
-                            src="{{product.image.url}}"
-                            alt="Image"
-                            class="img-fluid"
+                        src="{% static 'img/kabkab2.png' %}"
+                        alt="Image"
+                        class="img-fluid"
                     />
                     <figcaption class="d-flex align-items-center justify-content-center">
-                        <h2 class="product_name" style="font-family: roboto-light">{{ product.name }}</h2>
-                        <a href="{% url 'seeproduct' product.pk %}">View </a>
+                        <!-- <h2 class="product_name" style="font-family: roboto-light">product.name</h2> -->
+                        <h2 class="product_name" style="font-family: roboto-light">Kabkab</h2>
+                        <!-- <a href=" url 'seeproduct' product.pk ">View </a> -->
+                        <a href="#">View </a>
                     </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -118,7 +129,66 @@
                     <span>9,906 views</span>
                 </div>
             </div>
-            {% endfor %}
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-5" style="padding: 0;">
+                <figure class="effect-ming tm-video-item">
+                    <!-- src="product.image.url" -->
+                    <img
+                        src="{% static 'img/kabkab2.png' %}"
+                        alt="Image"
+                        class="img-fluid"
+                    />
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <!-- <h2 class="product_name" style="font-family: roboto-light">product.name</h2> -->
+                        <h2 class="product_name" style="font-family: roboto-light">Kabkab</h2>
+                        <!-- <a href=" url 'seeproduct' product.pk ">View </a> -->
+                        <a href="#">View </a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">18 Oct 2020</span>
+                    <span>9,906 views</span>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-5" style="padding: 0;">
+                <figure class="effect-ming tm-video-item">
+                    <!-- src="product.image.url" -->
+                    <img
+                        src="{% static 'img/kabkab2.png' %}"
+                        alt="Image"
+                        class="img-fluid"
+                    />
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <!-- <h2 class="product_name" style="font-family: roboto-light">product.name</h2> -->
+                        <h2 class="product_name" style="font-family: roboto-light">Kabkab</h2>
+                        <!-- <a href=" url 'seeproduct' product.pk ">View </a> -->
+                        <a href="#">View </a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">18 Oct 2020</span>
+                    <span>9,906 views</span>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 mb-5" style="padding: 0;">
+                <figure class="effect-ming tm-video-item">
+                    <!-- src="product.image.url" -->
+                    <img
+                        src="{% static 'img/kabkab2.png' %}"
+                        alt="Image"
+                        class="img-fluid"
+                    />
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <!-- <h2 class="product_name" style="font-family: roboto-light">product.name</h2> -->
+                        <h2 class="product_name" style="font-family: roboto-light">Kabkab</h2>
+                        <!-- <a href=" url 'seeproduct' product.pk ">View </a> -->
+                        <a href="#">View </a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">18 Oct 2020</span>
+                    <span>9,906 views</span>
+                </div>
+            </div>
             <!-- endfor -->
 
             <!--      <div class="row mb-4">-->
