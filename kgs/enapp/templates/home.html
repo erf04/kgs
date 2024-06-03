@@ -252,41 +252,60 @@
   <!--    ></button>-->
   <!--  </div>-->
   <div class="carousel-inner" style="height: 550px;">
-    <!--    {% for product,number in products %}-->
     <!-- <a> -->
       <div class="carousel-item active" style="height: 550px">
+        <!-- <div> -->
+          
+        <!-- </div> -->
         <video autoplay muted loop id="myVideo" style="width: 100%;">
-          <source src="{% static 'video/test.mp4' %}" />
+          <source src="{% static 'video/header.mp4' %}" />
         </video>
-        <div class="carousel-caption d-none d-md-block p-0">
-          <h2 style="margin-bottom: 0.8em">From farm to your target market</h2>
-          <a href="{% url 'Contact' %}">
-            <button
-              class="glass-button"
-              style="
-                display: inline-block;
-                padding: 10px 32px;
-                border: 3.1px solid #ffffff;
-                text-decoration: none;
-                border-radius: 37px;
-                background-color: rgba(255, 255, 255, 0.1);
-                backdrop-filter: blur(30px);
-                color: rgba(255, 255, 255, 0.8);
-                font-size: 1.3em;
-                font-family: 'roboto-condensed-light';
-                letter-spacing: 2px;
-                cursor: pointer;
-                margin-bottom: 0.8em;
-                text-transform: uppercase;
-              "
-            >
-              order to KGS
-            </button>
-          </a>
-        </div>
+        <!-- <div class="d-flex"> -->
+          <div class="carousel-caption d-none d-md-flex justify-content-between p-0 w-100" style="right: 0; left: 0;">
+            <div style="align-self: end; padding: 20px">
+              <button id="playVideoBtn" style="background: none; border: none" onclick="videoPlayHandler()">
+                <svg style="width: 30px; height: 30px; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+                </svg>          
+              </button>
+            </div>
+            <div>
+              <h2 style="margin-bottom: 0.8em">From farm to your target market</h2>
+              <a style="display: block;" href="{% url 'Contact' %}">
+                <button
+                  class="glass-button"
+                  style="
+                    display: inline-block;
+                    padding: 10px 32px;
+                    border: 3.1px solid #ffffff;
+                    text-decoration: none;
+                    border-radius: 37px;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(30px);
+                    color: rgba(255, 255, 255, 0.8);
+                    font-size: 1.3em;
+                    font-family: 'roboto-condensed-light';
+                    letter-spacing: 2px;
+                    cursor: pointer;
+                    margin-bottom: 0.8em;
+                    text-transform: uppercase;
+                  "
+                >
+                  order to KGS
+                </button>
+              </a>
+            </div>
+            <div style="align-self: end; padding: 20px">
+              <button id="playSoundBtn" style="background: none; border: none" onclick="playHeaderSound()">
+                <svg style="width: 30px; height: 30px; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        <!-- </div> -->
       </div>
     <!-- </a> -->
-    <!--    {% endfor %}-->
     <!-- <a href="{% url 'seeproduct' 2 %}">
           <div class="carousel-item">
             <img
@@ -1198,6 +1217,67 @@
 <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
 <script src="{% static 'css\OwlCarousel2-2.3.4\dist\owl.carousel.min.js' %}"></script>
 <script src="{% static 'js/index.js' %}"></script>
+<script>
+  var isPlaying = false
+  var sound = new Audio('../../static/audio/header.mp3');
+  var btn = document.getElementById('playSoundBtn');
+  const video = document.getElementById('myVideo');
+  var isPause = false;
+  
+  sound.loop = true
+  var cTime;
+  function setTime() {
+    cTime = video.currentTime;
+    sound.currentTime = cTime;
+  }
+
+  function playHeaderSound() {
+    if (!isPlaying) {
+      btn.innerHTML = `<svg style="width: 30px; height: 30px; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+      </svg> `;
+      if (!isPause) {
+        sound.volume = 1;
+        sound.play();
+        setTime();
+      }
+      isPlaying = true
+    } else {
+      btn.innerHTML = `<svg style="width: 30px; height: 30px; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+      </svg>
+      `;
+      if (!isPause) {
+        sound.volume = 0;
+      }
+      isPlaying = false
+    } 
+  }
+
+  var btnV = document.getElementById('playVideoBtn');
+  function videoPlayHandler() {
+    if (isPause) {
+      btnV.innerHTML = `<svg style="width: 30px; height: 30px; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+      </svg>      
+      `;
+      video.play();
+      if (isPlaying) {
+        sound.volume = 1;
+        sound.play();
+        setTime();
+      }
+      isPause = false;
+    } else {
+      btnV.innerHTML = `<svg style="width: 30px; height: 30px; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+      </svg>`;
+      sound.pause();
+      video.pause();
+      isPause = true;
+    }
+  }
+</script>
 
 <!--<script src="{% static 'js/carousel.js' %}"></script>-->
 
