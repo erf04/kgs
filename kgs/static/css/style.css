@@ -539,14 +539,14 @@ img {
 .more-products {
     text-decoration: none;
     color: rgb(0, 140, 255);
-    font-size: 16pt;
+    font-size: 1.45vw;
 }
 
 .arrow-more-pro {
     padding: 0;
     margin: 0;
-    width: 15px;
-    height: 15px;
+    width: 1.04vw;
+    height: 1.04vw;
 }
 
 .flex {
@@ -573,11 +573,11 @@ img {
 .seeGallery {
     text-decoration: none;
     color: rgb(0, 140, 255);
-    font-size: 16pt;
+    font-size: 1.45vw;
 }
 
 .upComming {
-    margin-top: 20px;
+    margin-top: 1.38vw;
     height: fit-content;
 }
 
@@ -621,27 +621,27 @@ img {
 
 @media (min-width: 768px) {
     .button-52 {
-        padding: 13px 50px 13px;
+        padding: 0.9vw 3.47vw 0.9vw;
     }
 }
 
 .social-media {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 0.34vw;
 }
 
 .linkedin-icon,
 .whatsapp-icon {
-    font-size: 30px;
-    border-radius: 5px;
-    padding: 3px;
+    font-size: 2.08vw;
+    border-radius: 0.34vw;
+    padding: 0.2vw;
     transition: 0.2s;
 }
 
 .whatsapp-icon {
     color: green;
-    border: 2px solid green;
+    border: 0.13vw solid green;
 }
 
 .whatsapp-icon:hover {
@@ -651,7 +651,7 @@ img {
 
 .linkedin-icon {
     color: blue;
-    border: 2px solid blue;
+    border: 0.13vw solid blue;
 }
 
 .linkedin-icon:hover {

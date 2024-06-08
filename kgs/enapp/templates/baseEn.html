@@ -44,25 +44,25 @@
       } */
 
       .greenRectTop {
-        width: 570px;
-        height: 20px;
-        border: 5px solid #9cd38d;
-        border-radius: 30px;
+        width: 39.5vw;
+        height: 1.4vw;
+        border: 0.34vw solid #9cd38d;
+        border-radius: 2.1vw;
         border-top: none;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
         position: absolute;
         top: 0px;
-        left: 150px;
+        left: 10.4vw;
       }
 
       .greenRectBottom {
-        width: 570px;
-        height: 150px;
-        border: 5px solid #9cd38d;
-        border-radius: 30px;
+        width: 39.5vw;
+        height: 10.4vw;
+        border: 0.34vw solid #9cd38d;
+        border-radius: 2.1vw;
         position: absolute;
-        top: 60px;
+        top: 4.1vw;
         right: 0px;
         z-index: 0;
         border-right: none;
@@ -71,23 +71,23 @@
       }
 
       .whatsapp {
-        width: 70px;
-        height: 70px;
+        width: 5vw;
+        height: 5vw;
         position: fixed;
         /* z-index: 99999; */
         background-color: #61a870;
         border-radius: 50%;
-        bottom: 40px;
-        right: 40px;
+        bottom: 2.7vw;
+        right: 2.7vw;
         z-index: 999;
       }
 
-      @media screen and (max-width: 1800px) {
+      @media screen and (max-width: 2800px) {
         #w-lg-100 {
           width: 50%;
         }
       }
-      @media screen and (max-width: 992px) {
+      @media screen and (max-width: 1025px) {
         #w-lg-100 {
           width: 100%;
         }
@@ -100,12 +100,15 @@
         style="display: flex; justify-content: center; align-items: center"
         class="whatsapp"
       >
-        <i class="fab fa-whatsapp" style="color: white; font-size: 2.5em"></i>
+        <i class="fab fa-whatsapp" style="color: white; font-size: 3vw"></i>
       </div>
     </a>
     <!-- destroy in other sizes -->
     <header class="px-2 text-bg-white" style="background-color: #f4f4f4">
-      <div class="container-fluid pl-0" style="padding-left: 0; max-width: 2500px;">
+      <div
+        class="container-fluid pl-0"
+        style="padding-left: 0; max-width: 2800px"
+      >
         <div class="greenRectTop d-none d-lg-block"></div>
         <div class="greenRectBottom d-none d-lg-block"></div>
         <div
@@ -122,13 +125,13 @@
                 src="{% static 'img/logoKgs.png' %}"
                 class="me-4"
                 style="
-                  width: 8em;
-                  height: 6em;
+                  width: 8vw;
+                  height: 6vw;
                   background-color: none;
                   position: relative;
                   z-index: 1001;
-                  top: 8px;
-                  left: 5px;
+                  top: 0.55vw;
+                  left: 0.34vw;
                 "
               />
               <div
@@ -136,10 +139,10 @@
                   background-color: #f4f4f4;
                   border-radius: 50%;
                   position: absolute;
-                  width: 106px;
-                  height: 80px;
-                  top: 41px;
-                  left: -3px;
+                  width: 7.2vw;
+                  height: 5vw;
+                  top: 2.7vw;
+                  left: -0.2vw;
                   z-index: 1000;
                 "
                 class="d-none d-lg-block"
@@ -148,7 +151,12 @@
 
             <ul
               class="nav col-12 col-lg-auto mb-2 mb-md-0"
-              style="position: relative; top: 12px; gap: 20px; justify-content: center;" 
+              style="
+                position: relative;
+                top: 0.8vw;
+                gap: 1.38vw;
+                justify-content: center;
+              "
             >
               <!-- <li>
                       <a href="{% url 'enhome' %}" class="nav-link px-3 text-secondary"
@@ -174,10 +182,10 @@
               <!--            </li>-->
 
               <li>
-                <div class="btn-group nav-link">
+                <div class="btn-group nav-link" style="font-size: 1.3vw; padding: 0.55vw 1.1vw">
                   <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
                   <a
-                    style="font-size: 1.4em; color: #4d4c4c"
+                    style="font-size: 1.9vw; color: #4d4c4c"
                     class="text-decoration-none pl-3"
                     href="{% url 'products' %}"
                     >Products</a
@@ -212,10 +220,10 @@
                 </div>
               </li>
 
-              <div class="btn-group nav-link">
+              <div class="btn-group nav-link" style="font-size: 1.3vw; padding: 0.55vw 1.1vw">
                 <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
                 <a
-                  style="font-size: 1.4em; color: #4d4c4c"
+                  style="font-size: 1.9vw; color: #4d4c4c"
                   class="text-decoration-none pl-3"
                   href="{% url 'AboutUs' %}"
                   >About Us</a
@@ -265,11 +273,11 @@
               </div>
               <!-- <li><a href="{% url 'AboutUs' %}" class="nav-link px-3 text-black">About</a></li> -->
               <li>
-                <div class="btn-group nav-link">
+                <div class="btn-group nav-link" style="font-size: 1.3vw; padding: 0.55vw 1.1vw">
                   <a
                     href="#footer"
                     class="text-decoration-none pl-3"
-                    style="font-size: 1.4em; color: #4d4c4c"
+                    style="font-size: 1.9vw; color: #4d4c4c"
                     >Contact Us</a
                   >
                 </div>
@@ -298,31 +306,31 @@
           </div>
 
           <div
-            style="gap: 40px; margin-top: 0.3em"
+            style="gap: 2.7vw; margin-top: 0.33vw; "
             class="d-flex align-self-start align-items-center justify-content-center"
           >
             <a aria-label="Chat on WhatsApp" href="https://wa.me/+989300615268">
-              <div class="d-flex align-items-center" style="gap: 5px">
+              <div class="d-flex align-items-center" style="gap: 0.34vw">
                 <i
                   class="fab fa-whatsapp"
-                  style="color: #4d4c4c; font-size: 1.4em"
+                  style="color: #4d4c4c; font-size: 1.7vw"
                 ></i>
-                <p style="color: #4d4c4c; margin: 0">Whatsapp</p>
+                <p style="color: #4d4c4c; margin: 0; font-size: 1.7vw">Whatsapp</p>
               </div>
             </a>
             <a aria-label="Gmail" href="#">
-              <div class="d-flex align-items-center" style="gap: 5px">
+              <div class="d-flex align-items-center" style="gap: 0.34vw">
                 <p
                   style="
                     font-weight: bold;
-                    font-size: 1.4em;
+                    font-size: 1.7vw;
                     color: #4d4c4c;
                     margin: 0;
                   "
                 >
                   @
                 </p>
-                <p style="color: #4d4c4c; margin: 0">Email message</p>
+                <p style="color: #4d4c4c; margin: 0; font-size: 1.7vw">Email message</p>
               </div>
             </a>
           </div>
@@ -412,7 +420,7 @@ write the header(like navbar)
               <!-- </li> -->
               <!-- <li class="nav-item mb-2"> -->
               <!-- </li> -->
-              <hr style="color: white; margin: 10px" />
+              <hr style="color: white; margin: 0.69vw" />
               <div class="row">
                 <div class="col-8">
                   <li class="nav-item mb-2">

@@ -181,9 +181,9 @@
         //color: #989898;
     //} */
 
-  @media screen and (max-width: 1800px) {
+  @media screen and (max-width: 2800px) {
     .w-lg-100 {
-      width: 65%;
+      width: 48vw;
     }
   }
   @media screen and (max-width: 992px) {
@@ -251,9 +251,10 @@
   <!--      aria-label="Slide 3"-->
   <!--    ></button>-->
   <!--  </div>-->
-  <div class="carousel-inner" style="height: 550px;">
+
+  <div class="carousel-inner" style="height: 39.8vw">
     <!-- <a> -->
-      <div class="carousel-item active" style="height: 550px">
+      <div class="carousel-item active" style="height: 100%">
         <!-- <div> -->
           
         <!-- </div> -->
@@ -261,29 +262,30 @@
           <source src="{% static 'video/header.mp4' %}" />
         </video>
         <!-- <div class="d-flex"> -->
+          <!-- </div> -->
           <div class="carousel-caption d-none d-md-flex justify-content-between p-0 w-100" style="right: 0; left: 0;">
             <div style="align-self: end; padding: 20px">
               <button id="playVideoBtn" style="background: none; border: none" onclick="videoPlayHandler()">
-                <svg style="width: 30px; height: 30px; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <svg style="width: 2vw; height: 2vw; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
                 </svg>          
               </button>
             </div>
             <div>
-              <h2 style="margin-bottom: 0.8em">From farm to your target market</h2>
+              <h2 style="margin-bottom: 0.8em; font-size: 2vw">From farm to your target market</h2>
               <a style="display: block;" href="{% url 'Contact' %}">
                 <button
                   class="glass-button"
                   style="
                     display: inline-block;
-                    padding: 10px 32px;
-                    border: 3.1px solid #ffffff;
+                    padding: 0.7vw 2.2vw;
+                    border: 0.2vw solid #ffffff;
                     text-decoration: none;
-                    border-radius: 37px;
+                    border-radius: 2.6vw;
                     background-color: rgba(255, 255, 255, 0.1);
                     backdrop-filter: blur(30px);
                     color: rgba(255, 255, 255, 0.8);
-                    font-size: 1.3em;
+                    font-size: 1.5vw;
                     font-family: 'roboto-condensed-light';
                     letter-spacing: 2px;
                     cursor: pointer;
@@ -297,13 +299,12 @@
             </div>
             <div style="align-self: end; padding: 20px">
               <button id="playSoundBtn" style="background: none; border: none" onclick="playHeaderSound()">
-                <svg style="width: 30px; height: 30px; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <svg style="width: 2vw; height: 2vw; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
                 </svg>
               </button>
             </div>
           </div>
-        <!-- </div> -->
       </div>
     <!-- </a> -->
     <!-- <a href="{% url 'seeproduct' 2 %}">
@@ -386,18 +387,18 @@
 <!--<div class="carousel"></div>-->
 
 <!-- Certification -->
-<div class="container my-5" style="text-align: center">
+<div class="container" style="text-align: center; margin-top: 3.33vw">
   <a href="{% url 'products' %}">
-    <p style="font-family: roboto-condensed-light; font-size: 2em">
+    <p style="font-family: roboto-condensed-light; font-size: 2.2vw; margin-bottom: 1.1vw">
       KGS Products
     </p>
   </a>
   <!-- <div> -->
   <div
-    class="d-block d-lg-flex justify-content-between"
-    style="margin-bottom: 2em"
+    class=" d-block d-lg-flex justify-content-between gap-4"
+    style="margin-bottom: 2.2vw"
   >
-    <div id="owl-demo" class="owl-carousel owl-theme w-lg-100" style="height: fit-content;">
+    <div id="owl-demo" class="owl-carousel owl-theme w-lg-100" style="height: fit-content">
       <div
         class="item h-100 p-3 me-4 w-100"
         >
@@ -455,7 +456,7 @@
     </div>
     </div>
     <div>
-      <img style="width: 106%; position: relative; right: -80px;" src="{% static 'img/bigDate.png' %}" alt="bigDate" />
+      <img style="width: 35vw" src="{% static 'img/bigDate.png' %}" alt="bigDate" />
     </div>
   </div>
   <div style="text-align: start;">
@@ -463,17 +464,18 @@
       <button
         class="glass-button"
         style="
+          font-size: 1.5vw;
           display: inline-block;
-          padding: 10px 32px;
-          border: 3.1px solid;
+          padding: 0.69vw 2.2vw;
+          border: 0.21vw solid;
           text-decoration: none;
-          border-radius: 37px;
+          border-radius: 2.56vw;
           background-color: #61a870;
           backdrop-filter: blur(30px);
           color: white;
           letter-spacing: 2px;
           cursor: pointer;
-          margin-bottom: 0.8em;
+          margin-bottom: 0.89vw;
           text-transform: uppercase;
         "
       >
@@ -484,17 +486,18 @@
       <button
         class="glass-button"
         style="
+          font-size: 1.5vw;
           display: inline-block;
-          padding: 10px 32px;
-          border: 3.1px solid;
+          padding: 0.69vw 2.2vw;
+          border: 0.21vw solid;
           text-decoration: none;
-          border-radius: 37px;
+          border-radius: 2.56vw;
           background-color: #ffffff;
           backdrop-filter: blur(30px);
           color: rgb(0, 0, 0);
           letter-spacing: 2px;
           cursor: pointer;
-          margin-bottom: 0.8em;
+          margin-bottom: 0.89vw;
           text-transform: uppercase;
         "
       >
@@ -555,31 +558,31 @@
   />
 </div> -->
 
-<div class="container mt-5" style="text-align: center;">
+<div class="container" style="text-align: center; margin-top: 3.3vw">
   <img
     src="{% static 'img/preparingBig.png' %}"
     alt="preparing"
-    style="width: 85%; margin-top: 4em; margin: 0 auto"
+    style="width: 85%; margin-top: 4.4vw; margin: 0 auto"
   />
-  <div class="d-block d-md-flex justify-content-center" style="gap: 2em; width: 85%; text-align: center; margin: 0 auto; margin-top: 2em;">
+  <div class="d-flex justify-content-center" style="gap: 2.2vw; width: 85%; text-align: center; margin: 0 auto; margin-top: 2.2vw;">
     <div>
       <img
         src="{% static 'img/preparing1.png' %}"
-        style="width: 100%; border-radius: 10px; margin-bottom: 2em"
+        style="width: 100%; border-radius: 0.69vw; margin-bottom: 2.2vw"
         alt="preparing"
       />
     </div>
     <div>
       <img
         src="{% static 'img/preparing2.png' %}"
-        style="width: 100%; border-radius: 10px; margin-bottom: 2em"
+        style="width: 100%; border-radius: 0.69vw; margin-bottom: 2.2vw"
         alt="preparing"
       />
     </div>
     <div>
       <img
         src="{% static 'img/preparing3.png' %}"
-        style="width: 100%; border-radius: 10px; margin-bottom: 2em"
+        style="width: 100%; border-radius: 0.69vw; margin-bottom: 2.2vw"  
         alt="preparing"
       />
     </div>
@@ -643,23 +646,24 @@
   </div> -->
 <!-- </div> -->
 
-<div class="container" style="margin-top: 1em">
+<div class="container" style="margin-top: 1.1vw">
   <a href="{% url 'Contact' %}">
     <button
       class="glass-button"
       style="
-        display: inline-block;
-        padding: 10px 32px;
-        border: 3.1px solid;
-        text-decoration: none;
-        border-radius: 37px;
-        background-color: #61a870;
-        backdrop-filter: blur(30px);
-        color: white;
-        letter-spacing: 2px;
-        cursor: pointer;
-        margin-bottom: 0.8em;
-        text-transform: uppercase;
+        font-size: 1.5vw;
+          display: inline-block;
+          padding: 0.69vw 2.2vw;
+          border: 0.21vw solid;
+          text-decoration: none;
+          border-radius: 2.56vw;
+          background-color: #61a870;
+          backdrop-filter: blur(30px);
+          color: white;
+          letter-spacing: 2px;
+          cursor: pointer;
+          margin-bottom: 0.89vw;
+          text-transform: uppercase;
       "
     >
       order to KGS
@@ -671,11 +675,11 @@
     <img src="{% static 'img/divisor.png' %}" alt="div" style="width: 100%;">
 </div> -->
 
-<div class="container" style="margin-top: 2rem;">
+<div class="container" style="margin-top: 2.2vw;">
   <h2 style="color: rgba(0, 128, 0, 0.61); font-weight: bold; line-height: 3">
     What value can KGS create for you?
   </h2>
-  <div class="d-block d-md-flex justify-content-between" style="margin-top: 2rem;">
+  <div class="d-block d-md-flex justify-content-between" style="margin-top: 2.2vw;">
     <div>
       <div
         class="d-flex align-items-center"
@@ -896,13 +900,14 @@
     </div>
     <div class="col-lg-6">
       <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-        Responsive left-aligned hero with image
+        About Us
       </h1>
       <p class="lead">
-        Quickly design and customize responsive mobile-first sites with
-        Bootstrap, the world’s most popular front-end open source toolkit,
-        featuring Sass variables and mixins, responsive grid system, extensive
-        prebuilt components, and powerful JavaScript plugins.
+        <p> In 2020, during an international business trip and reflecting on our family's deep roots in date farming, we decided to visit a few stores to check out their offerings. To our surprise, we found the packaging unattractive and the quality far below what we were used to having at home.
+        </p>
+        <p>
+As the new generation of our family, we decided to revitalize an important part of our heritage and childhood memories. We began our research, faced numerous challenges, and worked to resolve them one by one. Finally, we developed a plan!
+</p>
       </p>
       <div
         class="d-grid gap-2 d-md-flex justify-content-md-start align-items-center"
