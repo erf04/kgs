@@ -183,7 +183,7 @@
 
   @media screen and (max-width: 2800px) {
     .w-lg-100 {
-      width: 48vw;
+      width: 48vmax;
     }
   }
   @media screen and (max-width: 992px) {
@@ -252,7 +252,7 @@
   <!--    ></button>-->
   <!--  </div>-->
 
-  <div class="carousel-inner" style="height: 39.8vw">
+  <div class="carousel-inner" style="height: 39.8vmax">
     <!-- <a> -->
       <div class="carousel-item active" style="height: 100%">
         <!-- <div> -->
@@ -266,26 +266,26 @@
           <div class="carousel-caption d-none d-md-flex justify-content-between p-0 w-100" style="right: 0; left: 0;">
             <div style="align-self: end; padding: 20px">
               <button id="playVideoBtn" style="background: none; border: none" onclick="videoPlayHandler()">
-                <svg style="width: 2vw; height: 2vw; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <svg style="width: 2vmax; height: 2vmax; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
                 </svg>          
               </button>
             </div>
             <div>
-              <h2 style="margin-bottom: 0.8em; font-size: 2vw">From farm to your target market</h2>
+              <h2 style="margin-bottom: 0.8em; font-size: 2vmax">From farm to your target market</h2>
               <a style="display: block;" href="{% url 'Contact' %}">
                 <button
                   class="glass-button"
                   style="
                     display: inline-block;
-                    padding: 0.7vw 2.2vw;
-                    border: 0.2vw solid #ffffff;
+                    padding: 0.7vmax 2.2vmax;
+                    border: 0.2vmax solid #ffffff;
                     text-decoration: none;
-                    border-radius: 2.6vw;
+                    border-radius: 2.6vmax;
                     background-color: rgba(255, 255, 255, 0.1);
                     backdrop-filter: blur(30px);
                     color: rgba(255, 255, 255, 0.8);
-                    font-size: 1.5vw;
+                    font-size: 1.5vmax;
                     font-family: 'roboto-condensed-light';
                     letter-spacing: 2px;
                     cursor: pointer;
@@ -299,7 +299,7 @@
             </div>
             <div style="align-self: end; padding: 20px">
               <button id="playSoundBtn" style="background: none; border: none" onclick="playHeaderSound()">
-                <svg style="width: 2vw; height: 2vw; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <svg style="width: 2vmax; height: 2vmax; color: black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75 19.5 12m0 0 2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6 4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
                 </svg>
               </button>
@@ -387,16 +387,16 @@
 <!--<div class="carousel"></div>-->
 
 <!-- Certification -->
-<div class="container" style="text-align: center; margin-top: 3.33vw">
+<div class="container" style="text-align: center; margin-top: 3.33vmax">
   <a href="{% url 'products' %}">
-    <p style="font-family: roboto-condensed-light; font-size: 2.2vw; margin-bottom: 1.1vw">
+    <p style="font-family: roboto-condensed-light; font-size: 2.2vmax; margin-bottom: 1.1vmax">
       KGS Products
     </p>
   </a>
   <!-- <div> -->
   <div
     class=" d-block d-lg-flex justify-content-between gap-4"
-    style="margin-bottom: 2.2vw"
+    style="margin-bottom: 2.2vmax"
   >
     <div id="owl-demo" class="owl-carousel owl-theme w-lg-100" style="height: fit-content">
       <div
@@ -456,7 +456,7 @@
     </div>
     </div>
     <div>
-      <img style="width: 35vw" src="{% static 'img/bigDate.png' %}" alt="bigDate" />
+      <img style="width: 35vmax" src="{% static 'img/bigDate.png' %}" alt="bigDate" />
     </div>
   </div>
   <div style="text-align: start;">
@@ -464,18 +464,18 @@
       <button
         class="glass-button"
         style="
-          font-size: 1.5vw;
+          font-size: 1.5vmax;
           display: inline-block;
-          padding: 0.69vw 2.2vw;
-          border: 0.21vw solid;
+          padding: 0.69vmax 2.2vmax;
+          border: 0.21vmax solid;
           text-decoration: none;
-          border-radius: 2.56vw;
+          border-radius: 2.56vmax;
           background-color: #61a870;
           backdrop-filter: blur(30px);
           color: white;
           letter-spacing: 2px;
           cursor: pointer;
-          margin-bottom: 0.89vw;
+          margin-bottom: 0.89vmax;
           text-transform: uppercase;
         "
       >
@@ -486,18 +486,18 @@
       <button
         class="glass-button"
         style="
-          font-size: 1.5vw;
+          font-size: 1.5vmax;
           display: inline-block;
-          padding: 0.69vw 2.2vw;
-          border: 0.21vw solid;
+          padding: 0.69vmax 2.2vmax;
+          border: 0.21vmax solid;
           text-decoration: none;
-          border-radius: 2.56vw;
+          border-radius: 2.56vmax;
           background-color: #ffffff;
           backdrop-filter: blur(30px);
           color: rgb(0, 0, 0);
           letter-spacing: 2px;
           cursor: pointer;
-          margin-bottom: 0.89vw;
+          margin-bottom: 0.89vmax;
           text-transform: uppercase;
         "
       >
@@ -558,31 +558,31 @@
   />
 </div> -->
 
-<div class="container" style="text-align: center; margin-top: 3.3vw">
+<div class="container" style="text-align: center; margin-top: 3.3vmax">
   <img
     src="{% static 'img/preparingBig.png' %}"
     alt="preparing"
-    style="width: 85%; margin-top: 4.4vw; margin: 0 auto"
+    style="width: 85%; margin-top: 4.4vmax; margin: 0 auto"
   />
-  <div class="d-flex justify-content-center" style="gap: 2.2vw; width: 85%; text-align: center; margin: 0 auto; margin-top: 2.2vw;">
+  <div class="d-flex justify-content-center" style="gap: 2.2vmax; width: 85%; text-align: center; margin: 0 auto; margin-top: 2.2vmax;">
     <div>
       <img
         src="{% static 'img/preparing1.png' %}"
-        style="width: 100%; border-radius: 0.69vw; margin-bottom: 2.2vw"
+        style="width: 100%; border-radius: 0.69vmax; margin-bottom: 2.2vmax"
         alt="preparing"
       />
     </div>
     <div>
       <img
         src="{% static 'img/preparing2.png' %}"
-        style="width: 100%; border-radius: 0.69vw; margin-bottom: 2.2vw"
+        style="width: 100%; border-radius: 0.69vmax; margin-bottom: 2.2vmax"
         alt="preparing"
       />
     </div>
     <div>
       <img
         src="{% static 'img/preparing3.png' %}"
-        style="width: 100%; border-radius: 0.69vw; margin-bottom: 2.2vw"  
+        style="width: 100%; border-radius: 0.69vmax; margin-bottom: 2.2vmax"  
         alt="preparing"
       />
     </div>
@@ -646,23 +646,23 @@
   </div> -->
 <!-- </div> -->
 
-<div class="container" style="margin-top: 1.1vw">
+<div class="container" style="margin-top: 1.1vmax">
   <a href="{% url 'Contact' %}">
     <button
       class="glass-button"
       style="
-        font-size: 1.5vw;
+        font-size: 1.5vmax;
           display: inline-block;
-          padding: 0.69vw 2.2vw;
-          border: 0.21vw solid;
+          padding: 0.69vmax 2.2vmax;
+          border: 0.21vmax solid;
           text-decoration: none;
-          border-radius: 2.56vw;
+          border-radius: 2.56vmax;
           background-color: #61a870;
           backdrop-filter: blur(30px);
           color: white;
           letter-spacing: 2px;
           cursor: pointer;
-          margin-bottom: 0.89vw;
+          margin-bottom: 0.89vmax;
           text-transform: uppercase;
       "
     >
@@ -675,11 +675,11 @@
     <img src="{% static 'img/divisor.png' %}" alt="div" style="width: 100%;">
 </div> -->
 
-<div class="container" style="margin-top: 2.2vw;">
-  <h2 style="color: rgba(0, 128, 0, 0.61); font-weight: bold; line-height: 3">
+<div class="container" style="margin-top: 2.2vmax;">
+  <h2 style="color: rgba(0, 128, 0, 0.61); font-weight: bold; font-size: 3vmax">
     What value can KGS create for you?
   </h2>
-  <div class="d-block d-md-flex justify-content-between" style="margin-top: 2.2vw;">
+  <div class="d-flex justify-content-between gap-3" style="margin-top: 2.2vmax;">
     <div>
       <div
         class="d-flex align-items-center"
@@ -687,26 +687,18 @@
       >
         <div
           style="
-            margin: 10px;
-            width: 40px;
-            height: 40px;
+            margin: 1.5vmax;
+            width: 2vmax;
+            height: 2vmax;
             border-radius: 50%;
             background-color: rgba(0, 128, 0, 0.61);
           "
           class="green-circle"
         ></div>
-        <h3 style="font-weight: bold">A complete variety of date products</h3>
+        <h3 style="font-weight: bold; font-size:2vmax; margin: 0">A complete variety of date products</h3>
       </div>
-      <div style="margin-left: 60px; color: rgba(0, 128, 0, 0.61)">
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
-          A complete variety of date products A complete variety of date
-          products A complete variety of date products
-        </p>
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
-          A complete variety of date products A complete variety of date
-          products A complete variety of date products
-        </p>
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
+      <div class="mt-2" style="margin-left: 2vmax; color: rgba(0, 128, 0, 0.61)">
+        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold; font-size: 1.3vmax">
           A complete variety of date products A complete variety of date
           products A complete variety of date products
         </p>
@@ -714,13 +706,13 @@
     </div>
     <div>
       <img
-        style="border-radius: 10px; width: 100%"
+        style="border-radius: 10px; width: 100%;"
         src="{% static 'img/preparing3.png' %}"
         alt=""
       />
     </div>
   </div>
-  <div class="d-block d-md-flex justify-content-between" style="margin-top: 2rem;">
+  <div class="d-flex justify-content-between gap-3" style="margin-top: 2rem;">
     <div>
       <img
         style="
@@ -737,62 +729,46 @@
         class="d-flex align-items-center"
         style="color: rgba(0, 128, 0, 0.61); direction: rtl"
       >
-        <div
-          style="
-            margin: 10px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(0, 128, 0, 0.61);
-          "
-          class="green-circle"
-        ></div>
-        <h3 style="font-weight: bold">A complete variety of date products</h3>
+      <div
+      style="
+        margin: 1.5vmax;
+        width: 2vmax;
+        height: 2vmax;
+        border-radius: 50%;
+        background-color: rgba(0, 128, 0, 0.61);
+      "
+      class="green-circle"
+    ></div>
+    <h3 style="font-weight: bold; font-size:2vmax; margin: 0">A complete variety of date products</h3>
       </div>
-      <div style="margin-left: 60px; color: rgba(0, 128, 0, 0.61)">
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
-          A complete variety of date products A complete variety of date
-          products A complete variety of date products
-        </p>
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
-          A complete variety of date products A complete variety of date
-          products A complete variety of date products
-        </p>
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
+      <div class="mt-2" style="margin-left: 2vmax; color: rgba(0, 128, 0, 0.61)">
+        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold; font-size: 1.3vmax">
           A complete variety of date products A complete variety of date
           products A complete variety of date products
         </p>
       </div>
     </div>
   </div>
-  <div class="d-block d-md-flex justify-content-between" style="margin-top: 2rem;">
+  <div class="d-flex justify-content-between gap-3" style="margin-top: 2rem;">
     <div>
       <div
         class="d-flex align-items-center"
         style="color: rgba(0, 128, 0, 0.61)"
       >
-        <div
-          style="
-            margin: 10px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(0, 128, 0, 0.61);
-          "
-          class="green-circle"
-        ></div>
-        <h3 style="font-weight: bold">A complete variety of date products</h3>
+      <div
+      style="
+        margin: 1.5vmax;
+        width: 2vmax;
+        height: 2vmax;
+        border-radius: 50%;
+        background-color: rgba(0, 128, 0, 0.61);
+      "
+      class="green-circle"
+    ></div>
+    <h3 style="font-weight: bold; font-size:2vmax; margin: 0">A complete variety of date products</h3>
       </div>
-      <div style="margin-left: 60px; color: rgba(0, 128, 0, 0.61)">
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
-          A complete variety of date products A complete variety of date
-          products A complete variety of date products
-        </p>
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
-          A complete variety of date products A complete variety of date
-          products A complete variety of date products
-        </p>
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
+      <div class="mt-2" style="margin-left: 2vmax; color: rgba(0, 128, 0, 0.61)">
+        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold; font-size: 1.3vmax">
           A complete variety of date products A complete variety of date
           products A complete variety of date products
         </p>
@@ -806,7 +782,7 @@
       />
     </div>
   </div>
-  <div class="d-block d-md-flex justify-content-between" style="margin-top: 2rem;">
+  <div class="d-flex justify-content-between gap-3" style="margin-top: 2rem;">
     <div>
       <img
         style="
@@ -823,28 +799,20 @@
         class="d-flex align-items-center"
         style="color: rgba(0, 128, 0, 0.61); direction: rtl"
       >
-        <div
-          style="
-            margin: 10px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(0, 128, 0, 0.61);
-          "
-          class="green-circle"
-        ></div>
-        <h3 style="font-weight: bold">A complete variety of date products</h3>
+      <div
+      style="
+        margin: 1.5vmax;
+        width: 2vmax;
+        height: 2vmax;
+        border-radius: 50%;
+        background-color: rgba(0, 128, 0, 0.61);
+      "
+      class="green-circle"
+    ></div>
+    <h3 style="font-weight: bold; font-size: 2vmax; margin: 0">A complete variety of date products</h3>
       </div>
-      <div style="margin-left: 60px; color: rgba(0, 128, 0, 0.61)">
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
-          A complete variety of date products A complete variety of date
-          products A complete variety of date products
-        </p>
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
-          A complete variety of date products A complete variety of date
-          products A complete variety of date products
-        </p>
-        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold">
+      <div class="mt-2" style="margin-left: 2vmax; color: rgba(0, 128, 0, 0.61)">
+        <p style="color: rgba(0, 128, 0, 0.61); font-weight: bold; font-size: 1.3vmax">
           A complete variety of date products A complete variety of date
           products A complete variety of date products
         </p>
