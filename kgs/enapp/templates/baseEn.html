@@ -71,14 +71,14 @@
       }
 
       .whatsapp {
-        width: 5vmax;
-        height: 5vmax;
+        width: 4vmax;
+        height: 4vmax;
         position: fixed;
         /* z-index: 99999; */
         background-color: #61a870;
         border-radius: 50%;
-        bottom: 2.7vmax;
-        right: 2.7vmax;
+        bottom: 2.5vmax;
+        right: 2.5vmax;
         z-index: 999;
       }
 
@@ -100,7 +100,7 @@
         style="display: flex; justify-content: center; align-items: center"
         class="whatsapp"
       >
-        <i class="fab fa-whatsapp" style="color: white; font-size: 3vmax"></i>
+        <i class="fab fa-whatsapp" style="color: white; font-size: 2.5vmax"></i>
       </div>
     </a>
     <!-- destroy in other sizes -->
@@ -154,7 +154,7 @@
               style="
                 position: relative;
                 top: 0.8vmax;
-                gap: 1.38vmax;
+                gap: 2.5vmax;
                 justify-content: center;
               "
             >
@@ -182,10 +182,13 @@
               <!--            </li>-->
 
               <li>
-                <div class="btn-group nav-link" style="font-size: 1.3vmax; padding: 0.55vmax 1.1vmax">
+                <div
+                  class="btn-group nav-link"
+                  style="font-size: 1.3vmax; padding: 0.55vmax 1.1vmax"
+                >
                   <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
                   <a
-                    style="font-size: 1.9vmax; color: #4d4c4c"
+                    style="font-size: 1.8vmax; color: #4d4c4c"
                     class="text-decoration-none pl-3"
                     href="{% url 'products' %}"
                     >Products</a
@@ -220,10 +223,13 @@
                 </div>
               </li>
 
-              <div class="btn-group nav-link" style="font-size: 1.3vmax; padding: 0.55vmax 1.1vmax">
+              <div
+                class="btn-group nav-link"
+                style="font-size: 1.3vmax; padding: 0.55vmax 1.1vmax"
+              >
                 <!-- <button type="button" class="btn btn-danger" href="#products">Products</button> -->
                 <a
-                  style="font-size: 1.9vmax; color: #4d4c4c"
+                  style="font-size: 1.8vmax; color: #4d4c4c"
                   class="text-decoration-none pl-3"
                   href="{% url 'AboutUs' %}"
                   >About Us</a
@@ -273,21 +279,55 @@
               </div>
               <!-- <li><a href="{% url 'AboutUs' %}" class="nav-link px-3 text-black">About</a></li> -->
               <li>
-                <div class="btn-group nav-link" style="font-size: 1.3vmax; padding: 0.55vmax 1.1vmax">
+                <div
+                  class="btn-group nav-link"
+                  style="font-size: 1.3vmax; padding: 0.55vmax 1.1vmax"
+                >
                   <a
                     href="#footer"
                     class="text-decoration-none pl-3"
-                    style="font-size: 1.9vmax; color: #4d4c4c"
+                    style="font-size: 1.8vmax; color: #4d4c4c"
                     >Contact Us</a
                   >
                 </div>
               </li>
+              <li>
+                <div
+                  class="btn-group nav-link"
+                  style="font-size: 1.3vmax; padding: 0.55vmax 1.1vmax"
+                >
+                  <a
+                    href="{% url 'E_N' %}"
+                    class="text-decoration-none pl-3"
+                    style="font-size: 1.8vmax; color: #4d4c4c"
+                    >Articles</a
+                  >
+                </div>
+              </li>
               <!-- add and update -->
+              <!-- <div class="btn-group nav-link" style="font-size: 1.3vmax; padding: 0.55vmax 1.1vmax"> -->
+              <!-- <li> -->
+              <!-- <a
+                  href="{% url 'E_N' %}"
+                  class="nav-link px-3"
+                  style="font-size: 1.8vmax; color: #4d4c4c"
+                  >News</a
+                >
+              </li> -->
               <!-- <li>
-                    <a href="{% url 'E_N' %}" class="nav-link px-3 text-black"
+                <div
+                  class="btn-group nav-link"
+                  style="font-size: 1.3vmax; padding: 0.55vmax 1.1vmax"
+                >
+                  <a
+                    style="font-size: 1.8vmax; color: #4d4c4c"
+                    class="text-decoration-none pl-3"
+                    href="{% url 'E_N' %}"
                     >News</a
-                    >
-                </li> -->
+                  >
+                </div>
+              </li> -->
+              <!-- </div> -->
               <!--                <li>-->
               <!--                    <a href="{% url 'gallery' %}" class="nav-link px-3 text-black"-->
               <!--                    >Gallery</a-->
@@ -306,16 +346,18 @@
           </div>
 
           <div
-            style="gap: 2.7vmax; margin-top: 0.33vmax; "
+            style="gap: 1.5vmax; margin-top: 0.33vmax"
             class="d-flex align-self-start align-items-center justify-content-center"
           >
             <a aria-label="Chat on WhatsApp" href="https://wa.me/+989300615268">
               <div class="d-flex align-items-center" style="gap: 0.34vmax">
                 <i
                   class="fab fa-whatsapp"
-                  style="color: #4d4c4c; font-size: 1.7vmax"
+                  style="color: #4d4c4c; font-size: 1.2vmax"
                 ></i>
-                <p style="color: #4d4c4c; margin: 0; font-size: 1.7vmax">Whatsapp</p>
+                <p style="color: #4d4c4c; margin: 0; font-size: 1.2vmax">
+                  Whatsapp
+                </p>
               </div>
             </a>
             <a aria-label="Gmail" href="#">
@@ -323,14 +365,16 @@
                 <p
                   style="
                     font-weight: bold;
-                    font-size: 1.7vmax;
+                    font-size: 1.2vmax;
                     color: #4d4c4c;
                     margin: 0;
                   "
                 >
                   @
                 </p>
-                <p style="color: #4d4c4c; margin: 0; font-size: 1.7vmax">Email message</p>
+                <p style="color: #4d4c4c; margin: 0; font-size: 1.2vmax">
+                  Email message
+                </p>
               </div>
             </a>
           </div>
@@ -473,9 +517,9 @@ write the header(like navbar)
           <div id="w-lg-100" style="text-align: center">
             <div>
               <form>
-                <h5>Subscribe to our newsletter</h5>
+                <h5 class="text-white">Subscribe to our newsletter</h5>
                 <!-- save into database or something to use later (export as excel) -->
-                <p>
+                <p class="text-white">
                   Stay up to date with latest news, announcements and events
                 </p>
                 <div class="d-flex flex-column flex-sm-row w-100 gap-2">
@@ -502,7 +546,7 @@ write the header(like navbar)
                 <a href="{% url 'E_N' %}">
                   <img
                     class="eventImg"
-                    src="{% static 'img/people-4.jpg' %}"
+                    src="{% static 'img/logoKgs.png' %}"
                     alt=""
                   />
                 </a>
@@ -540,7 +584,7 @@ write the header(like navbar)
         <div
           class="d-flex flex-column flex-sm-row justify-content-between pt-4 border-top"
         >
-          <p>© 2023 Company, Inc. All rights reserved.</p>
+          <p class="text-white">© 2023 Company, Inc. All rights reserved.</p>
         </div>
       </footer>
     </div>

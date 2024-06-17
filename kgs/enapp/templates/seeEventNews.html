@@ -1,20 +1,116 @@
 {% extends 'baseEn.html' %} {% load static %} {% block content %}
 <link rel="stylesheet" href="{% static 'css/seeEventNews.css' %}" />
 <!-- <link rel="stylesheet" href="{% static 'css/product.css' %}" /> -->
+<div class="tm-hero"></div>
+
 <div id="loader-wrapper">
   <div id="loader"></div>
   <div class="loader-section section-left"></div>
   <div class="loader-section section-right"></div>
 </div>
-<div class="container-fluid content">
-  <div class="img-container">
-    <img class="img" src="{{event.image.url}}" alt="" />
-  </div>
+<div class="container content">
   <div class="discription">
     <h2>{{event.title}}</h2>
-    {{event.description}}
+    <div>
+      <p>
+        Date palm trees are susceptible to various pests that can cause
+        significant damage if not managed properly. Here are some of the common
+        pests found in date palm cultivation in Iran:
+      </p>
+      <p>1. Date Palm Leafhopper (Ommatissus lybicus)</p>
+      <p>
+        Description: The date palm leafhopper is a major pest in Iran, known
+        scientifically as Ommatissus lybicus. It has two generations per year.
+      </p>
+      <p>Damage: It primarily damages date palms in two ways:</p>
+      <p>
+        Egg Laying: Females lay eggs on the undersides of leaf veins, causing
+        interruption of the plant's sap flow. This results in leaf tips hanging
+        down, which worsens if egg laying is frequent.
+      </p>
+      <p>
+        Feeding: Adults feed on sap, excreting honeydew that can lead to a sticky
+        coating on the plant, promoting fungal diseases like sooty mold.
+      </p>
+      <p>Control:</p>
+      <p>
+        Pruning: Lower branches should be pruned to improve ventilation and light
+        penetration into the crown.
+      </p>
+      <p>
+        Yellow Traps: These traps attract leafhoppers and can help in monitoring
+        their population.
+      </p>
+      <p>
+        Chemical Control: Timing of chemical treatments is crucial and should
+        coincide with the emergence of nymphs and adult activity. Effective
+        pesticides include malathion, methyl pyrimiphos, fozalon, and chlorpyrifos
+        methyl.
+      </p>
+      <p>2. Date Moth (Batrachedra amydraula)</p>
+      <p>
+        Description: Also known as the date fruit moth, this pest affects dates
+        during its larval stage.
+      </p>
+      <p>
+        Damage: Larvae feed on date flowers after hatching from eggs laid on them.
+        They can cause significant damage by making the flowers drop prematurely.
+      </p>
+      <p>Control:</p>
+      <p>
+        Mechanical Control: Infested fruits should be collected and removed from
+        the plantation. Winter hiding places like old fibers around the trunk
+        should be eliminated.
+      </p>
+      <p>
+        Chemical Control: Insecticide spraying is recommended 10 days after flower
+        pollination and repeated every 4 weeks if fruit drop exceeds 25%.
+      </p>
+      <p>3. Red Palm Weevil (Rhynchophorus ferrugineus)</p>
+      <p>
+        Description: This weevil is a quarantine pest and poses a serious threat
+        to date palm plantations.
+      </p>
+      <p>
+        Damage: The larvae of the red palm weevil bore into the central shoot of
+        palm trees, leading to wilting and eventually death of the tree.
+      </p>
+      <p>Control:</p>
+      <p>
+        Cultural Control: Avoid introducing infested offshoots into date palm
+        plantations. Infested shoots and damaged areas should be pruned and
+        removed.
+      </p>
+      <p>
+        Chemical Control: Systemic insecticides like chlorpyrifos or endosulfan
+        can be applied to the trunks. Pheromone traps can also be used to monitor
+        and capture adults. </p>
+      <p> 4. Rhynchophorus weevil (Oryctes elegans) </p> <p> Description:
+        Also known as the rhinoceros beetle, this pest produces one generation per
+        year. </p> <p> Damage: Adults lay eggs in various parts of the palm tree, including
+        the crown, fibers, clusters, and petioles, leading to deformation and
+        breaking of the inflorescences. </p> <p> Control: </p> <p> Cultural Control: Avoid creating
+        wounds on the trunk as they attract weevils. Seal any holes or cuts
+        immediately. </p> <p> Chemical Control: Use insecticides such as Dorsovan or
+        trichlorfon on the trunk before the tree dries completely after pruning. </p>
+      <p>These pests can severely impact date palm production if not managed
+        effectively through a combination of cultural, mechanical, and chemical
+        control measures tailored to the specific pest and lifecycle stage.
+        Regular monitoring and early intervention are crucial for maintaining date
+        palm health and productivity. </p>
+      </p>  
+    </div>
+    
+    <div class="d-flex gap-5">
+      <div>
+        <img style="width: 100%" src="{% static 'img/1.png' %}" alt="" />
+      </div>
+      <div>
+        <img style="width: 100%" src="{% static 'img/2.png' %}" alt="" />
+      </div>
+    </div>
   </div>
-  <div class="lastest">
+  <!-- <div class="lastest">
     <ul class="list">
       <li>Lorem ipsum dolor sit amet consectetur.</li>
       <li>
@@ -23,19 +119,24 @@
       <li>Lorem ipsum dolor sit amet consectetur.</li>
       <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
     </ul>
-    <!-- attachment and date  -->
-  </div>
-  <!-- <audio controls src="{{event.voice.url}}"></audio> -->
+  </div> -->
+  <!-- <audio controls src="event.voice.url"></audio> -->
 </div>
 <div class="container">
-  <audio controls class="d-block">
-    <source src="{{event.voice.url}}" />
+  <!-- <audio controls class="d-block">
+    src="event.voice.url"
+    <source  />
     Your browser does not support the audio tag.
   </audio>
-  <video src="{{event.attachment.url}}" class="d-block" controls></video>
+  <video src="event.attachment.url" class="d-block" controls></video> -->
 </div>
 <!-- Script For Loader -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
 <script src="{% static 'js/index.js' %}"></script>
+<script>
+  $(window).on("load", function () {
+    $("body").addClass("loaded");
+  });
+</script>
 {% endblock %}

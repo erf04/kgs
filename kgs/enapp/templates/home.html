@@ -221,11 +221,11 @@
 </div>
 {% endfor %} {% endif %}
 <!-- Loader -->
-<!-- <div id="loader-wrapper">
+<div id="loader-wrapper">
   <div id="loader"></div>
   <div class="loader-section section-left"></div>
   <div class="loader-section section-right"></div>
-</div> -->
+</div>
 
 <!-- Crousel -->
 <!-- <div> -->
@@ -285,7 +285,7 @@
                     background-color: rgba(255, 255, 255, 0.1);
                     backdrop-filter: blur(30px);
                     color: rgba(255, 255, 255, 0.8);
-                    font-size: 1.5vmax;
+                    font-size: 1.2vmax;
                     font-family: 'roboto-condensed-light';
                     letter-spacing: 2px;
                     cursor: pointer;
@@ -395,9 +395,8 @@
   </a>
   <!-- <div> -->
   <div
-    class=" d-block d-lg-flex justify-content-between gap-4"
-    style="margin-bottom: 2.2vmax"
-  >
+    class="d-block d-lg-flex justify-content-between gap-4"
+    style="height:min-content"  >
     <div id="owl-demo" class="owl-carousel owl-theme w-lg-100" style="height: fit-content">
       <div
         class="item h-100 p-3 me-4 w-100"
@@ -456,7 +455,7 @@
     </div>
     </div>
     <div>
-      <img style="width: 35vmax" src="{% static 'img/bigDate.png' %}" alt="bigDate" />
+      <img style="width: 33vmax" src="{% static 'img/bigDate.png' %}" alt="bigDate" />
     </div>
   </div>
   <div style="text-align: start;">
@@ -464,7 +463,7 @@
       <button
         class="glass-button"
         style="
-          font-size: 1.5vmax;
+          font-size: 1.2vmax;
           display: inline-block;
           padding: 0.69vmax 2.2vmax;
           border: 0.21vmax solid;
@@ -486,7 +485,7 @@
       <button
         class="glass-button"
         style="
-          font-size: 1.5vmax;
+          font-size: 1.2vmax;
           display: inline-block;
           padding: 0.69vmax 2.2vmax;
           border: 0.21vmax solid;
@@ -651,7 +650,7 @@
     <button
       class="glass-button"
       style="
-        font-size: 1.5vmax;
+          font-size: 1.2vmax;
           display: inline-block;
           padding: 0.69vmax 2.2vmax;
           border: 0.21vmax solid;
@@ -676,7 +675,7 @@
 </div> -->
 
 <div class="container" style="margin-top: 2.2vmax;">
-  <h2 style="color: rgba(0, 128, 0, 0.61); font-weight: bold; font-size: 3vmax">
+  <h2 style="color: rgba(0, 128, 0, 0.61); font-weight: bold; font-size: 2.5vmax">
     What value can KGS create for you?
   </h2>
   <div class="d-flex justify-content-between gap-3" style="margin-top: 2.2vmax;">
@@ -820,7 +819,7 @@
     </div>
   </div>
 
-  <div class="container" style="margin-top: 1em">
+  <div class="container" style="margin-top: 1.7vmax">
     <a href="{% url 'Contact' %}">
       <button
         class="glass-button"
@@ -1191,6 +1190,10 @@ As the new generation of our family, we decided to revitalize an important part 
 <script src="{% static 'css\OwlCarousel2-2.3.4\dist\owl.carousel.min.js' %}"></script>
 <script src="{% static 'js/index.js' %}"></script>
 <script>
+  $(window).on("load", function () {
+    $("body").addClass("loaded");
+  });
+  
   var isPlaying = false
   var sound = new Audio('../../static/audio/header.mp3');
   var btn = document.getElementById('playSoundBtn');

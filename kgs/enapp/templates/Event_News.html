@@ -2,11 +2,11 @@
 <link rel="stylesheet" href="{% static 'css/Event_News.css' %}" />
 <!-- <link rel="stylesheet" href="{% static 'css/product.css' %}" /> -->
 <!-- loader -->
-<div id="loader-wrapper">
+<!-- <div id="loader-wrapper">
   <div id="loader"></div>
   <div class="loader-section section-left"></div>
   <div class="loader-section section-right"></div>
-</div>
+</div> -->
 <div class="tm-hero"></div>
 <div class="container">
   {% for event in events %}
@@ -15,18 +15,43 @@
       <div class="img-container">
         <img class="img" src="{{event.image.url}}" alt="" />
       </div>
-      <div class="discription">
-        <p>{{event.description}}</p>
+      <div
+        id="event_description"
+        onmouseleave="LeaveAnimation()"
+        onmouseenter="EnterAnimation()"
+      >
+        <p style="color: rgb(94, 94, 94); font-size: 1.6vmax">
+          Date palm trees are susceptib le to various pests that can cause
+          significant damage if not managed properly.
+        </p>
       </div>
     </div>
   </a>
-  <button type="button" class="btn btn-primary">
+  <!-- <button type="button" class="btn btn-primary">
     <a href="{% url 'update-event' event.pk %}">Update</a>
-  </button>
+  </button> -->
   {% endfor %}
 </div>
-<!-- Script For Loader -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
+
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
 <script src="{% static 'js/index.js' %}"></script>
+<script>
+  $(window).on("load", function () {
+    $("body").addClass("loaded");
+  });
+
+  var description = document.getElementById("event_description");
+
+  function LeaveAnimation() {
+    description.style.animation = "colorChangeRev .6s";
+    description.style.animationFillMode = "backwards";
+    description.style.animationDelay = "0.2s";
+  }
+
+  function EnterAnimation() {
+    description.style.animation = "colorChange .6s";
+    description.style.animationFillMode = "forwards";
+    description.style.animationDelay = "0.2s";
+  }
+</script>
 {% endblock %}

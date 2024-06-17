@@ -26,10 +26,11 @@
 }
 
 .img-container {
-    width: 40%;
+    width: 25%;
+    border-radius: 12px;
 }
 
-.discription {
+#event_description {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -38,38 +39,26 @@
 
 @keyframes colorChange {
     0% {
-        background-image: url("../img/d9d9d9.png");
+        background-image: url("../icons/gray.png");
         background-size: 0% 100%;
     }
 
     100% {
-        background-image: url("../img/d9d9d9.png");
+        background-image: url("../icons/gray.png");
         background-size: 100% 100%;
     }
-}
-
-.discription:hover {
-    animation: colorChange .6s;
-    animation-fill-mode: forwards;
-    animation-delay: .2s;
 }
 
 @keyframes colorChangeRev {
     0% {
-        background-image: url("../img/d9d9d9.png");
+        background-image: url("../icons/gray.png");
         background-size: 100% 100%;
     }
 
     100% {
-        background-image: url("../img/d9d9d9.png");
+        background-image: url("../icons/gray.png");
         background-size: 0% 100%;
     }
-}
-
-.discription:not(:hover) {
-    animation: colorChangeRev .6s;
-    animation-fill-mode: backwards;
-    animation-delay: .2s;
 }
 
 @media screen and (max-width: 768px) {
