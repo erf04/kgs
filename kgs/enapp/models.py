@@ -40,7 +40,7 @@ class Certification(models.Model):
 
 class Event(models.Model):
     title=models.CharField(max_length=500)
-    description=models.TextField(max_length=1000)
+    description=models.TextField()
     image=models.ImageField(upload_to="mediafiles/event/images")
     date=models.DateField(blank=True,null=True)
     voice=models.FileField(upload_to="mediafiles/event/voices",blank=True)
