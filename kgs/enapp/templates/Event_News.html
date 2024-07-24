@@ -9,25 +9,35 @@
 </div> -->
 <div class="tm-hero"></div>
 <div class="container">
-  {% for event in events %}
-  <a class="seeLink" href="{% url 'seeEventNews' event.pk %}">
+  <!-- for event in events -->
+  <a class="seeLink" href="seeEventNews.html">
     <div class="content little-zooom">
       <div class="img-container">
-        <img class="img" src="{{event.image.url}}" alt="" />
+        <img class="img" src="{% static 'img/1.png' %}" alt="eventImage" />
       </div>
-      <div
-        id="event_description"
-      >
+      <div id="event_description">
         <p style="color: rgb(94, 94, 94); font-size: 1.6vmax">
-          {{event.title}}
+          Common Pests Of Date Palm Trees
+        </p>
+      </div>
+    </div>
+  </a>
+  <a class="seeLink" href="seeEventNews1.html">
+    <div class="content little-zooom">
+      <div class="img-container">
+        <img class="img" src="{% static 'img/4.jpg' %}" alt="eventImage" />
+      </div>
+      <div id="event_description">
+        <p style="color: rgb(94, 94, 94); font-size: 1.6vmax">
+          Exploring the Varieties of Dates: A Sweet Journey
         </p>
       </div>
     </div>
   </a>
   <!-- <button type="button" class="btn btn-primary">
-    <a href="{% url 'update-event' event.pk %}">Update</a>
+    <a href=" url 'update-event' event.pk ">Update</a>
   </button> -->
-  {% endfor %}
+  <!-- endfor  -->
 </div>
 
 <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
